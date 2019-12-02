@@ -1,2 +1,0 @@
-This is a temporary file.
-Remove this when a view file has been added.

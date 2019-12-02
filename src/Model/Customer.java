@@ -1,6 +1,6 @@
 package Model;
 
-public class Customer{
+public class Customer {
 
     public String name;
     public String email;
@@ -9,34 +9,89 @@ public class Customer{
     public Payment payment;
     public double credit;
 
+    public Customer(){
 
-    public Customer(String name, String email, String pw, String addr, Payment p, double cred){
+        this.name = null;
+        this.email = null;
+        this.password = null;
+        this.address = null;
+        this.payment = null;
+        this.credit = 0;
+    }
+
+    // If an argument was not provided, pass in null when creating an instance of Customer
+    public Customer(String name, String email, String password, String address, Payment payment, double credit){
+
         this.name = name;
         this.email = email;
-        this.password = pw;
-        this.address = addr;
-        this.payment = p;
-        this.credit = cred;
-
+        this.password = password;
+        this.address = address;
+        this.payment = payment;
+        this.credit = credit;
     }
 
-    public void writeToDb(){
-        preparedstatement = adfasdfjs("insert into table (name, email ...) values(?, ?, ? ...")
-
-                preparedstatement.insertString(1, name)
-
+    public String getName() {
+      return name;
     }
 
-    public void changePw(String newPw){
-
+    public void setName(String name) {
+      this.name = name;
     }
 
-    public void printCustomer(){
-        System.out.printf("Name: %s", this.name);
+    public String getEmail() {
+      return email;
     }
 
+    public void setEmail(String email) {
+      this.email = email;
+    }
 
+    public String getPassword() {
+      return password;
+    }
 
+    public void setPassword(String password) {
+      this.password = password;
+    }
 
+    public String getAddress() {
+      return address;
+    }
 
+    public void setAddress(String address) {
+      this.address = address;
+    }
+
+    public Payment getPayment() {
+      return payment;
+    }
+
+    public void setPayment(Payment payment) {
+      this.payment = payment;
+    }
+
+    public double getCredit() {
+      return credit;
+    }
+
+    public void setCredit(double credit) {
+      this.credit = credit;
+    }
+    
+    public String toString() {
+    	
+    	String s = "";
+    	
+    	// s += "Thing: "+value
+    	// s += "Thing: "+value
+    	
+    	return s;
+    }
+    
+    public void writeToDb() {
+    	// preparedstatement = adfasdfjs("insert into table (name, email ...) values(?, ?, ? ...")
+        // preparedstatement.insertString(1, name)
+    }
 }
+
+// System.out.print("Name: %s", this.name);
