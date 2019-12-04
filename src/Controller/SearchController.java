@@ -22,6 +22,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -42,6 +43,7 @@ import java.util.ArrayList;
 public class SearchController implements Initializable, EventHandler<ActionEvent> {
 	
 	ArrayList<String>options = new ArrayList<String>();
+	private String curFxml = "../View/Search.fxml";
 	
 	@FXML
 	Button leftBtn;
@@ -59,6 +61,8 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 	Button cartBtn;
 	@FXML
 	ComboBox<String> optionsComboBox;
+	@FXML
+	TextField searchBox;
 	
 	// LOCAL
 	@FXML
@@ -74,25 +78,20 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 				
 		if( e.getSource() == homeBtn ) {
 			
-			passVar();
 			goToView("../View/Main.fxml");
 		}
 		
 		else if( loginBtn == e.getSource()) {
 
-			passVar();
 			goToView("../View/Login.fxml");
 		}
 		
 		else if( searchBtn == e.getSource()) {
 
-			passVar();
 			goToView("../View/Search.fxml");
 		}
 		
 		else if( settingsBtn == e.getSource()) {
-			
-			passVar();
 			
 			if(true == MainController.isLoggedIn) {
 				goToView("../View/Settings.fxml");
@@ -107,28 +106,31 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 		
 		else if( cartBtn == e.getSource()) {
 
-			passVar();
 			goToView("../View/Cart.fxml");
 		}
 		
 		else if( leftBtn == e.getSource()) {
-			
+			goToView(MainController.backwardView);
 		}
 		
 		else if( rightBtn == e.getSource()) {
-			
+			forwardTrick();
+			goToView(MainController.forwardView);
 		}
 	}
 	
 	// set the variables in MainController before switching views
 	public void passVar() {
-		MainController.selectedOption = optionsComboBox.getSelectionModel().getSelectedItem().toString();
+		MainController.selectedOption = optionsComboBox.getSelectionModel().getSelectedIndex();
 	}
 	
 	// code to simplify changing views
 	public void goToView(String xmlPath) {
 		
 		try {
+			passVar();
+			MainController.backwardView = curFxml;
+			MainController.forwardView = xmlPath;
 			Parent root = FXMLLoader.load(getClass().getResource(xmlPath));
 			Main.stage.setScene(new Scene(root, 1200, 800));
 			Main.stage.show();
@@ -138,6 +140,12 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 			System.out.print("\n\n\tError: Could not change scenes\n\n");
 			error.printStackTrace();
 		}
+	}
+	
+	public void forwardTrick() {
+		String temp = MainController.forwardView;
+		MainController.forwardView = MainController.backwardView;
+		MainController.backwardView = temp;
 	}
 	
 	@Override
@@ -210,7 +218,7 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 		ObservableList<String> observableOptions = FXCollections.observableArrayList(options);
 		optionsComboBox.setItems(observableOptions);
 		optionsComboBox.getSelectionModel().selectFirst();
-		
+		optionsComboBox.getSelectionModel().select(MainController.selectedOption);
 	}
 	
 }

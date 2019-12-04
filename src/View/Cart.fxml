@@ -22,12 +22,12 @@
       <ComboBox fx:id="optionsComboBox" layoutX="694.0" prefHeight="75.0" prefWidth="281.0" />
       <Button fx:id="leftBtn" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
       <Button fx:id="rightBtn" layoutX="75.0" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
-      <Label layoutX="795.0" layoutY="598.0" text="Total:">
+      <Label layoutX="788.0" layoutY="591.0" text="Total:">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Label fx:id="totalLabel" layoutX="1090.0" layoutY="598.0" text="Label">
+      <Label fx:id="totalLabel" layoutX="913.0" layoutY="591.0" prefHeight="45.0" prefWidth="224.0" text="0">
          <font>
             <Font size="30.0" />
          </font>
@@ -38,14 +38,14 @@
           <TableColumn prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
-      <Label layoutX="835.0" layoutY="716.0" text="Please sign in" textFill="#ae2020">
+      <Label fx:id="messageLabel" layoutX="868.0" layoutY="657.0" textFill="#ae2020">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Button fx:id="addBtn" layoutX="514.0" layoutY="702.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="31.0" text="+" />
-      <Button fx:id="subBtn" layoutX="514.0" layoutY="734.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="31.0" text="-" />
-      <TextField fx:id="quantityTextfField" layoutX="439.0" layoutY="702.0" prefHeight="64.0" prefWidth="75.0">
+      <Button fx:id="addBtn" layoutX="514.0" layoutY="702.0" mnemonicParsing="false" onAction="#handle" prefHeight="31.0" prefWidth="31.0" text="+" />
+      <Button fx:id="subBtn" layoutX="514.0" layoutY="734.0" mnemonicParsing="false" onAction="#handle" prefHeight="24.0" prefWidth="31.0" text="-" />
+      <TextField fx:id="quantityTextField" layoutX="439.0" layoutY="702.0" prefHeight="64.0" prefWidth="75.0" text="0">
          <font>
             <Font size="30.0" />
          </font>
@@ -56,24 +56,64 @@
             <Font size="39.0" />
          </font>
       </Label>
-      <Label layoutX="797.0" layoutY="170.0" text="Email receipt to:">
+      <Label layoutX="789.0" layoutY="98.0" text="Email receipt to:">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="emailTextField" layoutX="796.0" layoutY="213.0" prefHeight="35.0" prefWidth="358.0" />
-      <Label layoutX="794.0" layoutY="298.0" text="Delivery address:">
+      <TextField fx:id="emailTextField" layoutX="790.0" layoutY="128.0" prefHeight="35.0" prefWidth="358.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Label layoutX="791.0" layoutY="187.0" text="Delivery address:">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="deliveryAddressTextField" layoutX="796.0" layoutY="339.0" prefHeight="35.0" prefWidth="358.0" />
-      <Label layoutX="794.0" layoutY="422.0" text="Delivery method:">
+      <TextField fx:id="deliveryAddressTextField" layoutX="790.0" layoutY="217.0" prefHeight="35.0" prefWidth="358.0">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Label layoutX="788.0" layoutY="429.0" text="Delivery method: ">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <ComboBox fx:id="deliveryMethodComboBox" layoutX="799.0" layoutY="469.0" prefHeight="45.0" prefWidth="358.0" />
+      <ComboBox fx:id="deliveryMethodComboBox" layoutX="785.0" layoutY="459.0" prefHeight="45.0" prefWidth="358.0" />
+      <Button fx:id="placeOrderBtn" layoutX="791.0" layoutY="705.0" mnemonicParsing="false" onAction="#handle" prefHeight="65.0" prefWidth="281.0" text="Place Order">
+         <font>
+            <Font size="30.0" />
+         </font></Button>
+      <Label layoutX="789.0" layoutY="375.0" text="Store Credit:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="914.0" layoutY="377.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="790.0" layoutY="530.0" text="Delivery cost: ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="919.0" layoutY="532.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="791.0" layoutY="282.0" text="Card Number">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cardNumberTextField" layoutX="790.0" layoutY="312.0" prefHeight="35.0" prefWidth="358.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
       <!--  THESE COMPONENTS ARE USED ACCROSS ALL VIEWS -->
    </children>
 </AnchorPane>

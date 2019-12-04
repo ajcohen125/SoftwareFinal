@@ -19,6 +19,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -45,6 +46,8 @@ public class TemplateController implements Initializable, EventHandler<ActionEve
 	Button cartBtn;
 	@FXML
 	ComboBox<String> optionsComboBox;
+	@FXML
+	TextField searchBox;
 		
 	@Override
 	public void handle(ActionEvent e) {
@@ -89,17 +92,18 @@ public class TemplateController implements Initializable, EventHandler<ActionEve
 		}
 		
 		else if( leftBtn == e.getSource()) {
-			
+			goToView(MainController.backwardView);
 		}
 		
 		else if( rightBtn == e.getSource()) {
-			
+			forwardTrick();
+			goToView(MainController.forwardView);
 		}
 	}
 	
 	// set the variables in MainController before switching views
 	public void passVar() {
-		MainController.selectedOption = optionsComboBox.getSelectionModel().getSelectedItem().toString();
+		MainController.selectedOption = optionsComboBox.getSelectionModel().getSelectedIndex();
 	}
 	
 	// code to simplify changing views
@@ -115,6 +119,12 @@ public class TemplateController implements Initializable, EventHandler<ActionEve
 			System.out.print("\n\n\tError: Could not change scenes\n\n");
 			error.printStackTrace();
 		}
+	}
+	
+	public void forwardTrick() {
+		String temp = MainController.forwardView;
+		MainController.forwardView = MainController.backwardView;
+		MainController.backwardView = temp;
 	}
 	
 	@Override
@@ -153,7 +163,7 @@ public class TemplateController implements Initializable, EventHandler<ActionEve
 		ObservableList<String> observableOptions = FXCollections.observableArrayList(options);
 		optionsComboBox.setItems(observableOptions);
 		optionsComboBox.getSelectionModel().selectFirst();
-		
+		optionsComboBox.getSelectionModel().select(MainController.selectedOption);
 	}
 	
 }

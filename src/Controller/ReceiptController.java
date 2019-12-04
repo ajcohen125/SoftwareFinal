@@ -27,13 +27,10 @@ import javafx.scene.image.ImageView;
 import Model.*;
 import java.util.ArrayList;
 
-// TODO
-// Write updateAccountInfo() and createAccount()
-
-public class SettingsController implements Initializable, EventHandler<ActionEvent> {
+public class ReceiptController implements Initializable, EventHandler<ActionEvent> {
 	
 	ArrayList<String>options = new ArrayList<String>();
-	private String curFxml = "../View/Settings.fxml";
+	private String curFxml = "../View/Receipt.fxml";
 	
 	@FXML
 	Button leftBtn;
@@ -55,54 +52,33 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 	TextField searchBox;
 	
 	// LOCAL
-	
-	// Both
 	@FXML
-	Button updateBtn;
-	@FXML
-	Label messageLabel;
-	
-	// Account Information
-	@FXML
-	TextField accountNameTextField;
-	@FXML
-	TextField accountAddressTextField;
-	@FXML 
-	TextField accountStoreCreditTextField;
-	@FXML
-	TextField accountEmailTextField;
-	
-	// Credit Card Information
-	@FXML
-	TextField cardNumberTextField;
-	@FXML
-	TextField cardFullNameTextField;
-	@FXML
-	TextField cardAddressTextField;
-	@FXML
-	TextField cardCCVTextField;
-	@FXML
-	TextField cardExpDateTextField;
+	Label emailedToLabel;
 		
 	@Override
 	public void handle(ActionEvent e) {
 				
 		if( e.getSource() == homeBtn ) {
 			
+			passVar();
 			goToView("../View/Main.fxml");
 		}
 		
 		else if( loginBtn == e.getSource()) {
 
+			passVar();
 			goToView("../View/Login.fxml");
 		}
 		
 		else if( searchBtn == e.getSource()) {
 
+			passVar();
 			goToView("../View/Search.fxml");
 		}
 		
 		else if( settingsBtn == e.getSource()) {
+			
+			passVar();
 			
 			if(true == MainController.isLoggedIn) {
 				goToView("../View/Settings.fxml");
@@ -117,6 +93,7 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 		
 		else if( cartBtn == e.getSource()) {
 
+			passVar();
 			goToView("../View/Cart.fxml");
 		}
 		
@@ -127,33 +104,6 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 		else if( rightBtn == e.getSource()) {
 			forwardTrick();
 			goToView(MainController.forwardView);
-		}
-		
-		else if ( updateBtn == e.getSource()) {
-			System.out.println("Update button pressed");
-			
-			// if signed in
-			if( true == MainController.isLoggedIn ) {
-				
-				if( true == allFieldsProvided()) {
-					updateAccountInfo();
-				}
-				else {
-					messageLabel.setText("Some fields missing");
-				}
-			}
-
-			// if creating an account
-			else {
-				
-				if( true == allFieldsProvided()) {
-					createAccount();
-				}
-				else {
-					messageLabel.setText("Some fields missing");
-				}
-			}
-			
 		}
 	}
 	
@@ -166,9 +116,6 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 	public void goToView(String xmlPath) {
 		
 		try {
-			passVar();
-			MainController.backwardView = curFxml;
-			MainController.forwardView = xmlPath;
 			Parent root = FXMLLoader.load(getClass().getResource(xmlPath));
 			Main.stage.setScene(new Scene(root, 1200, 800));
 			Main.stage.show();
@@ -186,91 +133,12 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 		MainController.backwardView = temp;
 	}
 	
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	
-	// updates user info
-	public void updateAccountInfo() {
-		
-	}
-	
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	
-	// creates a new account
-	public void createAccount() {
-		
-	}
-	
-	// creates a new account
-	// called in initialize() if the user is signed in
-	public void displayUserInfo() {
-		
-		System.out.println("displayUserInfo: comment code back in after user info is populated");
-		
-		// just to let the the program work until it is finished
-		if(MainController.user == null ) {
-			return;
-		}
-		
-		accountNameTextField.setText(MainController.user.getName());
-		accountAddressTextField.setText(MainController.user.getAddress()); 
-		accountStoreCreditTextField.setText(MainController.user.getCredit()+"");
-		accountEmailTextField.setText(MainController.user.getEmail());
-		cardNumberTextField.setText(MainController.user.getPayment().getCcNum());
-		cardFullNameTextField.setText(MainController.user.getPayment().getName());
-		cardAddressTextField.setText(MainController.user.getPayment().getAddress());
-		cardCCVTextField.setText(MainController.user.getPayment().getCcNum());
-		cardExpDateTextField.setText(MainController.user.getPayment().getExpDate());
-	}
-	
-	// checks to see if all fields were provided
-	// to make life simple, all field will be required when creating an account
-	public boolean allFieldsProvided() {
-		
-		if( accountNameTextField.getText().isEmpty() ||
-			accountAddressTextField.getText().isEmpty() ||
-			accountStoreCreditTextField.getText().isEmpty() ||
-			accountEmailTextField.getText().isEmpty() ||
-			cardNumberTextField.getText().isEmpty() ||
-			cardFullNameTextField.getText().isEmpty() ||
-			cardAddressTextField.getText().isEmpty() ||
-			cardCCVTextField.getText().isEmpty() ||
-			cardExpDateTextField.getText().isEmpty())
-		{
-			// some fields missing
-			return false;
-		}
-		
-		// all field provided
-		return true;
-			
-	}
-	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
-		System.out.println("Switched to Settings View!");
-		
-		// if signed in
-		if( true == MainController.isLoggedIn ) {
-			displayUserInfo();
-			updateBtn.setText("Update");
-		}
-		// the only way to get to the SettingsView while signed out is by pressing the 
-		// SignUp link in the LoginView
-		// Therefore, if the user is at this view and not signed in, they are signing up
-		else {
-			updateBtn.setText("Sign Up");
-		}
-		
+		System.out.print("Switched Views!");
 		setUpNavigationBar();
+		emailedToLabel.setText("Receipt was emailed to "+MainController.user.getEmail());
 	}
 	
 	public void setUpNavigationBar() {

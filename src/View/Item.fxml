@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.shape.*?>
@@ -8,7 +8,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ItemController">
    <children>
    	  <!--  THESE COMPONENTS ARE USED ACCROSS ALL VIEWS -->
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3dd3f510" height="800.0" layoutX="1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1200.0" />
@@ -22,11 +22,30 @@
       <ComboBox fx:id="optionsComboBox" layoutX="694.0" prefHeight="75.0" prefWidth="281.0" />
       <Button fx:id="leftBtn" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
       <Button fx:id="rightBtn" layoutX="75.0" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
-      <ImageView fitHeight="413.0" fitWidth="507.0" layoutX="394.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../Images/fullLogo.png" />
-         </image>
-      </ImageView>
+      <Label layoutX="60.0" layoutY="246.0" />
+      <Label fx:id="itemNameLabel" layoutX="668.0" layoutY="220.0" text="Item name">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="380.0" layoutX="75.0" layoutY="237.0" stroke="BLACK" strokeType="INSIDE" width="368.0" />
+      <Label fx:id="itemCostLabel" layoutX="668.0" layoutY="318.0" text="Item Cost ">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="addToCartBtn" layoutX="874.0" layoutY="480.0" mnemonicParsing="false" onAction="#handle" prefHeight="62.0" prefWidth="159.0" text="Add to Cart">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="addBtn" layoutX="734.0" layoutY="480.0" mnemonicParsing="false" onAction="#handle" text="+" />
+      <Button fx:id="subBtn" layoutX="734.0" layoutY="511.0" mnemonicParsing="false" onAction="#handle" prefHeight="31.0" prefWidth="31.0" text="-" />
+      <TextField fx:id="quantityTextField" layoutX="668.0" layoutY="480.0" prefHeight="62.0" prefWidth="66.0" text="0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </TextField>
       <!--  THESE COMPONENTS ARE USED ACCROSS ALL VIEWS -->
    </children>
 </AnchorPane>

@@ -19,6 +19,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -56,10 +57,16 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 	// Ex: MainController.selectedOption
 	// Default vaulues for these variables are set in initialize when the application is launched
 	public static Customer user;
-	public static String selectedOption;           // currently unused
+	public static Cart cart;
+	public static Item curItem;
+	public static int selectedOption;           // currently unused
 	public static Item selectedItem;
+	public static String backwardView;
+	public static String forwardView;
 	public static boolean isLoggedIn = false;      // used in various Controllers
 	public static boolean justLaunched = true;     // only used in the MainController to see if the app was just launched
+	
+	private String curFxml = "../View/Main.fxml";
 	
 	ArrayList<String>options = new ArrayList<String>();
 	
@@ -79,32 +86,29 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 	Button cartBtn;
 	@FXML
 	ComboBox<String> optionsComboBox;
+	@FXML
+	TextField searchBox;
 		
 	@Override
 	public void handle(ActionEvent e) {
 				
 		if( e.getSource() == homeBtn ) {
 			
-			passVar();
 			goToView("../View/Main.fxml");
 		}
 		
 		else if( loginBtn == e.getSource()) {
 
-			passVar();
 			goToView("../View/Login.fxml");
 		}
 		
 		else if( searchBtn == e.getSource()) {
 
-			passVar();
 			goToView("../View/Search.fxml");
 		}
 		
 		else if( settingsBtn == e.getSource()) {
-			
-			passVar();
-			
+					
 			if(true == isLoggedIn) {
 				goToView("../View/Settings.fxml");
 			}
@@ -118,28 +122,32 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 		
 		else if( cartBtn == e.getSource()) {
 
-			passVar();
 			goToView("../View/Cart.fxml");
 		}
 		
 		else if( leftBtn == e.getSource()) {
 			
+			goToView(backwardView);
 		}
 		
 		else if( rightBtn == e.getSource()) {
-			
+			forwardTrick();
+			goToView(forwardView);
 		}
 	}
 	
 	// set the variables in MainController before switching views
 	public void passVar() {
-		selectedOption = optionsComboBox.getSelectionModel().getSelectedItem().toString();
+		selectedOption = optionsComboBox.getSelectionModel().getSelectedIndex();
 	}
 	
 	// code to simplify changing views
 	public void goToView(String xmlPath) {
 		
 		try {
+			passVar();
+			backwardView = curFxml;
+			forwardView = xmlPath;
 			Parent root = FXMLLoader.load(getClass().getResource(xmlPath));
 			Main.stage.setScene(new Scene(root, 1200, 800));
 			Main.stage.show();
@@ -149,6 +157,12 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 			System.out.print("\n\n\tError: Could not change scenes\n\n");
 			error.printStackTrace();
 		}
+	}
+	
+	public void forwardTrick() {
+		String temp = forwardView;
+		forwardView = backwardView;
+		backwardView = temp;
 	}
 	
 	@Override
@@ -161,7 +175,7 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 		if( true == justLaunched ) {
 			
 			user = null;
-			selectedOption = "";
+			selectedOption = 0;
 			selectedItem = null;
 			justLaunched = false;
 		}
@@ -199,8 +213,7 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 		// set options for combo box
 		ObservableList<String> observableOptions = FXCollections.observableArrayList(options);
 		optionsComboBox.setItems(observableOptions);
-		optionsComboBox.getSelectionModel().selectFirst();
-		
+		optionsComboBox.getSelectionModel().select(selectedOption);	
 	}
 	
 }

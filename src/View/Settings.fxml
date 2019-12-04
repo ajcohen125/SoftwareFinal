@@ -83,13 +83,16 @@
          </font>
       </Label>
       <Button fx:id="updateBtn" layoutX="1003.0" layoutY="717.0" mnemonicParsing="false" onAction="#handle" prefHeight="46.0" prefWidth="137.0" />
-      <Label fx:id="messageLabel" layoutX="696.0" layoutY="725.0" prefHeight="31.0" prefWidth="214.0" />
       <TextField fx:id="accountAddressTextField" layoutX="784.0" layoutY="316.0" prefHeight="31.0" prefWidth="347.0" />
       <Label layoutX="710.0" layoutY="220.0" text="Email:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
+      <Label fx:id="messageLabel" layoutX="703.0" layoutY="717.0" prefHeight="31.0" prefWidth="214.0" textFill="#b92727">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
       <!--  THESE COMPONENTS ARE USED ACCROSS ALL VIEWS -->
    </children>
 </AnchorPane>
