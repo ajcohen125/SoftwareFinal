@@ -19,11 +19,25 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import Model.*;
 import java.util.ArrayList;
+
+/* TODO
+ * 
+ * I could not get data to display using sample data, so that still needs to be fixed.
+ * 
+ * A table was added.
+ * Load items into an ArrayList in loadSearchData()
+ * The ArrayList is converted to an ObservableList<>
+ * A TableView is created using the ObservableList<>
+ */
 
 public class SearchController implements Initializable, EventHandler<ActionEvent> {
 	
@@ -45,6 +59,15 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 	Button cartBtn;
 	@FXML
 	ComboBox<String> optionsComboBox;
+	
+	// LOCAL
+	@FXML
+	TableView<Item> results;
+
+	ArrayList<Item>loadList;
+	ObservableList<Item>items;
+	// @FXML
+	// TableView<Item>results;
 		
 	@Override
 	public void handle(ActionEvent e) {
@@ -68,9 +91,18 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 		}
 		
 		else if( settingsBtn == e.getSource()) {
-
+			
 			passVar();
-			goToView("../View/Settings.fxml");
+			
+			if(true == MainController.isLoggedIn) {
+				goToView("../View/Settings.fxml");
+			}
+			
+			// redirect user to the login menu if they are not signed in
+			// you need to be signed in to change your account settings
+			else {
+				goToView("../View/Login.fxml");
+			}
 		}
 		
 		else if( cartBtn == e.getSource()) {
@@ -79,11 +111,11 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 			goToView("../View/Cart.fxml");
 		}
 		
-		if( e.getSource() == leftBtn ) {
+		else if( leftBtn == e.getSource()) {
 			
 		}
 		
-		if( e.getSource() == rightBtn ) {
+		else if( rightBtn == e.getSource()) {
 			
 		}
 	}
@@ -112,7 +144,41 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 	public void initialize(URL location, ResourceBundle resources) {
 		
 		System.out.println("Switched to Search View!");
+		
+		loadSearchResults();
+		
 		setUpNavigationBar();
+	}
+	
+	public void loadSearchResults() {
+		
+		// load items to display into an ArrayList
+		loadList = new ArrayList<Item>();
+		loadList.add(new Item("Hello", "There", 1, 2));
+		// loadList.add(...);
+		// loadList.add(...);
+		
+		// create ObservableList from ArrayList
+		items = FXCollections.observableList(loadList);
+		
+		
+		TableColumn<Item, String> idCol = new TableColumn<>("ID");
+		idCol.setCellValueFactory(new PropertyValueFactory<>("ID"));
+		
+		TableColumn<Item, String> nameCol = new TableColumn<>("Name");
+		nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+		
+		TableColumn<Item, Double> priceCol = new TableColumn<>("Price");
+		priceCol.setCellValueFactory(new PropertyValueFactory<>("price"));
+		
+		TableColumn<Item, Integer> quantityCol = new TableColumn<>("Quantity");
+		quantityCol.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+
+		results = new TableView<Item>();
+		results.setItems(items);
+		
+		results.getColumns().addAll(idCol, nameCol, priceCol, quantityCol);
+		
 	}
 	
 	public void setUpNavigationBar() {

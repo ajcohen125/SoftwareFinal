@@ -68,9 +68,18 @@ public class TemplateController implements Initializable, EventHandler<ActionEve
 		}
 		
 		else if( settingsBtn == e.getSource()) {
-
+			
 			passVar();
-			goToView("../View/Settings.fxml");
+			
+			if(true == MainController.isLoggedIn) {
+				goToView("../View/Settings.fxml");
+			}
+			
+			// redirect user to the login menu if they are not signed in
+			// you need to be signed in to change your account settings
+			else {
+				goToView("../View/Login.fxml");
+			}
 		}
 		
 		else if( cartBtn == e.getSource()) {
@@ -79,11 +88,11 @@ public class TemplateController implements Initializable, EventHandler<ActionEve
 			goToView("../View/Cart.fxml");
 		}
 		
-		if( e.getSource() == leftBtn ) {
+		else if( leftBtn == e.getSource()) {
 			
 		}
 		
-		if( e.getSource() == rightBtn ) {
+		else if( rightBtn == e.getSource()) {
 			
 		}
 	}

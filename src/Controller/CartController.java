@@ -19,6 +19,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -45,6 +47,24 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 	Button cartBtn;
 	@FXML
 	ComboBox<String> optionsComboBox;
+	
+	// LOCAL 
+	@FXML
+	Button deleteBtn;
+	@FXML
+	TextField quantityTextField;
+	@FXML
+	Button addBtn;
+	@FXML
+	Button subBtn;
+	@FXML
+	TextField emailTextField;
+	@FXML
+	TextField deliveryAddressTextField;
+	@FXML
+	ComboBox<String> deliveryMethodComboBox;
+	@FXML
+	Label totalLabel;
 		
 	@Override
 	public void handle(ActionEvent e) {
@@ -68,9 +88,18 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		}
 		
 		else if( settingsBtn == e.getSource()) {
-
+			
 			passVar();
-			goToView("../View/Settings.fxml");
+			
+			if(true == MainController.isLoggedIn) {
+				goToView("../View/Settings.fxml");
+			}
+			
+			// redirect user to the login menu if they are not signed in
+			// you need to be signed in to change your account settings
+			else {
+				goToView("../View/Login.fxml");
+			}
 		}
 		
 		else if( cartBtn == e.getSource()) {
@@ -79,11 +108,11 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 			goToView("../View/Cart.fxml");
 		}
 		
-		if( e.getSource() == leftBtn ) {
+		else if( leftBtn == e.getSource()) {
 			
 		}
 		
-		if( e.getSource() == rightBtn ) {
+		else if( rightBtn == e.getSource()) {
 			
 		}
 	}

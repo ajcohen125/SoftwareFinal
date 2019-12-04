@@ -19,11 +19,19 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import Model.*;
 import java.util.ArrayList;
+
+// TODO
+// validateCredentials()
+//     f.y.i User is taken to the home page if login is sucessful
 
 public class LoginController implements Initializable, EventHandler<ActionEvent> {
 	
@@ -45,6 +53,17 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 	Button cartBtn;
 	@FXML
 	ComboBox<String> optionsComboBox;
+	
+	@FXML
+	Label loginErrorLabel;
+	@FXML
+	TextField emailTextField;
+	@FXML
+	PasswordField passwordField;
+	@FXML
+	Hyperlink signUpHyperLink;
+	@FXML
+	Button realLoginBtn;
 		
 	@Override
 	public void handle(ActionEvent e) {
@@ -68,9 +87,18 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 		}
 		
 		else if( settingsBtn == e.getSource()) {
-
+			
 			passVar();
-			goToView("../View/Settings.fxml");
+			
+			if(true == MainController.isLoggedIn) {
+				goToView("../View/Settings.fxml");
+			}
+			
+			// redirect user to the login menu if they are not signed in
+			// you need to be signed in to change your account settings
+			else {
+				goToView("../View/Login.fxml");
+			}
 		}
 		
 		else if( cartBtn == e.getSource()) {
@@ -79,13 +107,46 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 			goToView("../View/Cart.fxml");
 		}
 		
-		if( e.getSource() == leftBtn ) {
+		else if( leftBtn == e.getSource()) {
 			
 		}
 		
-		if( e.getSource() == rightBtn ) {
+		else if( rightBtn == e.getSource()) {
 			
 		}
+		
+		// LOCAL
+		
+		else if( realLoginBtn == e.getSource()) {
+			
+			if(validateCredentials() == true) {
+				
+				MainController.isLoggedIn = true;
+				goToView("../View/Main.fxml");
+			}
+			
+			else {
+				loginErrorLabel.setText("Incorrect email and/or password");
+			}
+		}
+		
+		else if( signUpHyperLink == e.getSource()) {
+			
+			goToView("../View/Settings.fxml");
+		}
+	}
+	
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	
+	public boolean validateCredentials() {
+		
+		// TODO: database stuff
+		
+		return true;
 	}
 	
 	// set the variables in MainController before switching views
@@ -110,6 +171,11 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
+		// If the user is logging out
+		if(MainController.isLoggedIn == true) {
+			MainController.isLoggedIn = false;
+		}
 		
 		System.out.println("Switched to Login View!");
 		setUpNavigationBar();

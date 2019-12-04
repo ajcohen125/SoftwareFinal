@@ -25,14 +25,41 @@ import javafx.scene.image.ImageView;
 import Model.*;
 import java.util.ArrayList;
 
+
+/* TODO
+ * 
+ * MainController
+ * Home page
+ * 
+ * VIEWS THAT DEAL WITH ACCOUNT INFORMATION
+ * 
+ * LoginController
+ * Write validateCredentials()
+ * 
+ * SettingsController
+ * Write updateAccountInfo() and createAccount()
+ * 
+ * VIEWS WHAT DEAL WITH ITEMS STUFF
+ * 
+ * SearchController
+ * Upload item data to the TableView
+ * We had trouble displaying sample data
+ * Most of the TableView data is there, but something is off
+ * 
+ * CartController
+ * 
+ */
 public class MainController implements Initializable, EventHandler<ActionEvent> {
 	
 	// VARIABLES WE WANT TO ACCESS ACROSS ALL VIEWS
 	// THESE VARIABLES ARE EXCLUSIVE TO THE MAIN CONTROLLER
 	// Ex: MainController.selectedOption
-	public static String selectedOption;
-	public static boolean isLoggedIn = false;
-	public static boolean justLaunched = true;
+	// Default vaulues for these variables are set in initialize when the application is launched
+	public static Customer user;
+	public static String selectedOption;           // currently unused
+	public static Item selectedItem;
+	public static boolean isLoggedIn = false;      // used in various Controllers
+	public static boolean justLaunched = true;     // only used in the MainController to see if the app was just launched
 	
 	ArrayList<String>options = new ArrayList<String>();
 	
@@ -75,9 +102,18 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 		}
 		
 		else if( settingsBtn == e.getSource()) {
-
+			
 			passVar();
-			goToView("../View/Settings.fxml");
+			
+			if(true == isLoggedIn) {
+				goToView("../View/Settings.fxml");
+			}
+			
+			// redirect user to the login menu if they are not signed in
+			// you need to be signed in to change your account settings
+			else {
+				goToView("../View/Login.fxml");
+			}
 		}
 		
 		else if( cartBtn == e.getSource()) {
@@ -86,11 +122,11 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 			goToView("../View/Cart.fxml");
 		}
 		
-		if( e.getSource() == leftBtn ) {
+		else if( leftBtn == e.getSource()) {
 			
 		}
 		
-		if( e.getSource() == rightBtn ) {
+		else if( rightBtn == e.getSource()) {
 			
 		}
 	}
@@ -124,6 +160,9 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 		// if the program was launched for the first time
 		if( true == justLaunched ) {
 			
+			user = null;
+			selectedOption = "";
+			selectedItem = null;
 			justLaunched = false;
 		}
 		
