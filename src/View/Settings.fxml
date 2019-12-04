@@ -30,7 +30,7 @@
       </Label>
       <TextField fx:id="accountNameTextField" layoutX="164.0" layoutY="218.0" prefHeight="31.0" prefWidth="347.0" />
       <TextField fx:id="accountEmailTextField" layoutX="784.0" layoutY="218.0" prefHeight="31.0" prefWidth="347.0" />
-      <TextField fx:id="cardNumberTextField" layoutX="163.0" layoutY="629.0" prefHeight="31.0" prefWidth="347.0" />
+      <TextField fx:id="cardNumberTextField" layoutX="164.0" layoutY="531.0" prefHeight="31.0" prefWidth="347.0" />
       <Label layoutX="500.0" layoutY="137.0" text="General Information">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -53,8 +53,8 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="cardAddressTextField" layoutX="163.0" layoutY="727.0" prefHeight="31.0" prefWidth="347.0" />
-      <TextField fx:id="cardCCVTextField" layoutX="166.0" layoutY="531.0" prefHeight="31.0" prefWidth="347.0" />
+      <TextField fx:id="cardAddressTextField" layoutX="164.0" layoutY="629.0" prefHeight="31.0" prefWidth="347.0" />
+      <TextField fx:id="cardCVVTextField" layoutX="164.0" layoutY="717.0" prefHeight="31.0" prefWidth="347.0" />
       <TextField fx:id="cardExpDateTextField" layoutX="793.0" layoutY="629.0" prefHeight="31.0" prefWidth="347.0" />
       <TextField fx:id="cardFullNameTextField" layoutX="793.0" layoutY="531.0" prefHeight="31.0" prefWidth="347.0" />
       <Label layoutX="38.0" layoutY="533.0" text="Card Number:">
@@ -62,7 +62,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="113.0" layoutY="719.0" text="CCV:">
+      <Label layoutX="113.0" layoutY="719.0" text="CVV:">
          <font>
             <Font size="18.0" />
          </font>

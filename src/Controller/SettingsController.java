@@ -80,7 +80,7 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 	@FXML
 	TextField cardAddressTextField;
 	@FXML
-	TextField cardCCVTextField;
+	TextField cardCVVTextField;
 	@FXML
 	TextField cardExpDateTextField;
 		
@@ -226,7 +226,7 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 		cardNumberTextField.setText(MainController.user.getPayment().getCcNum());
 		cardFullNameTextField.setText(MainController.user.getPayment().getName());
 		cardAddressTextField.setText(MainController.user.getPayment().getAddress());
-		cardCCVTextField.setText(MainController.user.getPayment().getCcNum());
+		cardCVVTextField.setText(MainController.user.getPayment().getCVV());
 		cardExpDateTextField.setText(MainController.user.getPayment().getExpDate());
 	}
 	
@@ -241,7 +241,7 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 			cardNumberTextField.getText().isEmpty() ||
 			cardFullNameTextField.getText().isEmpty() ||
 			cardAddressTextField.getText().isEmpty() ||
-			cardCCVTextField.getText().isEmpty() ||
+			cardCVVTextField.getText().isEmpty() ||
 			cardExpDateTextField.getText().isEmpty())
 		{
 			// some fields missing
