@@ -180,27 +180,20 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 			items.add(name);
 		}
 		
-		//TableColumn<Item, String> idCol = new TableColumn<>("ID");
 		idCol.setCellValueFactory(new PropertyValueFactory<Item, String>("ID"));
 		
-		//TableColumn<Item, String> nameCol = new TableColumn<>("Name");
 		nameCol.setCellValueFactory(new PropertyValueFactory<Item, String>("name"));
 		
-		//TableColumn<Item, Double> priceCol = new TableColumn<>("Price");
 		priceCol.setCellValueFactory(new PropertyValueFactory<Item, Double>("price"));
 		
-		//TableColumn<Item, Integer> quantityCol = new TableColumn<>("Quantity");
 		quantityCol.setCellValueFactory(new PropertyValueFactory<Item, Integer>("quantity"));
 
-		//results = new TableView<Item>();
 		results.setItems(items);
 		
 		results.getSortOrder().add(nameCol);
 		
 		results.getSelectionModel().select(null);
-		
-		//results.getColumns().addAll(idCol, nameCol, priceCol, quantityCol);
-		
+				
 	}
 	
 	public void setUpNavigationBar() {
