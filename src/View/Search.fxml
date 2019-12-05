@@ -23,8 +23,10 @@
       <Button fx:id="rightBtn" layoutX="75.0" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
       <TableView fx:id="results" layoutX="75.0" layoutY="148.0" prefHeight="585.0" prefWidth="1048.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="priceCol" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="quantityCol" prefWidth="75.0" text="Quantity" />
+            <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
         </columns>
       </TableView>
       <!--  THESE COMPONENTS ARE USED ACCROSS ALL VIEWS -->

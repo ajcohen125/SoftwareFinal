@@ -67,6 +67,14 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 	// LOCAL
 	@FXML
 	TableView<Item> results;
+	@FXML
+	TableColumn<Item, String> idCol;
+	@FXML
+	TableColumn<Item, String> nameCol;
+	@FXML
+	TableColumn<Item, Double> priceCol;
+	@FXML
+	TableColumn<Item, Integer> quantityCol;
 
 	ArrayList<Item>loadList;
 	ObservableList<Item>items;
@@ -167,25 +175,31 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 		// loadList.add(...);
 		
 		// create ObservableList from ArrayList
-		items = FXCollections.observableList(loadList);
+		ObservableList<Item> items = FXCollections.observableArrayList();
+		for (Item name: loadList) {
+			items.add(name);
+		}
 		
+		//TableColumn<Item, String> idCol = new TableColumn<>("ID");
+		idCol.setCellValueFactory(new PropertyValueFactory<Item, String>("ID"));
 		
-		TableColumn<Item, String> idCol = new TableColumn<>("ID");
-		idCol.setCellValueFactory(new PropertyValueFactory<>("ID"));
+		//TableColumn<Item, String> nameCol = new TableColumn<>("Name");
+		nameCol.setCellValueFactory(new PropertyValueFactory<Item, String>("name"));
 		
-		TableColumn<Item, String> nameCol = new TableColumn<>("Name");
-		nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+		//TableColumn<Item, Double> priceCol = new TableColumn<>("Price");
+		priceCol.setCellValueFactory(new PropertyValueFactory<Item, Double>("price"));
 		
-		TableColumn<Item, Double> priceCol = new TableColumn<>("Price");
-		priceCol.setCellValueFactory(new PropertyValueFactory<>("price"));
-		
-		TableColumn<Item, Integer> quantityCol = new TableColumn<>("Quantity");
-		quantityCol.setCellValueFactory(new PropertyValueFactory<>("quantity"));
+		//TableColumn<Item, Integer> quantityCol = new TableColumn<>("Quantity");
+		quantityCol.setCellValueFactory(new PropertyValueFactory<Item, Integer>("quantity"));
 
-		results = new TableView<Item>();
+		//results = new TableView<Item>();
 		results.setItems(items);
 		
-		results.getColumns().addAll(idCol, nameCol, priceCol, quantityCol);
+		results.getSortOrder().add(nameCol);
+		
+		results.getSelectionModel().select(null);
+		
+		//results.getColumns().addAll(idCol, nameCol, priceCol, quantityCol);
 		
 	}
 	
