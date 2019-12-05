@@ -19,6 +19,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -27,7 +29,11 @@ import java.util.ArrayList;
 
 public class CartController implements Initializable, EventHandler<ActionEvent> {
 	
+	private final int STANDARD = 0;
+	private final int EXPEDITED = 0;
+	
 	ArrayList<String>options = new ArrayList<String>();
+	private String curFxml = "../View/Cart.fxml";
 	
 	@FXML
 	Button leftBtn;
@@ -45,58 +51,122 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 	Button cartBtn;
 	@FXML
 	ComboBox<String> optionsComboBox;
+	@FXML
+	TextField searchBox;
+	
+	// LOCAL 
+	@FXML
+	Button deleteBtn;
+	@FXML
+	TextField quantityTextField;
+	@FXML
+	Button addBtn;
+	@FXML
+	Button subBtn;
+	@FXML
+	TextField emailTextField;
+	@FXML
+	TextField deliveryAddressTextField;
+	@FXML
+	TextField cardNumberTextField;
+	@FXML
+	ComboBox<String> deliveryMethodComboBox;
+	@FXML
+	Label totalLabel;
+	@FXML
+	Label messageLabel;
+	@FXML
+	Button placeOrderBtn;
 		
 	@Override
 	public void handle(ActionEvent e) {
 				
 		if( e.getSource() == homeBtn ) {
 			
-			passVar();
 			goToView("../View/Main.fxml");
 		}
 		
 		else if( loginBtn == e.getSource()) {
 
-			passVar();
 			goToView("../View/Login.fxml");
 		}
 		
 		else if( searchBtn == e.getSource()) {
 
-			passVar();
 			goToView("../View/Search.fxml");
 		}
 		
 		else if( settingsBtn == e.getSource()) {
-
-			passVar();
-			goToView("../View/Settings.fxml");
+			
+			if(true == MainController.isLoggedIn) {
+				goToView("../View/Settings.fxml");
+			}
+			
+			// redirect user to the login menu if they are not signed in
+			// you need to be signed in to change your account settings
+			else {
+				goToView("../View/Login.fxml");
+			}
 		}
 		
 		else if( cartBtn == e.getSource()) {
 
-			passVar();
 			goToView("../View/Cart.fxml");
 		}
 		
-		if( e.getSource() == leftBtn ) {
+		else if( leftBtn == e.getSource()) {
+			goToView(MainController.backwardView);
+		}
+		
+		else if( rightBtn == e.getSource()) {
+			forwardTrick();
+			goToView(MainController.forwardView);
+		}
+		
+		else if ( deleteBtn == e.getSource()) {
 			
 		}
 		
-		if( e.getSource() == rightBtn ) {
+		else if( addBtn == e.getSource()) {
+			System.out.println("addBtn");
+			int val = Integer.parseInt(quantityTextField.getText());
+			val += 1;
+			quantityTextField.setText(val+"");
+		}
+		
+		else if ( subBtn == e.getSource()) {
+			int val = Integer.parseInt(quantityTextField.getText());
 			
+			if(val > 0) {
+				val -= 1;
+				quantityTextField.setText(val+"");
+			}
+		}
+		
+		else if( placeOrderBtn == e.getSource()) {
+			
+			if(MainController.isLoggedIn == true) {
+				goToView("../View/Receipt.fxml");
+			}
+			
+			else {
+				messageLabel.setText("Please sign in");
+			}
 		}
 	}
 	
 	// set the variables in MainController before switching views
 	public void passVar() {
-		MainController.selectedOption = optionsComboBox.getSelectionModel().getSelectedItem().toString();
+		MainController.selectedOption = optionsComboBox.getSelectionModel().getSelectedIndex();
 	}
 	
 	// code to simplify changing views
 	public void goToView(String xmlPath) {
 		
 		try {
+			passVar();
+			MainController.backwardView = curFxml;
+			MainController.forwardView = xmlPath;
 			Parent root = FXMLLoader.load(getClass().getResource(xmlPath));
 			Main.stage.setScene(new Scene(root, 1200, 800));
 			Main.stage.show();
@@ -108,11 +178,34 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		}
 	}
 	
+	public void forwardTrick() {
+		String temp = MainController.forwardView;
+		MainController.forwardView = MainController.backwardView;
+		MainController.backwardView = temp;
+	}
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
 		System.out.println("Switched to Cart Controller!");
 		setUpNavigationBar();
+		quantityTextField.setEditable(false);
+		
+		if( true == MainController.isLoggedIn) {
+			emailTextField.setText(MainController.user.getEmail());
+			deliveryAddressTextField.setText(MainController.user.getAddress());
+			String cardNumber = MainController.user.getPayment().getCcNum();
+			cardNumberTextField.setText("XXXX-XXXX-XXXX-"+cardNumber.substring(cardNumber.length()-4));
+			
+			emailTextField.setEditable(false);
+			deliveryAddressTextField.setEditable(false);
+			cardNumberTextField.setEditable(false);
+		}
+		
+		// disallow interacting with components if not signed in
+		else {
+			deliveryMethodComboBox.setDisable(true);
+		}
 	}
 	
 	public void setUpNavigationBar() {
@@ -144,7 +237,7 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		ObservableList<String> observableOptions = FXCollections.observableArrayList(options);
 		optionsComboBox.setItems(observableOptions);
 		optionsComboBox.getSelectionModel().selectFirst();
-		
+		optionsComboBox.getSelectionModel().select(MainController.selectedOption);
 	}
 	
 }

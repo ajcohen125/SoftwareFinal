@@ -19,6 +19,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -45,6 +46,8 @@ public class TemplateController implements Initializable, EventHandler<ActionEve
 	Button cartBtn;
 	@FXML
 	ComboBox<String> optionsComboBox;
+	@FXML
+	TextField searchBox;
 		
 	@Override
 	public void handle(ActionEvent e) {
@@ -68,9 +71,18 @@ public class TemplateController implements Initializable, EventHandler<ActionEve
 		}
 		
 		else if( settingsBtn == e.getSource()) {
-
+			
 			passVar();
-			goToView("../View/Settings.fxml");
+			
+			if(true == MainController.isLoggedIn) {
+				goToView("../View/Settings.fxml");
+			}
+			
+			// redirect user to the login menu if they are not signed in
+			// you need to be signed in to change your account settings
+			else {
+				goToView("../View/Login.fxml");
+			}
 		}
 		
 		else if( cartBtn == e.getSource()) {
@@ -79,18 +91,19 @@ public class TemplateController implements Initializable, EventHandler<ActionEve
 			goToView("../View/Cart.fxml");
 		}
 		
-		if( e.getSource() == leftBtn ) {
-			
+		else if( leftBtn == e.getSource()) {
+			goToView(MainController.backwardView);
 		}
 		
-		if( e.getSource() == rightBtn ) {
-			
+		else if( rightBtn == e.getSource()) {
+			forwardTrick();
+			goToView(MainController.forwardView);
 		}
 	}
 	
 	// set the variables in MainController before switching views
 	public void passVar() {
-		MainController.selectedOption = optionsComboBox.getSelectionModel().getSelectedItem().toString();
+		MainController.selectedOption = optionsComboBox.getSelectionModel().getSelectedIndex();
 	}
 	
 	// code to simplify changing views
@@ -106,6 +119,12 @@ public class TemplateController implements Initializable, EventHandler<ActionEve
 			System.out.print("\n\n\tError: Could not change scenes\n\n");
 			error.printStackTrace();
 		}
+	}
+	
+	public void forwardTrick() {
+		String temp = MainController.forwardView;
+		MainController.forwardView = MainController.backwardView;
+		MainController.backwardView = temp;
 	}
 	
 	@Override
@@ -144,7 +163,7 @@ public class TemplateController implements Initializable, EventHandler<ActionEve
 		ObservableList<String> observableOptions = FXCollections.observableArrayList(options);
 		optionsComboBox.setItems(observableOptions);
 		optionsComboBox.getSelectionModel().selectFirst();
-		
+		optionsComboBox.getSelectionModel().select(MainController.selectedOption);
 	}
 	
 }

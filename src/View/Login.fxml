@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.shape.*?>
@@ -21,6 +22,42 @@
       <ComboBox fx:id="optionsComboBox" layoutX="694.0" prefHeight="75.0" prefWidth="281.0" />
       <Button fx:id="leftBtn" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
       <Button fx:id="rightBtn" layoutX="75.0" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
+      <ImageView fitHeight="254.0" fitWidth="342.0" layoutX="473.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/fullLogo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="571.0" layoutY="126.0" text="Login" textFill="#6b6565">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="243.0" layoutY="512.0" text="email:" textFill="#6b6565">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="200.0" layoutY="583.0" text="password:" textFill="#6b6565">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="realLoginBtn" layoutX="529.0" layoutY="682.0" mnemonicParsing="false" onAction="#handle" prefHeight="53.0" prefWidth="144.0" style="-fx-background-color: #fce303;" text="LOGIN">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#00000063" />
+         </effect>
+      </Button>
+      <PasswordField fx:id="passwordField" layoutX="403.0" layoutY="578.0" prefHeight="45.0" prefWidth="395.0" />
+      <TextField fx:id="emailTextfield" layoutX="404.0" layoutY="507.0" prefHeight="45.0" prefWidth="395.0" />
+      <Hyperlink fx:id="signUpHyperLink" layoutX="488.0" layoutY="623.0" onAction="#handle" prefHeight="29.0" prefWidth="224.0" text="Don't have an account? Sign up" />
+      <Label fx:id="loginErrorLabel" layoutX="463.0" layoutY="457.0" textFill="#bc5a5a">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
       <!--  THESE COMPONENTS ARE USED ACCROSS ALL VIEWS -->
    </children>
 </AnchorPane>

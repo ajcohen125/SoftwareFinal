@@ -19,15 +19,24 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import Model.*;
 import java.util.ArrayList;
 
+// TODO
+// validateCredentials()
+//     f.y.i User is taken to the home page if login is sucessful
+
 public class LoginController implements Initializable, EventHandler<ActionEvent> {
 	
 	ArrayList<String>options = new ArrayList<String>();
+	private String curFxml = "../View/Login.fxml";
 	
 	@FXML
 	Button leftBtn;
@@ -45,58 +54,112 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 	Button cartBtn;
 	@FXML
 	ComboBox<String> optionsComboBox;
+	@FXML
+	TextField searchBox;
+	
+	@FXML
+	Label loginErrorLabel;
+	@FXML
+	TextField emailTextField;
+	@FXML
+	PasswordField passwordField;
+	@FXML
+	Hyperlink signUpHyperLink;
+	@FXML
+	Button realLoginBtn;
 		
 	@Override
 	public void handle(ActionEvent e) {
 				
 		if( e.getSource() == homeBtn ) {
 			
-			passVar();
 			goToView("../View/Main.fxml");
 		}
 		
 		else if( loginBtn == e.getSource()) {
 
-			passVar();
 			goToView("../View/Login.fxml");
 		}
 		
 		else if( searchBtn == e.getSource()) {
 
-			passVar();
 			goToView("../View/Search.fxml");
 		}
 		
 		else if( settingsBtn == e.getSource()) {
-
-			passVar();
-			goToView("../View/Settings.fxml");
+			
+			if(true == MainController.isLoggedIn) {
+				goToView("../View/Settings.fxml");
+			}
+			
+			// redirect user to the login menu if they are not signed in
+			// you need to be signed in to change your account settings
+			else {
+				goToView("../View/Login.fxml");
+			}
 		}
 		
 		else if( cartBtn == e.getSource()) {
 
-			passVar();
 			goToView("../View/Cart.fxml");
 		}
 		
-		if( e.getSource() == leftBtn ) {
-			
+		else if( leftBtn == e.getSource()) {
+			goToView(MainController.backwardView);
 		}
 		
-		if( e.getSource() == rightBtn ) {
-			
+		else if( rightBtn == e.getSource()) {
+			forwardTrick();
+			goToView(MainController.forwardView);
 		}
+		
+		// LOCAL
+		
+		else if( realLoginBtn == e.getSource()) {
+			
+			if(validateCredentials() == true) {
+				
+				MainController.isLoggedIn = true;
+				MainController.user = Customer.dummyCustomer();
+				goToView("../View/Main.fxml");
+			}
+			
+			else {
+				loginErrorLabel.setText("Incorrect email and/or password");
+			}
+		}
+		
+		else if( signUpHyperLink == e.getSource()) {
+			
+			goToView("../View/Settings.fxml");
+		}
+	}
+	
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	
+	public boolean validateCredentials() {
+		
+		// TODO: database stuff
+		
+		return true;
 	}
 	
 	// set the variables in MainController before switching views
 	public void passVar() {
-		MainController.selectedOption = optionsComboBox.getSelectionModel().getSelectedItem().toString();
+		MainController.selectedOption = optionsComboBox.getSelectionModel().getSelectedIndex();
 	}
 	
 	// code to simplify changing views
 	public void goToView(String xmlPath) {
 		
 		try {
+			passVar();
+			MainController.backwardView = curFxml;
+			MainController.forwardView = xmlPath;
 			Parent root = FXMLLoader.load(getClass().getResource(xmlPath));
 			Main.stage.setScene(new Scene(root, 1200, 800));
 			Main.stage.show();
@@ -108,8 +171,19 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 		}
 	}
 	
+	public void forwardTrick() {
+		String temp = MainController.forwardView;
+		MainController.forwardView = MainController.backwardView;
+		MainController.backwardView = temp;
+	}
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
+		// If the user is logging out
+		if(MainController.isLoggedIn == true) {
+			MainController.isLoggedIn = false;
+		}
 		
 		System.out.println("Switched to Login View!");
 		setUpNavigationBar();
@@ -144,7 +218,7 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 		ObservableList<String> observableOptions = FXCollections.observableArrayList(options);
 		optionsComboBox.setItems(observableOptions);
 		optionsComboBox.getSelectionModel().selectFirst();
-		
+		optionsComboBox.getSelectionModel().select(MainController.selectedOption);
 	}
 	
 }
