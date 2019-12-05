@@ -19,31 +19,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import Model.*;
 import java.util.ArrayList;
 
-/* TODO
- * 
- * I could not get data to display using sample data, so that still needs to be fixed.
- * 
- * A table was added.
- * Load items into an ArrayList in loadSearchData()
- * The ArrayList is converted to an ObservableList<>
- * A TableView is created using the ObservableList<>
- */
-
-public class SearchController implements Initializable, EventHandler<ActionEvent> {
+public class ReceiptController implements Initializable, EventHandler<ActionEvent> {
 	
 	ArrayList<String>options = new ArrayList<String>();
-	private String curFxml = "../View/Search.fxml";
+	private String curFxml = "../View/Receipt.fxml";
 	
 	@FXML
 	Button leftBtn;
@@ -66,40 +53,32 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 	
 	// LOCAL
 	@FXML
-	TableView<Item> results;
-	@FXML
-	TableColumn<Item, String> idCol;
-	@FXML
-	TableColumn<Item, String> nameCol;
-	@FXML
-	TableColumn<Item, Double> priceCol;
-	@FXML
-	TableColumn<Item, Integer> quantityCol;
-
-	ArrayList<Item>loadList;
-	ObservableList<Item>items;
-	// @FXML
-	// TableView<Item>results;
+	Label emailedToLabel;
 		
 	@Override
 	public void handle(ActionEvent e) {
 				
 		if( e.getSource() == homeBtn ) {
 			
+			passVar();
 			goToView("../View/Main.fxml");
 		}
 		
 		else if( loginBtn == e.getSource()) {
 
+			passVar();
 			goToView("../View/Login.fxml");
 		}
 		
 		else if( searchBtn == e.getSource()) {
 
+			passVar();
 			goToView("../View/Search.fxml");
 		}
 		
 		else if( settingsBtn == e.getSource()) {
+			
+			passVar();
 			
 			if(true == MainController.isLoggedIn) {
 				goToView("../View/Settings.fxml");
@@ -114,6 +93,7 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 		
 		else if( cartBtn == e.getSource()) {
 
+			passVar();
 			goToView("../View/Cart.fxml");
 		}
 		
@@ -136,9 +116,6 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 	public void goToView(String xmlPath) {
 		
 		try {
-			passVar();
-			MainController.backwardView = curFxml;
-			MainController.forwardView = xmlPath;
 			Parent root = FXMLLoader.load(getClass().getResource(xmlPath));
 			Main.stage.setScene(new Scene(root, 1200, 800));
 			Main.stage.show();
@@ -159,41 +136,9 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
-		System.out.println("Switched to Search View!");
-		
-		loadSearchResults();
-		
+		System.out.print("Switched Views!");
 		setUpNavigationBar();
-	}
-	
-	public void loadSearchResults() {
-		
-		// load items to display into an ArrayList
-		loadList = new ArrayList<Item>();
-		loadList.add(new Item("Hello", "There", 1, 2));
-		// loadList.add(...);
-		// loadList.add(...);
-		
-		// create ObservableList from ArrayList
-		ObservableList<Item> items = FXCollections.observableArrayList();
-		for (Item name: loadList) {
-			items.add(name);
-		}
-		
-		idCol.setCellValueFactory(new PropertyValueFactory<Item, String>("ID"));
-		
-		nameCol.setCellValueFactory(new PropertyValueFactory<Item, String>("name"));
-		
-		priceCol.setCellValueFactory(new PropertyValueFactory<Item, Double>("price"));
-		
-		quantityCol.setCellValueFactory(new PropertyValueFactory<Item, Integer>("quantity"));
-
-		results.setItems(items);
-		
-		results.getSortOrder().add(nameCol);
-		
-		results.getSelectionModel().select(null);
-				
+		emailedToLabel.setText("Receipt was emailed to "+MainController.user.getEmail());
 	}
 	
 	public void setUpNavigationBar() {

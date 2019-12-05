@@ -29,6 +29,36 @@ public class Cart {
       this.totalCost = totalCost;
     }
     
+    public void addItem(int ID) {
+    	
+    	// TODO
+    	// TODO
+    	// TODO
+    	// TODO
+    	// TODO
+    	
+    }
+    
+    public void removeItem(int ID) {
+    	
+    	// TODO
+    	// TODO
+    	// TODO
+    	// TODO
+    	// TODO
+    	
+    }
+    
+    public void updateItemQuantity(int ID, int newQuantity) {
+    	
+    	// TODO
+    	// TODO
+    	// TODO
+    	// TODO
+    	// TODO
+    	
+    }
+    
     public String toString() {
     	
     	String s = "";
