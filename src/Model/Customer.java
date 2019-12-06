@@ -33,7 +33,7 @@ public class Customer {
     // String ccNum, String expDate, String name, String CVV, String address
     public static Customer dummyCustomer() {
     	
-    	Payment p = new Payment("111122223333", "12/34", "John A Smith", "123", "123 Nunya Biz");
+    	Payment p = new Payment("111122223333", "12-34", "John A Smith", "123", "123 Nunya Biz");
     	Customer c = new Customer("John Smith", "johnsmith@gmail.com", "drowssap", "UTSA blvd", p, 10);
     	return c;
     }

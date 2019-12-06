@@ -1,58 +1,45 @@
+
 package Database;
+import java.sql.*;
 
 	public class DataBase {
 
-	    public static String reciept(String names, String values) {
+	    public static int update(String sql) {
 
 	        java.sql.Connection conn = linktodata();
-
-	        String todo = ("INSERT into staff " +
-	                "(" + names + ") values (" + values + ")");
+	        int r = -2;
 
 	        try {
 	            java.sql.Statement s = conn.createStatement();
-	            int r = s.executeUpdate (todo);
+	            r = s.executeUpdate (sql);
 	        }
 	        catch (Exception e) {
-	            return ("Oh oops - code 003\n"+e);
+	            System.out.println(e);
 	        }
 
-	        return (todo);
+	        return (r);
 
 	    }
 
-	    public static String select(String [] fields, String selector) {
+	    public static ResultSet select(String sql) {
 
 	        java.sql.Connection conn = linktodata();
 
-	        StringBuffer reply = new StringBuffer("<table border=1>");
-
-	        String todo = ("SELECT * "+
-	                " from staff " + selector);
+	        java.sql.ResultSet r = null;
 
 	        try {
 	            java.sql.Statement s = conn.createStatement();
-	            java.sql.ResultSet r = s.executeQuery (todo);
-	            while(r.next()) {
-	                reply.append("<tr>");
-	                for (int i=0;i<fields.length;i++) {
-	                    reply.append(tabit(r.getString(fields[i])));
-	                }
-	                reply.append("</tr>");
-	            }
-	            reply.append("</table>");
+	            r = s.executeQuery (sql);	           
+	           
 	        }
 	        catch (Exception e) {
-	            return ("Oh oops - code 003\n"+e);
+	            return (null);
 	        }
 
-	        return (reply.toString());
+	        return r;
 
 	    }
 
-	    private static String tabit(String box) {
-	        return ("<td>"+box+"</td>");
-	    }
 
 	    private static java.sql.Connection linktodata () {
 
@@ -66,7 +53,8 @@ package Database;
 	        }
 	        try {
 	            conn = java.sql.DriverManager.getConnection(
-	                    "jdbc:mysql://bhajee/J850a?user=jtest&password=");
+	            		"jdbc:mysql://easel2.fulgentcorp.com/kbd357",
+	            		"kbd357","ByUMDJDnGk4ak1agMXyw");
 	        }
 	        catch (Exception e) {
 	            return conn;
