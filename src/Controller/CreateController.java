@@ -19,7 +19,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -30,13 +29,12 @@ import Model.*;
 import java.util.ArrayList;
 
 // TODO
-// validateCredentials()
-//     f.y.i User is taken to the home page if login is sucessful
+// Write updateAccountInfo() and createAccount()
 
-public class LoginController implements Initializable, EventHandler<ActionEvent> {
+public class CreateController implements Initializable, EventHandler<ActionEvent> {
 	
 	ArrayList<String>options = new ArrayList<String>();
-	private String curFxml = "../View/Login.fxml";
+	private String curFxml = "../View/Settings.fxml";
 	
 	@FXML
 	Button leftBtn;
@@ -57,16 +55,37 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 	@FXML
 	TextField searchBox;
 	
+	// LOCAL
+	
+	// Both
 	@FXML
-	Label loginErrorLabel;
+	Button updateBtn;
 	@FXML
-	TextField emailTextField;
+	Label messageLabel;
+	
+	// Account Information
 	@FXML
-	PasswordField passwordField;
+	TextField accountNameTextField;
 	@FXML
-	Hyperlink signUpHyperLink;
+	TextField accountAddressTextField;
 	@FXML
-	Button realLoginBtn;
+	TextField accountEmailTextField;
+	@FXML
+	PasswordField accountPasswordField;
+	@FXML
+	PasswordField accountConfirmPasswordField;
+	
+	// Credit Card Information
+	@FXML
+	TextField cardNumberTextField;
+	@FXML
+	TextField cardFullNameTextField;
+	@FXML
+	TextField cardAddressTextField;
+	@FXML
+	PasswordField cardCVVPasswordField;
+	@FXML
+	TextField cardExpDateTextField;
 		
 	@Override
 	public void handle(ActionEvent e) {
@@ -88,15 +107,7 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 		
 		else if( settingsBtn == e.getSource()) {
 			
-			if(true == MainController.isLoggedIn) {
-				goToView("../View/Settings.fxml");
-			}
-			
-			// redirect user to the login menu if they are not signed in
-			// you need to be signed in to change your account settings
-			else {
-				goToView("../View/Login.fxml");
-			}
+			// already here
 		}
 		
 		else if( cartBtn == e.getSource()) {
@@ -113,40 +124,23 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 			goToView(MainController.forwardView);
 		}
 		
-		// LOCAL
-		
-		else if( realLoginBtn == e.getSource()) {
+		else if ( updateBtn == e.getSource()) {
+			System.out.println("Update button pressed");
 			
-			if(validateCredentials() == true) {
+			if( true == allFieldsProvided()) {
 				
-				MainController.isLoggedIn = true;
-				MainController.user = Customer.dummyCustomer();
-				goToView("../View/Main.fxml");
+				if( accountPasswordField.getText().trim() == accountConfirmPasswordField.getText().trim()) {
+					createAccount();
+				}
+				
+				else {
+					messageLabel.setText("Password do not match");
+				}
 			}
-			
 			else {
-				loginErrorLabel.setText("Incorrect email and/or password");
+				messageLabel.setText("Some fields missing");
 			}
 		}
-		
-		else if( signUpHyperLink == e.getSource()) {
-			
-			// Create.fxml is a slight variation of Settings.fxml
-			goToView("../View/Create.fxml");
-		}
-	}
-	
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	
-	public boolean validateCredentials() {
-		
-		// TODO: database stuff
-		
-		return true;
 	}
 	
 	// set the variables in MainController before switching views
@@ -178,15 +172,63 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 		MainController.backwardView = temp;
 	}
 	
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	// TODO
+	
+	// Data is only saved locally
+	// Changes need to be pushed to the database
+	
+	// updates user info
+	public void createAccount() {
 		
-		// If the user is logging out
-		if(MainController.isLoggedIn == true) {
-			MainController.isLoggedIn = false;
+		// Payment p = new Payment("111122223333", "12/34", "John A Smith", "123", "123 Nunya Biz");
+		
+    	Payment p = new Payment(cardNumberTextField.getText().trim(), 
+    			                cardExpDateTextField.getText().trim(),
+    			                cardFullNameTextField.getText().trim(),
+    			                cardCVVPasswordField.getText().trim(),
+    			                cardAddressTextField.getText().trim());
+    	
+    	// Customer c = new Customer("John Smith", "johnsmith@gmail.com", "drowssap", "UTSA blvd", p, 10);
+    	
+    	Customer c = new Customer(accountNameTextField.getText().trim(),
+    			                  accountEmailTextField.getText().trim(),
+    			                  accountPasswordField.getText().trim(),
+    			                  accountAddressTextField.getText().trim(),
+    			                  p,
+                                  0);
+    			                  
+	}
+	
+	// checks to see if all fields were provided
+	// to make life simple, all field will be required when creating an account
+	public boolean allFieldsProvided() {
+		
+		if( accountNameTextField.getText().isEmpty() ||
+			accountAddressTextField.getText().isEmpty() ||
+			accountEmailTextField.getText().isEmpty() ||
+			cardNumberTextField.getText().isEmpty() ||
+			cardFullNameTextField.getText().isEmpty() ||
+			cardAddressTextField.getText().isEmpty() ||
+			cardCVVPasswordField.getText().isEmpty() ||
+			cardExpDateTextField.getText().isEmpty())
+		{
+			// some fields missing
+			return false;
 		}
 		
-		System.out.println("Switched to Login View!");
+		// all field provided
+		return true;
+			
+	}
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+	
+		updateBtn.setText("Sign Up");
 		setUpNavigationBar();
 	}
 	

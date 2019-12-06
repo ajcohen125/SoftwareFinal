@@ -75,6 +75,8 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 	TableColumn<Item, Double> priceCol;
 	@FXML
 	TableColumn<Item, Integer> quantityCol;
+	@FXML
+	Button viewItemBtn;
 
 	ArrayList<Item>loadList;
 	ObservableList<Item>items;

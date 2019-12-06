@@ -68,7 +68,7 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 	@FXML
 	TextField accountAddressTextField;
 	@FXML 
-	TextField accountStoreCreditTextField;
+	TextField accountStoreCreditLabel;
 	@FXML
 	TextField accountEmailTextField;
 	
@@ -79,8 +79,6 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 	TextField cardFullNameTextField;
 	@FXML
 	TextField cardAddressTextField;
-	@FXML
-	TextField cardCVVTextField;
 	@FXML
 	TextField cardExpDateTextField;
 		
@@ -104,15 +102,7 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 		
 		else if( settingsBtn == e.getSource()) {
 			
-			if(true == MainController.isLoggedIn) {
-				goToView("../View/Settings.fxml");
-			}
-			
-			// redirect user to the login menu if they are not signed in
-			// you need to be signed in to change your account settings
-			else {
-				goToView("../View/Login.fxml");
-			}
+			// already here
 		}
 		
 		else if( cartBtn == e.getSource()) {
@@ -131,29 +121,13 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 		
 		else if ( updateBtn == e.getSource()) {
 			System.out.println("Update button pressed");
-			
-			// if signed in
-			if( true == MainController.isLoggedIn ) {
 				
-				if( true == allFieldsProvided()) {
-					updateAccountInfo();
-				}
-				else {
-					messageLabel.setText("Some fields missing");
-				}
+			if( true == allFieldsProvided()) {
+				updateAccountInfo();
 			}
-
-			// if creating an account
 			else {
-				
-				if( true == allFieldsProvided()) {
-					createAccount();
-				}
-				else {
-					messageLabel.setText("Some fields missing");
-				}
+				messageLabel.setText("Some fields missing");
 			}
-			
 		}
 	}
 	
@@ -192,19 +166,24 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 	// TODO
 	// TODO
 	
+	// DATA IS ONLY CHANGED LOCALLY
+	// CHANGES ARE NOT SAVED TO THE DATABASE
+	
 	// updates user info
 	public void updateAccountInfo() {
 		
-	}
-	
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	
-	// creates a new account
-	public void createAccount() {
+		Customer c = MainController.user;
+		
+		c.setName(accountNameTextField.getText().trim());
+		c.setEmail(accountEmailTextField.getText().trim());
+		c.setAddress(accountAddressTextField.getText().trim());
+		
+		Payment p = c.getPayment();
+		
+		p.setCcNum(cardNumberTextField.getText().trim());
+		p.setName(cardFullNameTextField.getText().trim());
+		p.setAddress(cardAddressTextField.getText().trim());
+		p.setExpDate(cardExpDateTextField.getText().trim());
 		
 	}
 	
@@ -221,12 +200,11 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 		
 		accountNameTextField.setText(MainController.user.getName());
 		accountAddressTextField.setText(MainController.user.getAddress()); 
-		accountStoreCreditTextField.setText(MainController.user.getCredit()+"");
+		accountStoreCreditLabel.setText(MainController.user.getCredit()+"");
 		accountEmailTextField.setText(MainController.user.getEmail());
 		cardNumberTextField.setText(MainController.user.getPayment().getCcNum());
 		cardFullNameTextField.setText(MainController.user.getPayment().getName());
 		cardAddressTextField.setText(MainController.user.getPayment().getAddress());
-		cardCVVTextField.setText(MainController.user.getPayment().getCVV());
 		cardExpDateTextField.setText(MainController.user.getPayment().getExpDate());
 	}
 	
@@ -236,12 +214,11 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 		
 		if( accountNameTextField.getText().isEmpty() ||
 			accountAddressTextField.getText().isEmpty() ||
-			accountStoreCreditTextField.getText().isEmpty() ||
+			accountStoreCreditLabel.getText().isEmpty() ||
 			accountEmailTextField.getText().isEmpty() ||
 			cardNumberTextField.getText().isEmpty() ||
 			cardFullNameTextField.getText().isEmpty() ||
 			cardAddressTextField.getText().isEmpty() ||
-			cardCVVTextField.getText().isEmpty() ||
 			cardExpDateTextField.getText().isEmpty())
 		{
 			// some fields missing
@@ -257,18 +234,6 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 	public void initialize(URL location, ResourceBundle resources) {
 		
 		System.out.println("Switched to Settings View!");
-		
-		// if signed in
-		if( true == MainController.isLoggedIn ) {
-			displayUserInfo();
-			updateBtn.setText("Update");
-		}
-		// the only way to get to the SettingsView while signed out is by pressing the 
-		// SignUp link in the LoginView
-		// Therefore, if the user is at this view and not signed in, they are signing up
-		else {
-			updateBtn.setText("Sign Up");
-		}
 		
 		setUpNavigationBar();
 	}
