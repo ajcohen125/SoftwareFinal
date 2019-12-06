@@ -15,6 +15,9 @@ public class Main extends Application {
 	
 	public static Stage stage;
 	public static AnchorPane layout;
+	public static ArrayList<Item> itemList;
+	public static Cart currentCart;
+	public static Item curItem;
 	
 	@Override
 	public void start(Stage primaryStage) {
@@ -28,7 +31,9 @@ public class Main extends Application {
 		
 		// itemList - an array list of EVERY ITEM we have
 		// added a change so I can stage this
-		ArrayList<Item> itemList = new ArrayList<Item>();
+		itemList = new ArrayList<Item>();
+		currentCart = new Cart();
+		
 		String sql = "SELECT * FROM Items;";
 		java.sql.ResultSet r = DataBase.select(sql);
 		try {
@@ -42,12 +47,16 @@ public class Main extends Application {
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
+			System.out.println("error in MYSQL");
 			e.printStackTrace();
 		}
 		
 		for(Item temp: itemList){
 			System.out.println(temp.name);
 		}
+		
+		//TODO: remove this line when we get the full cart set up
+		currentCart.itemList = itemList; //FOR TESTING ONLY
 		
 		// Test for inserting a customer into the DB
 		Customer test = Customer.dummyCustomer();

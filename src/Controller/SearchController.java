@@ -170,15 +170,9 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 	
 	public void loadSearchResults() {
 		
-		// load items to display into an ArrayList
-		loadList = new ArrayList<Item>();
-		loadList.add(new Item("Hello", "There", 1, 2));
-		// loadList.add(...);
-		// loadList.add(...);
-		
 		// create ObservableList from ArrayList
 		ObservableList<Item> items = FXCollections.observableArrayList();
-		for (Item name: loadList) {
+		for (Item name: Main.itemList) {
 			items.add(name);
 		}
 		

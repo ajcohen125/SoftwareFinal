@@ -68,7 +68,7 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 	@FXML
 	TextField accountAddressTextField;
 	@FXML 
-	TextField accountStoreCreditLabel;
+	Label accountStoreCreditLabel;
 	@FXML
 	TextField accountEmailTextField;
 	

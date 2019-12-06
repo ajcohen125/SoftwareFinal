@@ -2,6 +2,9 @@ package Model;
 
 import java.util.*;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 public class Cart {
 
     public ArrayList<Item> itemList;
@@ -58,6 +61,16 @@ public class Cart {
     	// TODO
     	
     }
+    
+    public ObservableList<Item> getAssignmentTableList(){
+		ObservableList<Item> tableList = FXCollections.observableArrayList();
+			
+		for(int i = 0; i < this.getItemList().size(); i++) {
+			tableList.add(itemList.get(i));
+			}
+		
+			return tableList;
+		}
     
     public String toString() {
     	

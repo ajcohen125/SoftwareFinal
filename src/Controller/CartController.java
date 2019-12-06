@@ -20,7 +20,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -77,8 +80,19 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 	Label messageLabel;
 	@FXML
 	Button placeOrderBtn;
-		
+	
+	@FXML
+	TableView<Item> results;	
+	@FXML
+	TableColumn<Item, String> idCol;
+	@FXML
+	TableColumn<Item, String> nameCol;
+	@FXML
+	TableColumn<Item, Double> priceCol;
+	@FXML
+	TableColumn<Item, Integer> quantityCol;
 	@Override
+
 	public void handle(ActionEvent e) {
 				
 		if( e.getSource() == homeBtn ) {
@@ -200,12 +214,36 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 			emailTextField.setEditable(false);
 			deliveryAddressTextField.setEditable(false);
 			cardNumberTextField.setEditable(false);
+			
+			loadCart();
 		}
 		
 		// disallow interacting with components if not signed in
 		else {
 			deliveryMethodComboBox.setDisable(true);
 		}
+	}
+	
+	public void loadCart() {
+		
+		// create ObservableList from ArrayList
+		ObservableList<Item> items = FXCollections.observableArrayList();
+		items = Main.currentCart.getAssignmentTableList();
+		
+		idCol.setCellValueFactory(new PropertyValueFactory<Item, String>("ID"));
+		
+		nameCol.setCellValueFactory(new PropertyValueFactory<Item, String>("name"));
+		
+		priceCol.setCellValueFactory(new PropertyValueFactory<Item, Double>("price"));
+		
+		quantityCol.setCellValueFactory(new PropertyValueFactory<Item, Integer>("quantity"));
+
+		results.setItems(items);
+		
+		results.getSortOrder().add(nameCol);
+		
+		results.getSelectionModel().select(null);
+				
 	}
 	
 	public void setUpNavigationBar() {
