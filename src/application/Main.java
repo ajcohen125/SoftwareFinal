@@ -27,6 +27,7 @@ public class Main extends Application {
 		}
 		
 		// itemList - an array list of EVERY ITEM we have
+		// added a change so I can stage this
 		ArrayList<Item> itemList = new ArrayList<Item>();
 		String sql = "SELECT * FROM Items;";
 		java.sql.ResultSet r = DataBase.select(sql);
