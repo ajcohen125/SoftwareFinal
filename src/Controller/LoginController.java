@@ -2,8 +2,10 @@ package Controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import Database.DataBase;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -117,6 +119,7 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 		
 		else if( realLoginBtn == e.getSource()) {
 			
+			
 			if(validateCredentials() == true) {
 				
 				MainController.isLoggedIn = true;
@@ -145,6 +148,27 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 	public boolean validateCredentials() {
 		
 		// TODO: database stuff
+		String email = "hjt210@my.utsa.edu";
+		String passwordInput = "password";
+		
+		
+		String sql = "SELECT password FROM Customer WHERE email='" + email +"';";
+		
+		java.sql.ResultSet r = DataBase.select(sql);
+		
+		try {
+			System.out.println("trying to get password from database");
+			while(r.next()) {
+				System.out.println(r.getString(1));
+				if (passwordInput.contentEquals(r.getString(1)))
+					return true;
+				else
+					return false;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		return true;
 	}
