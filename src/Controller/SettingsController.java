@@ -234,7 +234,7 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 	public void initialize(URL location, ResourceBundle resources) {
 		
 		System.out.println("Switched to Settings View!");
-		
+		displayUserInfo();
 		setUpNavigationBar();
 	}
 	

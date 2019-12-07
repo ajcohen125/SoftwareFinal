@@ -8,6 +8,14 @@ public class Payment {
     public String CVV;
     public String address;
 
+    public Payment() {
+    	this.ccNum = null;
+    	this.expDate = null;
+    	this.name = null;
+    	this.CVV = null;
+    	this.address = null;
+    }
+    
     public Payment(String ccNum, String expDate, String name, String CVV, String address){
 
         this.ccNum = ccNum;

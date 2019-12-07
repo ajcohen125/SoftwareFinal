@@ -18,8 +18,7 @@
       <Button fx:id="searchBtn" layoutX="225.0" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
       <Button fx:id="settingsBtn" layoutX="1050.0" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
       <Button fx:id="cartBtn" ellipsisString="" layoutX="1125.0" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
-      <TextField fx:id="searchBox" layoutX="300.0" prefHeight="75.0" prefWidth="395.0" />
-      <ComboBox fx:id="optionsComboBox" layoutX="694.0" prefHeight="75.0" prefWidth="281.0" />
+      <ComboBox fx:id="optionsComboBox" layoutX="300.0" prefHeight="75.0" prefWidth="676.0" />
       <Button fx:id="leftBtn" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
       <Button fx:id="rightBtn" layoutX="75.0" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
       <ImageView fitHeight="254.0" fitWidth="342.0" layoutX="473.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
@@ -51,7 +50,7 @@
          </effect>
       </Button>
       <PasswordField fx:id="passwordField" layoutX="403.0" layoutY="578.0" prefHeight="45.0" prefWidth="395.0" />
-      <TextField fx:id="emailTextfield" layoutX="404.0" layoutY="507.0" prefHeight="45.0" prefWidth="395.0" />
+      <TextField fx:id="emailTextField" layoutX="404.0" layoutY="507.0" prefHeight="45.0" prefWidth="395.0" />
       <Hyperlink fx:id="signUpHyperLink" layoutX="488.0" layoutY="623.0" onAction="#handle" prefHeight="29.0" prefWidth="224.0" text="Don't have an account? Sign up" />
       <Label fx:id="loginErrorLabel" layoutX="463.0" layoutY="457.0" textFill="#bc5a5a">
          <font>

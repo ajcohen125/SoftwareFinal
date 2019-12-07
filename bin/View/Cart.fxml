@@ -18,8 +18,7 @@
       <Button fx:id="searchBtn" layoutX="225.0" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
       <Button fx:id="settingsBtn" layoutX="1050.0" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
       <Button fx:id="cartBtn" ellipsisString="" layoutX="1125.0" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
-      <TextField fx:id="searchBox" layoutX="300.0" prefHeight="75.0" prefWidth="395.0" />
-      <ComboBox fx:id="optionsComboBox" layoutX="694.0" prefHeight="75.0" prefWidth="281.0" />
+      <ComboBox fx:id="optionsComboBox" layoutX="300.0" prefHeight="75.0" prefWidth="677.0" />
       <Button fx:id="leftBtn" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
       <Button fx:id="rightBtn" layoutX="75.0" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
       <Label layoutX="788.0" layoutY="591.0" text="Total:">
@@ -32,10 +31,12 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <TableView layoutX="67.0" layoutY="119.0" prefHeight="509.0" prefWidth="574.0">
+      <TableView fx:id="results" layoutX="67.0" layoutY="119.0" prefHeight="509.0" prefWidth="574.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="priceCol" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="quantityCol" prefWidth="75.0" text="Quantity" />
         </columns>
       </TableView>
       <Label fx:id="messageLabel" layoutX="868.0" layoutY="657.0" textFill="#ae2020">

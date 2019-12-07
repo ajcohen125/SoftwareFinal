@@ -123,7 +123,7 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 			if(validateCredentials() == true) {
 				
 				MainController.isLoggedIn = true;
-				MainController.user = Customer.dummyCustomer();
+				// MainController.user = Customer.dummyCustomer();
 				goToView("../View/Main.fxml");
 			}
 			
@@ -148,9 +148,11 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 	public boolean validateCredentials() {
 		
 		// TODO: database stuff
-		String email = "hjt210@my.utsa.edu";
-		String passwordInput = "password";
-		
+		// String email = "hjt210@my.utsa.edu";  
+		// String passwordInput = "password";
+		System.out.println("You are in validateCredentials()");
+		String email = emailTextField.getText().trim();     // this one doesn't work
+		String passwordInput = passwordField.getText().trim(); // this one works
 		
 		String sql = "SELECT password FROM Customer WHERE email='" + email +"';";
 		
@@ -160,8 +162,36 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 			System.out.println("trying to get password from database");
 			while(r.next()) {
 				System.out.println(r.getString(1));
-				if (passwordInput.contentEquals(r.getString(1)))
+				if (passwordInput.contentEquals(r.getString(1))) {
+					
+					// TODO			
+					// TODO		
+					// TODO		
+					// TODO		
+					// TODO		
+					
+					// Several views pull information from MainController.user
+					
+					/*
+					Customer c = MainController.user;
+					c.setName()
+					c.setEmail();
+					c.setPassword();
+					c.setAddress();
+					c.setCredit();
+					
+					Payment p = new Payment();
+					p.setCcNum();
+					p.setExpDate();
+					p.setName();
+					p.setCVV();
+					p.setAddress();
+					
+					c.setPayment(p);
+					*/
+					
 					return true;
+				}
 				else
 					return false;
 			}
@@ -170,7 +200,7 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 			e.printStackTrace();
 		}
 		
-		return true;
+		return false;
 	}
 	
 	// set the variables in MainController before switching views
