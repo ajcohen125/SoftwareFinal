@@ -21,7 +21,12 @@
       <ComboBox fx:id="optionsComboBox" layoutX="300.0" prefHeight="75.0" prefWidth="675.0" />
       <Button fx:id="leftBtn" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
       <Button fx:id="rightBtn" layoutX="75.0" mnemonicParsing="false" onAction="#handle" prefHeight="75.0" prefWidth="75.0" />
-      <ImageView fitHeight="413.0" fitWidth="507.0" layoutX="394.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="501.0" fitWidth="772.0" layoutX="223.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/store.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="291.0" fitWidth="288.0" layoutX="494.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/fullLogo.png" />
          </image>

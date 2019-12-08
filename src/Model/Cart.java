@@ -89,10 +89,10 @@ public class Cart {
 			
 		for(int i = 0; i < this.getItemList().size(); i++) {
 			tableList.add(itemList.get(i));
-			}
-		
-			return tableList;
 		}
+		
+		return tableList;
+	}
     
     public String toString() {
     	

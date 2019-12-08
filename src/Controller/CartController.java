@@ -91,8 +91,8 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 	TableColumn<Item, Double> priceCol;
 	@FXML
 	TableColumn<Item, Integer> quantityCol;
+	
 	@Override
-
 	public void handle(ActionEvent e) {
 				
 		if( e.getSource() == homeBtn ) {
@@ -214,21 +214,21 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 			emailTextField.setEditable(false);
 			deliveryAddressTextField.setEditable(false);
 			cardNumberTextField.setEditable(false);
-			
-			loadCart();
 		}
 		
 		// disallow interacting with components if not signed in
 		else {
 			deliveryMethodComboBox.setDisable(true);
 		}
+		
+		loadCart();
 	}
 	
 	public void loadCart() {
 		
 		// create ObservableList from ArrayList
 		ObservableList<Item> items = FXCollections.observableArrayList();
-		items = Main.currentCart.getAssignmentTableList();
+		items = MainController.cart.getAssignmentTableList();
 		
 		idCol.setCellValueFactory(new PropertyValueFactory<Item, String>("ID"));
 		
@@ -243,7 +243,7 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		results.getSortOrder().add(nameCol);
 		
 		results.getSelectionModel().select(null);
-				
+		
 	}
 	
 	public void setUpNavigationBar() {

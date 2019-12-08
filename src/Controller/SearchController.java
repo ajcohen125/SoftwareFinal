@@ -42,6 +42,12 @@ import java.util.ArrayList;
 
 public class SearchController implements Initializable, EventHandler<ActionEvent> {
 	
+	public static final int ALL = 0;
+	public static final int PRODUCE = 1;
+	public static final int GRAINS = 2;
+	public static final int DRINKS = 3;
+	public static final int SNACKS = 4;
+	
 	ArrayList<String>options = new ArrayList<String>();
 	private String curFxml = "../View/Search.fxml";
 	
