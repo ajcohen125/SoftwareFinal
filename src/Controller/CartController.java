@@ -164,14 +164,8 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 			
 			Main.cart.removeItem(selectedItem.getID());
 			
-			// TODO ...maybe
-			// TODO ...maybe
-			// TODO ...maybe
-			// TODO ...maybe
-			// TODO ...maybe
-			
-			// idk if the observable list needs to be changed
-			
+			loadCart();
+			updateTotalCostLabel();			
 		}
 		
 		else if( addBtn == e.getSource()) {
@@ -180,6 +174,9 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 			val += 1;
 			quantityTextField.setText(val+"");
 			Main.cart.updateItemQuantity(selectedItem.getID(), val);
+			results.refresh();
+			updateTotalCostLabel();
+			
 		}
 		
 		else if ( subBtn == e.getSource()) {
@@ -191,6 +188,8 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 				Main.cart.updateItemQuantity(selectedItem.getID(), val);
 				System.out.println("new quantity is: "+val);
 			}
+			results.refresh();
+			updateTotalCostLabel();
 		}
 		
 		else if( placeOrderBtn == e.getSource()) {
@@ -233,21 +232,19 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		double finalCost = Double.parseDouble(totalCostLabel.getText().substring(2));
 		double creditUsed = 0;
 		
-		// UNCOMMENT ME!
-		/*
 		if( useStoreCreditCheckBox.isSelected()) {
 			
-			if( Main.user.getCredit() < COST OF ITEMS) {
+			if( Main.user.getCredit() < Main.cart.totalCost) {
 				creditUsed = Main.user.getCredit();
 			}
 			
 			// user had more credit than needed
 			else {
-				creditUsed = COST OF ITEMS
+				creditUsed = Main.cart.totalCost;
 				Main.user.setCredit(Main.user.getCredit()-creditUsed);
 			}
 		}
-		*/
+		
 	}
 	
 	// set the variables in Main before switching views
@@ -375,6 +372,7 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		}
 		
 		totalCostLabel.setText("$ "+totalCost);
+		Main.cart.totalCost = totalCost;
 	}
 	
 	public void loadCart() {

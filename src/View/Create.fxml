@@ -69,7 +69,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Button fx:id="updateBtn" layoutX="1003.0" layoutY="717.0" mnemonicParsing="false" onAction="#handle" prefHeight="46.0" prefWidth="137.0" text="Update" />
+      <Button fx:id="updateBtn" layoutX="1003.0" layoutY="717.0" mnemonicParsing="false" onAction="#handle" prefHeight="46.0" prefWidth="137.0" text="Register" />
       <TextField fx:id="accountAddressTextField" layoutX="164.0" layoutY="341.0" prefHeight="31.0" prefWidth="347.0" />
       <Label layoutX="734.0" layoutY="154.0" text="Email:">
          <font>

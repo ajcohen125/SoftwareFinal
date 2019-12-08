@@ -1,5 +1,7 @@
 package Model;
 
+import Database.DataBase;
+
 public class Payment {
 
     public String ccNum;
@@ -76,7 +78,20 @@ public class Payment {
     }
     
     public void writeToDb() {
-    	// preparedstatement = adfasdfjs("insert into table (name, email ...) values(?, ?, ? ...")
-        // preparedstatement.insertString(1, name)
+    	String sql = "INSERT INTO Payment (ccNum, expDate, name, cvv, address) VALUES ("
+    			+ "'" + this.ccNum + "', "
+    			+ "'" + this.expDate + "', "
+    			+ "'" + this.name + "', "
+    			+ "'" + this.CVV + "', "
+    			+ "'" + this.address + "');";
+    	
+    	int r = DataBase.update(sql);
+    	
+    	if (r == -2) {
+    		System.out.println("Did not write Payment to database");
+    	}
+    	else {
+    		System.out.println("Wrote Payment to database");
+    	}
     }
 }

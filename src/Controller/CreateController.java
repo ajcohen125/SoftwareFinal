@@ -129,7 +129,7 @@ public class CreateController implements Initializable, EventHandler<ActionEvent
 			
 			if( true == allFieldsProvided()) {
 				
-				if( accountPasswordField.getText().trim() == accountConfirmPasswordField.getText().trim()) {
+				if( accountPasswordField.getText().trim().equals(accountConfirmPasswordField.getText().trim())) {
 					createAccount();
 				}
 				
@@ -140,6 +140,10 @@ public class CreateController implements Initializable, EventHandler<ActionEvent
 			else {
 				messageLabel.setText("Some fields missing");
 			}
+			//TODO
+			//TODO
+			//TODO
+			//TODO: after this is pressed, bring back to the main screen with isLoggedIn true
 		}
 	}
 	
@@ -171,16 +175,7 @@ public class CreateController implements Initializable, EventHandler<ActionEvent
 		Main.forwardView = Main.backwardView;
 		Main.backwardView = temp;
 	}
-	
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	
-	// Data is only saved locally
-	// Changes need to be pushed to the database
-	
+		
 	// updates user info
 	public void createAccount() {
 		
@@ -200,14 +195,9 @@ public class CreateController implements Initializable, EventHandler<ActionEvent
     			                  accountAddressTextField.getText().trim(),
     			                  p,
                                   0);
-    			                  
-    	// TODO
-    	// TODO
-    	// TODO
-    	// TODO
-    	// TODO
-    	
-    	// This newly created account needs to be added to the database
+    	c.payment = p;
+    	c.writeToDb();
+    	Main.user = c;   	
 	}
 	
 	// checks to see if all fields were provided

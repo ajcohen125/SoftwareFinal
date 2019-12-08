@@ -150,11 +150,14 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 		// TODO: database stuff
 		// String email = "hjt210@my.utsa.edu";  
 		// String passwordInput = "password";
+		
+		Customer c = new Customer();
+		Payment p = new Payment();
 		System.out.println("You are in validateCredentials()");
 		String email = emailTextField.getText().trim();     // this one doesn't work
 		String passwordInput = passwordField.getText().trim(); // this one works
 		
-		String sql = "SELECT password FROM Customer WHERE email='" + email +"';";
+		String sql = "SELECT * FROM Customer WHERE email='" + email +"';";
 		
 		java.sql.ResultSet r = DataBase.select(sql);
 		
@@ -162,35 +165,17 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 			System.out.println("trying to get password from database");
 			while(r.next()) {
 				System.out.println(r.getString(1));
-				if (passwordInput.contentEquals(r.getString(1))) {
+				if (passwordInput.contentEquals(r.getString(3))) {
 					
-					// TODO			
-					// TODO		
-					// TODO		
-					// TODO		
-					// TODO		
+					c.setName(r.getString(1));
+					c.setEmail(r.getString(2));
+					c.setPassword(r.getString(3));
+					c.setAddress(r.getString(4));
+					c.setCredit(r.getDouble(5));
 					
-					// Several views pull information from Main.user
+					c.getPaymentFromDB();
 					
-					/*
-					Customer c = Main.user;
-					c.setName()
-					c.setEmail();
-					c.setPassword();
-					c.setAddress();
-					c.setCredit();
-					
-					Payment p = new Payment();
-					p.setCcNum();
-					p.setExpDate();
-					p.setName();
-					p.setCVV();
-					p.setAddress();
-					
-					c.setPayment(p);
-					*/
-					
-					Main.user = Customer.dummyCustomer();
+					Main.user = c;
 					return true;
 				}
 				else

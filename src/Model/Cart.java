@@ -72,11 +72,12 @@ public class Cart {
     }
     
     public void removeItem(String removeID) {
+    	Iterator<Item> iter = itemList.iterator();
     	
-    	for(Item i: itemList) {
-			
-    		if( i.getID() == removeID) {
-    			itemList.remove(i);
+    	while (iter.hasNext()) {
+			Item temp = iter.next();
+    		if( temp.getID() == removeID) {
+    			iter.remove();
     		}
 		}
     }
@@ -87,7 +88,7 @@ public class Cart {
 			
 			if( i.getID() == wantedID) {
 				
-				i.setQuantity(i.getQuantity()+increaseInQuantity);
+				i.setQuantity(increaseInQuantity);
 				return;
 			}
 		}

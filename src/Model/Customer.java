@@ -1,5 +1,9 @@
 package Model;
 
+import java.sql.SQLException;
+
+import Database.DataBase;
+
 public class Customer {
 
     public String name;
@@ -97,8 +101,44 @@ public class Customer {
     }
     
     public void writeToDb() {
-    	// preparedstatement = adfasdfjs("insert into table (name, email ...) values(?, ?, ? ...")
-        // preparedstatement.insertString(1, name)
+    	String sql = "INSERT INTO Customer (name, email, password, address) VALUES ("
+    			+ "'" + this.name + "', "
+    			+ "'" + this.email + "', "
+    			+ "'" + this.password + "', "
+    			+ "'" + this.address + "');";
+    	
+    	int r = DataBase.update(sql);
+    	
+    	if (r == -2) {
+    		System.out.println("Did not write Cusomter to database");
+    	}
+    	else {
+    		System.out.println("Wrote customer to database");
+    	}
+    	
+    	this.payment.writeToDb();
+    }
+    
+    public void getPaymentFromDB() {
+    	Payment p = new Payment();
+    	String sql= "SELECT * from Payment WHERE name='" + this.name +"';";
+		
+    	java.sql.ResultSet r = DataBase.select(sql);
+    	
+    	try {
+			while(r.next()) {
+				p.ccNum = r.getString(1);
+				p.expDate = r.getString(2);
+				p.name = r.getString(3);
+				p.CVV = r.getString(4);
+				p.address = r.getString(5);
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		this.setPayment(p);
     }
 }
 
