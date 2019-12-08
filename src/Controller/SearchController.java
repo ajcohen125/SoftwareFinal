@@ -127,6 +127,14 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 			forwardTrick();
 			goToView(MainController.forwardView);
 		}
+		
+		else if( viewItemBtn == e.getSource()){
+			
+			if( null != results.getSelectionModel().getSelectedItem() ) {
+				MainController.curItem = results.getSelectionModel().getSelectedItem();
+				goToView("../View/Item.fxml");
+			}
+		}
 	}
 	
 	// set the variables in MainController before switching views

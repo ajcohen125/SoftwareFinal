@@ -2,6 +2,7 @@ package Model;
 
 import java.util.*;
 
+import Controller.MainController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -32,34 +33,55 @@ public class Cart {
       this.totalCost = totalCost;
     }
     
-    public void addItem(int ID) {
+	// returns true if the current item is in the cart
+	public boolean hasItem(String wantedID) {
+		
+		for(Item i: itemList) {
+			
+			if( i.getID() == wantedID) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	// returns the quantity of the item that are in the cart
+	public int getItemQuantity(String wantedID) {
+		
+		for(Item i: itemList) {
+			
+			if( i.getID() == wantedID) {
+				return i.getQuantity();
+			}
+		}
+		
+		return 0;
+	}
+	
+    public void addItem(Item itemToAdd) {
     	
-    	// TODO
-    	// TODO
-    	// TODO
-    	// TODO
-    	// TODO
-    	
+    	itemList.add(itemToAdd);
     }
     
-    public void removeItem(int ID) {
+    public void removeItem(int removeID) {
     	
-    	// TODO
-    	// TODO
-    	// TODO
-    	// TODO
-    	// TODO
-    	
+    	for(Item i: itemList) {
+			
+    		itemList.remove(i);
+		}
     }
     
-    public void updateItemQuantity(int ID, int newQuantity) {
-    	
-    	// TODO
-    	// TODO
-    	// TODO
-    	// TODO
-    	// TODO
-    	
+    public void updateItemQuantity(String wantedID, int increaseInQuantity) {
+
+		for(Item i: itemList) {
+			
+			if( i.getID() == wantedID) {
+				
+				i.setQuantity(i.getQuantity()+increaseInQuantity);
+				return;
+			}
+		}
     }
     
     public ObservableList<Item> getAssignmentTableList(){
@@ -76,8 +98,13 @@ public class Cart {
     	
     	String s = "";
     	
-    	// s += "Thing: "+value
-    	// s += "Thing: "+value
+    	s += "\n--- CART ---\n";
+    	
+    	for( Item i: itemList) {
+    		s += i.getName() + ": " + i.getQuantity() + "\n";
+    	}
+    	
+    	s += "\n";
     	
     	return s;
     }

@@ -1,7 +1,9 @@
 package Controller;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -55,7 +57,7 @@ public class ItemController implements Initializable, EventHandler<ActionEvent> 
 	@FXML
 	Label itemNameLabel;
 	@FXML
-	Label itemCostLabel;
+	Label itemPriceLabel;
 	@FXML
 	TextField quantityTextField;
 	@FXML
@@ -64,6 +66,16 @@ public class ItemController implements Initializable, EventHandler<ActionEvent> 
 	Button subBtn;
 	@FXML
 	Button addToCartBtn;
+	@FXML
+	ImageView itemImageView;
+	@FXML
+	Label itemLabel;
+	@FXML
+	Label messageLabel;
+	@FXML
+	Label inCartLabel;
+	
+	int quantityAlreadyInCart;
 		
 	@Override
 	public void handle(ActionEvent e) {
@@ -134,12 +146,44 @@ public class ItemController implements Initializable, EventHandler<ActionEvent> 
 		
 		else if( addToCartBtn == e.getSource()) {
 			
-			// TODO
-			// TODO
-			// TODO
-			// TODO
-			// TODO
+			Item item = MainController.curItem;
+			Cart cart = MainController.cart;
 			
+			int quantityWanted = Integer.parseInt(quantityTextField.getText());
+			
+			// if the item is not in the cart
+			if( false == cart.hasItem(item.getID()) ) {
+				
+				// item is successfully added to the cart
+				if( quantityWanted <= item.getQuantity() ) {
+					
+					cart.getItemList().add(item.cartItem(quantityWanted));
+					goToView("../View/Search.fxml");
+				}
+				
+				// item is not added to the cart
+				else {
+					messageLabel.setText("Unfortunately, there are only "+item.getQuantity()+" in stock.");
+				}
+			}
+			
+			// if the item is already in the cart
+			else {
+				
+				// item is successfully added to the cart
+				if( quantityWanted + quantityAlreadyInCart <= item.getQuantity() ) {
+					
+					System.out.println(quantityWanted +" + "+ quantityAlreadyInCart + " <= "+ item.getQuantity());
+					
+					cart.updateItemQuantity(item.getID(), quantityWanted);
+					goToView("../View/Search.fxml");
+				}
+				
+				// item is not added to the cart
+				else {
+					messageLabel.setText("Unfortunately, there are only "+item.getQuantity()+" in stock.");
+				}
+			}
 		}
 	}
 	
@@ -173,7 +217,26 @@ public class ItemController implements Initializable, EventHandler<ActionEvent> 
 	public void initialize(URL location, ResourceBundle resources) {
 		
 		System.out.print("Switched Views!");
+		displayItem();
 		setUpNavigationBar();
+		
+	    quantityAlreadyInCart = 0;
+		if( MainController.cart.hasItem(MainController.curItem.getID()) ){
+			
+			quantityAlreadyInCart = MainController.cart.getItemQuantity(MainController.curItem.getID());
+			inCartLabel.setText("You already have "+quantityAlreadyInCart+" in your cart.");
+		}
+		
+		System.out.println(MainController.cart.toString());
+	}
+	
+	public void displayItem() {
+		
+		Item i = MainController.curItem;
+		System.out.println("Item name is: "+i.getName());
+		itemNameLabel.setText(i.getName());
+		itemPriceLabel.setText("$"+i.getPrice());
+		itemImageView.setImage(new Image(getClass().getResourceAsStream("../Images/Food/"+i.getName()+".png"), 3000, 3000, true, true));
 	}
 	
 	public void setUpNavigationBar() {

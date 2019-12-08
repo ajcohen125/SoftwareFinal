@@ -178,6 +178,7 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 			selectedOption = 0;
 			selectedItem = null;
 			justLaunched = false;
+			cart = new Cart();
 		}
 		
 		else {
