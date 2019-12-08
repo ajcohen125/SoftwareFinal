@@ -32,6 +32,7 @@ import javafx.scene.image.ImageView;
 
 import Model.*;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class CartController implements Initializable, EventHandler<ActionEvent> {
 	
@@ -229,6 +230,8 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 	
 	public void generateReceipt() {
 		
+		Receipt r = new Receipt();
+		Random rand = new Random();
 		double finalCost = Double.parseDouble(totalCostLabel.getText().substring(2));
 		double creditUsed = 0;
 		
@@ -245,6 +248,10 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 			}
 		}
 		
+		r.email = Main.user.email;
+		r.itemList = Main.cart.itemList;
+		r.totalCost = finalCost;
+		r.receiptNum = rand.nextInt();
 	}
 	
 	// set the variables in Main before switching views
