@@ -74,7 +74,7 @@ public class TemplateController implements Initializable, EventHandler<ActionEve
 			
 			passVar();
 			
-			if(true == MainController.isLoggedIn) {
+			if(true == Main.isLoggedIn) {
 				goToView("../View/Settings.fxml");
 			}
 			
@@ -92,18 +92,18 @@ public class TemplateController implements Initializable, EventHandler<ActionEve
 		}
 		
 		else if( leftBtn == e.getSource()) {
-			goToView(MainController.backwardView);
+			goToView(Main.backwardView);
 		}
 		
 		else if( rightBtn == e.getSource()) {
 			forwardTrick();
-			goToView(MainController.forwardView);
+			goToView(Main.forwardView);
 		}
 	}
 	
-	// set the variables in MainController before switching views
+	// set the variables in Main before switching views
 	public void passVar() {
-		MainController.selectedOption = optionsComboBox.getSelectionModel().getSelectedIndex();
+		Main.selectedOption = optionsComboBox.getSelectionModel().getSelectedIndex();
 	}
 	
 	// code to simplify changing views
@@ -122,9 +122,9 @@ public class TemplateController implements Initializable, EventHandler<ActionEve
 	}
 	
 	public void forwardTrick() {
-		String temp = MainController.forwardView;
-		MainController.forwardView = MainController.backwardView;
-		MainController.backwardView = temp;
+		String temp = Main.forwardView;
+		Main.forwardView = Main.backwardView;
+		Main.backwardView = temp;
 	}
 	
 	@Override
@@ -144,7 +144,7 @@ public class TemplateController implements Initializable, EventHandler<ActionEve
 		settingsBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/settings.png"), settingsBtn.getPrefWidth()-30, settingsBtn.getPrefHeight()-30, true, true)));
 		cartBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/cart.png"), cartBtn.getPrefWidth(), cartBtn.getPrefHeight()-10, true, true)));
 		
-		if(MainController.isLoggedIn == false) {
+		if(Main.isLoggedIn == false) {
 			loginBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/person.png"), loginBtn.getPrefWidth()-10, loginBtn.getPrefHeight()-30, true, true)));
 		}
 		
@@ -163,7 +163,7 @@ public class TemplateController implements Initializable, EventHandler<ActionEve
 		ObservableList<String> observableOptions = FXCollections.observableArrayList(options);
 		optionsComboBox.setItems(observableOptions);
 		optionsComboBox.getSelectionModel().selectFirst();
-		optionsComboBox.getSelectionModel().select(MainController.selectedOption);
+		optionsComboBox.getSelectionModel().select(Main.selectedOption);
 	}
 	
 }

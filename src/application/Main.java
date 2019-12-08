@@ -17,7 +17,15 @@ public class Main extends Application {
 	public static AnchorPane layout;
 	public static ArrayList<Item> itemList;
 	public static Cart currentCart;
+	public static Customer user;
+	public static Cart cart;
 	public static Item curItem;
+	public static int selectedOption;           // currently unused
+	public static Item selectedItem;
+	public static String backwardView;
+	public static String forwardView;
+	public static boolean isLoggedIn = false;      // used in various Controllers
+	public static boolean justLaunched = true;     // only used in the MainController to see if the app was just launched
 	
 	@Override
 	public void start(Stage primaryStage) {

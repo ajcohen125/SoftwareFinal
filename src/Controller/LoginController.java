@@ -90,7 +90,7 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 		
 		else if( settingsBtn == e.getSource()) {
 			
-			if(true == MainController.isLoggedIn) {
+			if(true == Main.isLoggedIn) {
 				goToView("../View/Settings.fxml");
 			}
 			
@@ -107,12 +107,12 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 		}
 		
 		else if( leftBtn == e.getSource()) {
-			goToView(MainController.backwardView);
+			goToView(Main.backwardView);
 		}
 		
 		else if( rightBtn == e.getSource()) {
 			forwardTrick();
-			goToView(MainController.forwardView);
+			goToView(Main.forwardView);
 		}
 		
 		// LOCAL
@@ -122,8 +122,8 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 			
 			if(validateCredentials() == true) {
 				
-				MainController.isLoggedIn = true;
-				// MainController.user = Customer.dummyCustomer();
+				Main.isLoggedIn = true;
+				// Main.user = Customer.dummyCustomer();
 				goToView("../View/Main.fxml");
 			}
 			
@@ -170,10 +170,10 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 					// TODO		
 					// TODO		
 					
-					// Several views pull information from MainController.user
+					// Several views pull information from Main.user
 					
 					/*
-					Customer c = MainController.user;
+					Customer c = Main.user;
 					c.setName()
 					c.setEmail();
 					c.setPassword();
@@ -190,6 +190,7 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 					c.setPayment(p);
 					*/
 					
+					Main.user = Customer.dummyCustomer();
 					return true;
 				}
 				else
@@ -203,9 +204,9 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 		return false;
 	}
 	
-	// set the variables in MainController before switching views
+	// set the variables in Main before switching views
 	public void passVar() {
-		MainController.selectedOption = optionsComboBox.getSelectionModel().getSelectedIndex();
+		Main.selectedOption = optionsComboBox.getSelectionModel().getSelectedIndex();
 	}
 	
 	// code to simplify changing views
@@ -213,8 +214,8 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 		
 		try {
 			passVar();
-			MainController.backwardView = curFxml;
-			MainController.forwardView = xmlPath;
+			Main.backwardView = curFxml;
+			Main.forwardView = xmlPath;
 			Parent root = FXMLLoader.load(getClass().getResource(xmlPath));
 			Main.stage.setScene(new Scene(root, 1200, 800));
 			Main.stage.show();
@@ -227,17 +228,17 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 	}
 	
 	public void forwardTrick() {
-		String temp = MainController.forwardView;
-		MainController.forwardView = MainController.backwardView;
-		MainController.backwardView = temp;
+		String temp = Main.forwardView;
+		Main.forwardView = Main.backwardView;
+		Main.backwardView = temp;
 	}
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
 		// If the user is logging out
-		if(MainController.isLoggedIn == true) {
-			MainController.isLoggedIn = false;
+		if(Main.isLoggedIn == true) {
+			Main.isLoggedIn = false;
 		}
 		
 		System.out.println("Switched to Login View!");
@@ -254,7 +255,7 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 		settingsBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/settings.png"), settingsBtn.getPrefWidth()-30, settingsBtn.getPrefHeight()-30, true, true)));
 		cartBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/cart.png"), cartBtn.getPrefWidth(), cartBtn.getPrefHeight()-10, true, true)));
 		
-		if(MainController.isLoggedIn == false) {
+		if(Main.isLoggedIn == false) {
 			loginBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/person.png"), loginBtn.getPrefWidth()-10, loginBtn.getPrefHeight()-30, true, true)));
 		}
 		
@@ -273,7 +274,7 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 		ObservableList<String> observableOptions = FXCollections.observableArrayList(options);
 		optionsComboBox.setItems(observableOptions);
 		optionsComboBox.getSelectionModel().selectFirst();
-		optionsComboBox.getSelectionModel().select(MainController.selectedOption);
+		optionsComboBox.getSelectionModel().select(Main.selectedOption);
 	}
 	
 }

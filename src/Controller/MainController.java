@@ -29,7 +29,7 @@ import java.util.ArrayList;
 
 /* TODO
  * 
- * MainController
+ * Main
  * Home page
  * 
  * VIEWS THAT DEAL WITH ACCOUNT INFORMATION
@@ -54,17 +54,8 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 	
 	// VARIABLES WE WANT TO ACCESS ACROSS ALL VIEWS
 	// THESE VARIABLES ARE EXCLUSIVE TO THE MAIN CONTROLLER
-	// Ex: MainController.selectedOption
+	// Ex: Main.selectedOption
 	// Default vaulues for these variables are set in initialize when the application is launched
-	public static Customer user;
-	public static Cart cart;
-	public static Item curItem;
-	public static int selectedOption;           // currently unused
-	public static Item selectedItem;
-	public static String backwardView;
-	public static String forwardView;
-	public static boolean isLoggedIn = false;      // used in various Controllers
-	public static boolean justLaunched = true;     // only used in the MainController to see if the app was just launched
 	
 	private String curFxml = "../View/Main.fxml";
 	
@@ -109,7 +100,7 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 		
 		else if( settingsBtn == e.getSource()) {
 					
-			if(true == isLoggedIn) {
+			if(true == Main.isLoggedIn) {
 				goToView("../View/Settings.fxml");
 			}
 			
@@ -127,18 +118,18 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 		
 		else if( leftBtn == e.getSource()) {
 			
-			goToView(backwardView);
+			goToView(Main.backwardView);
 		}
 		
 		else if( rightBtn == e.getSource()) {
 			forwardTrick();
-			goToView(forwardView);
+			goToView(Main.forwardView);
 		}
 	}
 	
-	// set the variables in MainController before switching views
+	// set the variables in Main before switching views
 	public void passVar() {
-		selectedOption = optionsComboBox.getSelectionModel().getSelectedIndex();
+		Main.selectedOption = optionsComboBox.getSelectionModel().getSelectedIndex();
 	}
 	
 	// code to simplify changing views
@@ -146,8 +137,8 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 		
 		try {
 			passVar();
-			backwardView = curFxml;
-			forwardView = xmlPath;
+			Main.backwardView = curFxml;
+			Main.forwardView = xmlPath;
 			Parent root = FXMLLoader.load(getClass().getResource(xmlPath));
 			Main.stage.setScene(new Scene(root, 1200, 800));
 			Main.stage.show();
@@ -160,9 +151,9 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 	}
 	
 	public void forwardTrick() {
-		String temp = forwardView;
-		forwardView = backwardView;
-		backwardView = temp;
+		String temp = Main.forwardView;
+		Main.forwardView = Main.backwardView;
+		Main.backwardView = temp;
 	}
 	
 	@Override
@@ -172,13 +163,13 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 		setUpNavigationBar();
 		
 		// if the program was launched for the first time
-		if( true == justLaunched ) {
+		if( true == Main.justLaunched ) {
 			
-			user = null;
-			selectedOption = 0;
-			selectedItem = null;
-			justLaunched = false;
-			cart = new Cart();
+			Main.user = null;
+			Main.selectedOption = 0;
+			Main.selectedItem = null;
+			Main.justLaunched = false;
+			Main.cart = new Cart();
 		}
 		
 		else {
@@ -196,7 +187,7 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 		settingsBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/settings.png"), settingsBtn.getPrefWidth()-30, settingsBtn.getPrefHeight()-30, true, true)));
 		cartBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/cart.png"), cartBtn.getPrefWidth(), cartBtn.getPrefHeight()-10, true, true)));
 		
-		if(isLoggedIn == false) {
+		if(Main.isLoggedIn == false) {
 			loginBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/person.png"), loginBtn.getPrefWidth()-10, loginBtn.getPrefHeight()-30, true, true)));
 		}
 		
@@ -214,7 +205,7 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 		// set options for combo box
 		ObservableList<String> observableOptions = FXCollections.observableArrayList(options);
 		optionsComboBox.setItems(observableOptions);
-		optionsComboBox.getSelectionModel().select(selectedOption);	
+		optionsComboBox.getSelectionModel().select(Main.selectedOption);	
 	}
 	
 }

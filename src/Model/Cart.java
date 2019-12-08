@@ -2,7 +2,6 @@ package Model;
 
 import java.util.*;
 
-import Controller.MainController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -26,7 +25,15 @@ public class Cart {
     }
 
     public double getTotalCost() {
-      return totalCost;
+    
+    	double total = 0;
+    	
+    	for(Item i: itemList) {
+    		
+    		total += i.getQuantity() * i.getPrice();
+    	}
+    	
+    	return total;
     }
 
     public void setTotalCost(double totalCost) {
@@ -64,11 +71,13 @@ public class Cart {
     	itemList.add(itemToAdd);
     }
     
-    public void removeItem(int removeID) {
+    public void removeItem(String removeID) {
     	
     	for(Item i: itemList) {
 			
-    		itemList.remove(i);
+    		if( i.getID() == removeID) {
+    			itemList.remove(i);
+    		}
 		}
     }
     

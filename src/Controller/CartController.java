@@ -18,11 +18,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -32,8 +35,8 @@ import java.util.ArrayList;
 
 public class CartController implements Initializable, EventHandler<ActionEvent> {
 	
-	private final int STANDARD = 0;
-	private final int EXPEDITED = 0;
+	public static final int STANDARD = 0;
+	public static final int EXPEDITED = 1;
 	
 	ArrayList<String>options = new ArrayList<String>();
 	private String curFxml = "../View/Cart.fxml";
@@ -66,12 +69,24 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 	Button addBtn;
 	@FXML
 	Button subBtn;
+	
+	@FXML
+	RadioButton creditCardRadioBtn;
+	@FXML
+	RadioButton paypalRadioBtn;
 	@FXML
 	TextField emailTextField;
 	@FXML
 	TextField deliveryAddressTextField;
 	@FXML
 	TextField cardNumberTextField;
+	@FXML
+	TextField paypalEmailTextField;
+	@FXML
+	TextField paypalPasswordField;
+	@FXML
+	CheckBox useStoreCreditCheckBox;
+	
 	@FXML
 	ComboBox<String> deliveryMethodComboBox;
 	@FXML
@@ -80,6 +95,10 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 	Label messageLabel;
 	@FXML
 	Button placeOrderBtn;
+	@FXML
+	Label storeCreditLabel;
+	@FXML
+	Label totalCostLabel;
 	
 	@FXML
 	TableView<Item> results;	
@@ -91,6 +110,10 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 	TableColumn<Item, Double> priceCol;
 	@FXML
 	TableColumn<Item, Integer> quantityCol;
+	
+	ToggleGroup paymentOptionToggleGroup;
+	ObservableList<Item> items ;
+	Item selectedItem;
 	
 	@Override
 	public void handle(ActionEvent e) {
@@ -112,7 +135,7 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		
 		else if( settingsBtn == e.getSource()) {
 			
-			if(true == MainController.isLoggedIn) {
+			if(true == Main.isLoggedIn) {
 				goToView("../View/Settings.fxml");
 			}
 			
@@ -129,15 +152,25 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		}
 		
 		else if( leftBtn == e.getSource()) {
-			goToView(MainController.backwardView);
+			goToView(Main.backwardView);
 		}
 		
 		else if( rightBtn == e.getSource()) {
 			forwardTrick();
-			goToView(MainController.forwardView);
+			goToView(Main.forwardView);
 		}
 		
 		else if ( deleteBtn == e.getSource()) {
+			
+			Main.cart.removeItem(selectedItem.getID());
+			
+			// TODO ...maybe
+			// TODO ...maybe
+			// TODO ...maybe
+			// TODO ...maybe
+			// TODO ...maybe
+			
+			// idk if the observable list needs to be changed
 			
 		}
 		
@@ -146,6 +179,7 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 			int val = Integer.parseInt(quantityTextField.getText());
 			val += 1;
 			quantityTextField.setText(val+"");
+			Main.cart.updateItemQuantity(selectedItem.getID(), val);
 		}
 		
 		else if ( subBtn == e.getSource()) {
@@ -154,12 +188,15 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 			if(val > 0) {
 				val -= 1;
 				quantityTextField.setText(val+"");
+				Main.cart.updateItemQuantity(selectedItem.getID(), val);
+				System.out.println("new quantity is: "+val);
 			}
 		}
 		
 		else if( placeOrderBtn == e.getSource()) {
 			
-			if(MainController.isLoggedIn == true) {
+			if(Main.isLoggedIn == true) {
+				generateReceipt();
 				goToView("../View/Receipt.fxml");
 			}
 			
@@ -167,11 +204,55 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 				messageLabel.setText("Please sign in");
 			}
 		}
+		
+		else if( creditCardRadioBtn == e.getSource()) {
+			
+			paypalEmailTextField.setText("");
+			paypalPasswordField.setText("");
+			paypalEmailTextField.setDisable(true);
+			paypalPasswordField.setDisable(true);	
+			cardNumberTextField.setDisable(false);
+		}
+		
+		else if( paypalRadioBtn == e.getSource()) {
+			
+			cardNumberTextField.setDisable(true);
+			paypalEmailTextField.setDisable(false);
+			paypalPasswordField.setDisable(false);
+		}
+		
+		else if( useStoreCreditCheckBox == e.getSource()) {
+			
+			// this will make the total cost reflect the shipping cost
+			updateTotalCostLabel();
+		}
 	}
 	
-	// set the variables in MainController before switching views
+	public void generateReceipt() {
+		
+		double finalCost = Double.parseDouble(totalCostLabel.getText().substring(2));
+		double creditUsed = 0;
+		
+		// UNCOMMENT ME!
+		/*
+		if( useStoreCreditCheckBox.isSelected()) {
+			
+			if( Main.user.getCredit() < COST OF ITEMS) {
+				creditUsed = Main.user.getCredit();
+			}
+			
+			// user had more credit than needed
+			else {
+				creditUsed = COST OF ITEMS
+				Main.user.setCredit(Main.user.getCredit()-creditUsed);
+			}
+		}
+		*/
+	}
+	
+	// set the variables in Main before switching views
 	public void passVar() {
-		MainController.selectedOption = optionsComboBox.getSelectionModel().getSelectedIndex();
+		Main.selectedOption = optionsComboBox.getSelectionModel().getSelectedIndex();
 	}
 	
 	// code to simplify changing views
@@ -179,8 +260,8 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		
 		try {
 			passVar();
-			MainController.backwardView = curFxml;
-			MainController.forwardView = xmlPath;
+			Main.backwardView = curFxml;
+			Main.forwardView = xmlPath;
 			Parent root = FXMLLoader.load(getClass().getResource(xmlPath));
 			Main.stage.setScene(new Scene(root, 1200, 800));
 			Main.stage.show();
@@ -193,9 +274,9 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 	}
 	
 	public void forwardTrick() {
-		String temp = MainController.forwardView;
-		MainController.forwardView = MainController.backwardView;
-		MainController.backwardView = temp;
+		String temp = Main.forwardView;
+		Main.forwardView = Main.backwardView;
+		Main.backwardView = temp;
 	}
 	
 	@Override
@@ -205,30 +286,102 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		setUpNavigationBar();
 		quantityTextField.setEditable(false);
 		
-		if( true == MainController.isLoggedIn) {
-			emailTextField.setText(MainController.user.getEmail());
-			deliveryAddressTextField.setText(MainController.user.getAddress());
-			String cardNumber = MainController.user.getPayment().getCcNum();
+		// if logged in, fill out the TextFields with user information
+		if( true == Main.isLoggedIn) {
+			emailTextField.setText(Main.user.getEmail());
+			deliveryAddressTextField.setText(Main.user.getAddress());
+			String cardNumber = Main.user.getPayment().getCcNum();
 			cardNumberTextField.setText("XXXX-XXXX-XXXX-"+cardNumber.substring(cardNumber.length()-4));
-			
 			emailTextField.setEditable(false);
 			deliveryAddressTextField.setEditable(false);
 			cardNumberTextField.setEditable(false);
+			storeCreditLabel.setText("$ "+Main.user.getCredit());
 		}
 		
 		// disallow interacting with components if not signed in
-		else {
+		else {/*
+			addBtn.setDisable(true);
+			subBtn.setDisable(true);
+			deleteBtn.setDisable(true);
 			deliveryMethodComboBox.setDisable(true);
+			emailTextField.setDisable(true);
+			deliveryAddressTextField.setDisable(true);
+			cardNumberTextField.setDisable(true);
+			paypalEmailTextField.setDisable(true);
+			paypalPasswordField.setDisable(true);
+			useStoreCreditCheckBox.setDisable(true);*/
+			paypalEmailTextField.setDisable(true);
+			paypalPasswordField.setDisable(true);	
+			storeCreditLabel.setText("$ 0");
 		}
 		
+		// what to do when the table is pressed
+		results.setOnMousePressed(e -> {
+			selectedItem = results.getSelectionModel().getSelectedItem();
+			quantityTextField .setText(selectedItem.getQuantity()+"");
+		});
+		
+		// initial set the payment option to credit card
+		paymentOptionToggleGroup = new ToggleGroup();
+		creditCardRadioBtn.setToggleGroup(paymentOptionToggleGroup);
+		paypalRadioBtn.setToggleGroup(paymentOptionToggleGroup);
+		creditCardRadioBtn.setSelected(true);
+		
+		// delivery options
+		ArrayList<String>deliveryOptions = new ArrayList<String>();
+		deliveryOptions.add("Standard Shipping ($4.00)");
+		deliveryOptions.add("Expedited Shipping ($7.00)");
+		
+		// add options to the combo box
+		ObservableList<String> observableDeliveryOptions = FXCollections.observableArrayList(deliveryOptions);
+		deliveryMethodComboBox.setItems(observableDeliveryOptions);
+		deliveryMethodComboBox.getSelectionModel().selectFirst();
+		
+		// changed delivery method
+		deliveryMethodComboBox.getSelectionModel().selectedItemProperty().addListener(e ->{
+			updateTotalCostLabel();
+		});
+		
+		updateTotalCostLabel();
 		loadCart();
+	}
+	
+	public void updateTotalCostLabel() {
+		
+		double totalCost = 0;
+		
+		// total cost of items
+		totalCost += Main.cart.getTotalCost();
+		
+		// cost of delivery
+		if( deliveryMethodComboBox.getSelectionModel().getSelectedIndex() == STANDARD ) {
+			totalCost += 4;
+		}
+		
+		else {
+			totalCost += 7;
+		}
+		
+		// store credit
+		if( useStoreCreditCheckBox.isSelected()) {
+			
+			totalCost -= Main.user.getCredit();
+			
+			// don't worry about this
+			// generateReceipt() will calculate how much store credit was actually used
+			if( totalCost < 0 ) {
+				totalCost = 0;
+			}
+		}
+		
+		totalCostLabel.setText("$ "+totalCost);
 	}
 	
 	public void loadCart() {
 		
 		// create ObservableList from ArrayList
-		ObservableList<Item> items = FXCollections.observableArrayList();
-		items = MainController.cart.getAssignmentTableList();
+		items = FXCollections.observableArrayList();
+		items = Main.cart.getAssignmentTableList();
 		
 		idCol.setCellValueFactory(new PropertyValueFactory<Item, String>("ID"));
 		
@@ -256,7 +409,7 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		settingsBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/settings.png"), settingsBtn.getPrefWidth()-30, settingsBtn.getPrefHeight()-30, true, true)));
 		cartBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/cart.png"), cartBtn.getPrefWidth(), cartBtn.getPrefHeight()-10, true, true)));
 		
-		if(MainController.isLoggedIn == false) {
+		if(Main.isLoggedIn == false) {
 			loginBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/person.png"), loginBtn.getPrefWidth()-10, loginBtn.getPrefHeight()-30, true, true)));
 		}
 		
@@ -275,7 +428,7 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		ObservableList<String> observableOptions = FXCollections.observableArrayList(options);
 		optionsComboBox.setItems(observableOptions);
 		optionsComboBox.getSelectionModel().selectFirst();
-		optionsComboBox.getSelectionModel().select(MainController.selectedOption);
+		optionsComboBox.getSelectionModel().select(Main.selectedOption);
 	}
 	
 }

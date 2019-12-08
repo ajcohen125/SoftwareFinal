@@ -26,7 +26,7 @@
             <Image url="@../Images/store.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="291.0" fitWidth="288.0" layoutX="494.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="291.0" fitWidth="288.0" layoutX="464.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Images/fullLogo.png" />
          </image>

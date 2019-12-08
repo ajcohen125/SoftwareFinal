@@ -111,12 +111,12 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 		}
 		
 		else if( leftBtn == e.getSource()) {
-			goToView(MainController.backwardView);
+			goToView(Main.backwardView);
 		}
 		
 		else if( rightBtn == e.getSource()) {
 			forwardTrick();
-			goToView(MainController.forwardView);
+			goToView(Main.forwardView);
 		}
 		
 		else if ( updateBtn == e.getSource()) {
@@ -131,9 +131,9 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 		}
 	}
 	
-	// set the variables in MainController before switching views
+	// set the variables in Main before switching views
 	public void passVar() {
-		MainController.selectedOption = optionsComboBox.getSelectionModel().getSelectedIndex();
+		Main.selectedOption = optionsComboBox.getSelectionModel().getSelectedIndex();
 	}
 	
 	// code to simplify changing views
@@ -141,8 +141,8 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 		
 		try {
 			passVar();
-			MainController.backwardView = curFxml;
-			MainController.forwardView = xmlPath;
+			Main.backwardView = curFxml;
+			Main.forwardView = xmlPath;
 			Parent root = FXMLLoader.load(getClass().getResource(xmlPath));
 			Main.stage.setScene(new Scene(root, 1200, 800));
 			Main.stage.show();
@@ -155,9 +155,9 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 	}
 	
 	public void forwardTrick() {
-		String temp = MainController.forwardView;
-		MainController.forwardView = MainController.backwardView;
-		MainController.backwardView = temp;
+		String temp = Main.forwardView;
+		Main.forwardView = Main.backwardView;
+		Main.backwardView = temp;
 	}
 	
 	// TODO
@@ -172,7 +172,7 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 	// updates user info
 	public void updateAccountInfo() {
 		
-		Customer c = MainController.user;
+		Customer c = Main.user;
 		
 		c.setName(accountNameTextField.getText().trim());
 		c.setEmail(accountEmailTextField.getText().trim());
@@ -194,18 +194,18 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 		System.out.println("displayUserInfo: comment code back in after user info is populated");
 		
 		// just to let the the program work until it is finished
-		if(MainController.user == null ) {
+		if(Main.user == null ) {
 			return;
 		}
 		
-		accountNameTextField.setText(MainController.user.getName());
-		accountAddressTextField.setText(MainController.user.getAddress()); 
-		accountStoreCreditLabel.setText(MainController.user.getCredit()+"");
-		accountEmailTextField.setText(MainController.user.getEmail());
-		cardNumberTextField.setText(MainController.user.getPayment().getCcNum());
-		cardFullNameTextField.setText(MainController.user.getPayment().getName());
-		cardAddressTextField.setText(MainController.user.getPayment().getAddress());
-		cardExpDateTextField.setText(MainController.user.getPayment().getExpDate());
+		accountNameTextField.setText(Main.user.getName());
+		accountAddressTextField.setText(Main.user.getAddress()); 
+		accountStoreCreditLabel.setText(Main.user.getCredit()+"");
+		accountEmailTextField.setText(Main.user.getEmail());
+		cardNumberTextField.setText(Main.user.getPayment().getCcNum());
+		cardFullNameTextField.setText(Main.user.getPayment().getName());
+		cardAddressTextField.setText(Main.user.getPayment().getAddress());
+		cardExpDateTextField.setText(Main.user.getPayment().getExpDate());
 	}
 	
 	// checks to see if all fields were provided
@@ -248,7 +248,7 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 		settingsBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/settings.png"), settingsBtn.getPrefWidth()-30, settingsBtn.getPrefHeight()-30, true, true)));
 		cartBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/cart.png"), cartBtn.getPrefWidth(), cartBtn.getPrefHeight()-10, true, true)));
 		
-		if(MainController.isLoggedIn == false) {
+		if(Main.isLoggedIn == false) {
 			loginBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/person.png"), loginBtn.getPrefWidth()-10, loginBtn.getPrefHeight()-30, true, true)));
 		}
 		
@@ -267,7 +267,7 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 		ObservableList<String> observableOptions = FXCollections.observableArrayList(options);
 		optionsComboBox.setItems(observableOptions);
 		optionsComboBox.getSelectionModel().selectFirst();
-		optionsComboBox.getSelectionModel().select(MainController.selectedOption);
+		optionsComboBox.getSelectionModel().select(Main.selectedOption);
 	}
 	
 }
