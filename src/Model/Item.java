@@ -21,8 +21,8 @@ public class Item {
         this.price = price;
         this.quantity = quantity;
     }
-    
-    // When an Item is added to the cart, the item should have the quantity the user wants to purchase
+
+	// When an Item is added to the cart, the item should have the quantity the user wants to purchase
     // The item should not have the quantity of the inventory
     public Item cartItem(int cartQuantity) {
     	
