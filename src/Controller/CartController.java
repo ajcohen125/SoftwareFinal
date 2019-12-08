@@ -235,7 +235,7 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		Random rand = new Random();
 		double finalCost = Double.parseDouble(totalCostLabel.getText().substring(2));
 		double creditUsed = 0;
-		
+	
 		if( useStoreCreditCheckBox.isSelected()) {
 			
 			if( Main.user.getCredit() < Main.cart.totalCost) {
@@ -252,7 +252,14 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		r.email = Main.user.email;
 		r.itemList = Main.cart.itemList;
 		r.totalCost = finalCost;
-		r.receiptNum = rand.nextInt();
+		r.receiptNum = rand.nextInt(1000);
+		r.creditUsed = creditUsed;
+		if (deliveryMethodComboBox.getSelectionModel().getSelectedIndex() == STANDARD)
+			r.shipping = "STANDARD";
+		else
+			r.shipping = "EXPEDITED";
+		
+		r.writeToDb();
 	}
 	
 	public void updateMainItemList() {

@@ -6,6 +6,13 @@ public class Item {
     public String name;
     public double price;
     public int quantity;
+    
+    public Item() {
+    	this.ID = null;
+    	this.name = null;
+    	this.price = 0;
+    	this.quantity = 0;
+    }
 
     public Item(String ID, String name, double price, int quantity){
 
