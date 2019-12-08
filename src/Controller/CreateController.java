@@ -131,6 +131,7 @@ public class CreateController implements Initializable, EventHandler<ActionEvent
 				
 				if( accountPasswordField.getText().trim().equals(accountConfirmPasswordField.getText().trim())) {
 					createAccount();
+					goToView("../View/Main.fxml");
 				}
 				
 				else {
@@ -197,7 +198,8 @@ public class CreateController implements Initializable, EventHandler<ActionEvent
                                   0);
     	c.payment = p;
     	c.writeToDb();
-    	Main.user = c;   	
+    	Main.user = c;
+    	Main.isLoggedIn = true;
 	}
 	
 	// checks to see if all fields were provided

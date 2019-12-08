@@ -197,6 +197,7 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 			
 			if(Main.isLoggedIn == true) {
 				generateReceipt();
+				updateMainItemList();
 				goToView("../View/Receipt.fxml");
 			}
 			
@@ -252,6 +253,24 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		r.itemList = Main.cart.itemList;
 		r.totalCost = finalCost;
 		r.receiptNum = rand.nextInt();
+	}
+	
+	public void updateMainItemList() {
+		
+		int newQuantity = 0;
+		
+		for(Item inventoryItem: Main.itemList) {
+			for(Item cartItem: Main.cart.getItemList()) {
+				
+				if( cartItem.getID() == inventoryItem.getID()) {
+					
+					// System.out.println(inventoryItem.getName()+": "+inventoryItem.getQuantity());
+					newQuantity = inventoryItem.getQuantity() - cartItem.getQuantity();
+					inventoryItem.setQuantity(newQuantity);
+					// System.out.println(inventoryItem.getName()+": "+inventoryItem.getQuantity());
+				}
+			}
+		}
 	}
 	
 	// set the variables in Main before switching views
