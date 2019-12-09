@@ -15,7 +15,13 @@ public class Main extends Application {
 	
 	public static Stage stage;
 	public static AnchorPane layout;
+	//item lists
 	public static ArrayList<Item> itemList;
+	public static ArrayList<Item> produceList;
+	public static ArrayList<Item> drinkList;
+	public static ArrayList<Item> grainList;
+	public static ArrayList<Item> snackList;
+	
 	public static ArrayList<Receipt> receiptList;
 	public static Cart currentCart;
 	public static Customer user;
@@ -52,7 +58,10 @@ public class Main extends Application {
 				itemTest.name  = r.getString(2);
 				itemTest.price = r.getDouble(3);
 				itemTest.quantity =  r.getInt(4);
+				itemTest.category = r.getString(5);
 				itemList.add(itemTest);
+				
+				
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

@@ -50,7 +50,7 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 	
 	ArrayList<String>options = new ArrayList<String>();
 	private String curFxml = "../View/Search.fxml";
-	
+		
 	@FXML
 	Button leftBtn;
 	@FXML
@@ -86,6 +86,7 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 
 	ArrayList<Item>loadList;
 	ObservableList<Item>items;
+	String category = "";
 	// @FXML
 	// TableView<Item>results;
 		
@@ -102,8 +103,9 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 			goToView("../View/Login.fxml");
 		}
 		
-		else if( searchBtn == e.getSource()) {
-
+		else if( searchBtn == e.getSource()) {	
+			category = optionsComboBox.getValue();
+			loadSearchResults();
 			goToView("../View/Search.fxml");
 		}
 		
@@ -188,8 +190,16 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 		// create ObservableList from ArrayList
 		ObservableList<Item> items = FXCollections.observableArrayList();
 		for (Item i: Main.itemList) {
-			
-			items.add(i);
+			if (category.equals("All"))
+				items.add(i);
+			/*else if (category.equals("Produce") && i.category.equals(category))
+				items.add(i);
+			else if (category.equals("Drinks") && i.category.equals(category))
+				items.add(i);
+			else if (category.equals("Grains") && i.category.equals(category))
+				items.add(i);
+			else if (category.equals("Snacks") && i.category.equals(category))
+				items.add(i);*/
 		}
 		
 		idCol.setCellValueFactory(new PropertyValueFactory<Item, String>("ID"));
@@ -238,6 +248,8 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 		optionsComboBox.setItems(observableOptions);
 		optionsComboBox.getSelectionModel().selectFirst();
 		optionsComboBox.getSelectionModel().select(Main.selectedOption);
+		
+		category = optionsComboBox.getValue();
 	}
 	
 }

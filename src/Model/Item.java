@@ -6,14 +6,25 @@ public class Item {
     public String name;
     public double price;
     public int quantity;
+    public String category;
     
     public Item() {
     	this.ID = null;
     	this.name = null;
     	this.price = 0;
     	this.quantity = 0;
+    	this.category = null;
     }
 
+    public Item(String ID, String name, double price, int quantity, String category){
+
+        this.ID = ID;
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+        this.category = category;
+    }
+    
     public Item(String ID, String name, double price, int quantity){
 
         this.ID = ID;
