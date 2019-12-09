@@ -57,6 +57,12 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 	// Ex: Main.selectedOption
 	// Default vaulues for these variables are set in initialize when the application is launched
 	
+	public static final int ALL = 0;
+	public static final int PRODUCE = 1;
+	public static final int GRAINS = 2;
+	public static final int DRINKS = 3;
+	public static final int SNACKS = 4;
+	
 	private String curFxml = "../View/Main.fxml";
 	
 	ArrayList<String>options = new ArrayList<String>();
@@ -79,6 +85,17 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 	ComboBox<String> optionsComboBox;
 	@FXML
 	TextField searchBox;
+	
+	@FXML
+	Button allBtn;
+	@FXML
+	Button produceBtn;
+	@FXML
+	Button grainsBtn;
+	@FXML
+	Button drinksBtn;
+	@FXML
+	Button snacksBtn;
 		
 	@Override
 	public void handle(ActionEvent e) {
@@ -125,6 +142,31 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 			forwardTrick();
 			goToView(Main.forwardView);
 		}
+		
+		else if( allBtn == e.getSource() ) {
+			optionsComboBox.getSelectionModel().select(ALL);
+			goToView("../View/Search.fxml");
+		}
+		
+		else if( produceBtn == e.getSource() ) {
+			optionsComboBox.getSelectionModel().select(PRODUCE);
+			goToView("../View/Search.fxml");
+		}
+		
+		else if( grainsBtn == e.getSource() ) {
+			optionsComboBox.getSelectionModel().select(GRAINS);
+			goToView("../View/Search.fxml");
+		}
+		
+		else if( drinksBtn == e.getSource() ) {
+			optionsComboBox.getSelectionModel().select(DRINKS);
+			goToView("../View/Search.fxml");
+		}
+		
+		else if( snacksBtn == e.getSource() ) {
+			optionsComboBox.getSelectionModel().select(SNACKS);
+			goToView("../View/Search.fxml");
+		}
 	}
 	
 	// set the variables in Main before switching views
@@ -161,6 +203,7 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 		
 		System.out.println("Switched to Main View!");
 		setUpNavigationBar();
+		setUpQuickSelectButtons();
 		
 		// if the program was launched for the first time
 		if( true == Main.justLaunched ) {
@@ -170,11 +213,21 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 			Main.selectedItem = null;
 			Main.justLaunched = false;
 			Main.cart = new Cart();
+			Main.receiptList = new ArrayList<Receipt>();
 		}
 		
 		else {
 			
 		}
+	}
+	
+	public void setUpQuickSelectButtons() {
+		
+		allBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/Food/Cereal.png"), allBtn.getPrefWidth(), allBtn.getPrefHeight(), true, true)));
+		produceBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/Food/Oranges.png"), produceBtn.getPrefWidth(), produceBtn.getPrefHeight(), true, true)));
+		grainsBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/Food/Bread.png"), grainsBtn.getPrefWidth(), grainsBtn.getPrefHeight(), true, true)));
+		drinksBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/Food/Sweet Tea.png"), drinksBtn.getPrefWidth(), drinksBtn.getPrefHeight(), true, true)));
+		snacksBtn.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("../Images/Food/Candy.png"), snacksBtn.getPrefWidth(), snacksBtn.getPrefHeight(), true, true)));
 	}
 	
 	public void setUpNavigationBar() {

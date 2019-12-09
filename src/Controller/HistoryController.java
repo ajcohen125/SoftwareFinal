@@ -78,9 +78,13 @@ public class HistoryController implements Initializable, EventHandler<ActionEven
 	@FXML
 	Label deliveryLabel;
 	@FXML
+	Label itemCostLabel;
+	@FXML
 	Label storeCreditUsedLabel;
 	@FXML
 	Label totalCostLabel;
+	@FXML
+	Label reducedCostLabel;
 	
 	// LOCAL
 	Receipt selectedReceipt;
@@ -208,10 +212,40 @@ public class HistoryController implements Initializable, EventHandler<ActionEven
 		selectedReceiptTableView.setItems(items);
 		selectedReceiptTableView.refresh();
 		
-		deliveryLabel.setText(selectedReceipt.getShipping());
-		storeCreditUsedLabel.setText("$ "+selectedReceipt.getCreditUsed());
-		totalCostLabel.setText("$ "+selectedReceipt.getTotalCost());
+		double deliveryCost = 0;
+		double itemCost = selectedReceipt.getTotalCost();
+		double creditUsed = selectedReceipt.getCreditUsed();
+		double totalCost = 0;
+		double costAfterStoreCredit = 0;
+		
+		if(selectedReceipt.getShipping().trim().equals("STANDARD") ) {
+			
+			deliveryLabel.setText("$4.0 (Standard)");
+			deliveryCost = 4;
+		}
+		
+		else if(selectedReceipt.getShipping().trim().equals("EXPEDITED") ) {
+			
+			deliveryLabel.setText("$7.0 (Expedited)");
+			deliveryCost = 7;
+		}
+		
+		// this else should not happen
+		else {
+			System.out.println("Shipping: "+selectedReceipt.getShipping());
+			deliveryLabel.setText("$0.0 (Free)");
+		}
+		
+		
+		costAfterStoreCredit = deliveryCost + itemCost;
+		totalCost = costAfterStoreCredit + creditUsed;
+			
+		itemCostLabel.setText("$ "+itemCost);
+		storeCreditUsedLabel.setText("$ "+creditUsed);
+		totalCostLabel.setText("$ "+totalCost);
+		reducedCostLabel.setText("$ "+costAfterStoreCredit);
 	}
+
 	
 	public void setUpNavigationBar() {
 		

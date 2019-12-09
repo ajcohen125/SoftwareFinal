@@ -127,7 +127,7 @@ public class CreateController implements Initializable, EventHandler<ActionEvent
 		else if ( updateBtn == e.getSource()) {
 			System.out.println("Update button pressed");
 			
-			if( true == allFieldsProvided()) {
+			if( true == allFieldsProvided() && true == isEmailValid() ) {
 				
 				if( accountPasswordField.getText().trim().equals(accountConfirmPasswordField.getText().trim())) {
 					createAccount();
@@ -141,10 +141,10 @@ public class CreateController implements Initializable, EventHandler<ActionEvent
 			else {
 				messageLabel.setText("Some fields missing");
 			}
-			//TODO
-			//TODO
-			//TODO
-			//TODO: after this is pressed, bring back to the main screen with isLoggedIn true
+			
+			if( false == isEmailValid() ) {
+				messageLabel.setText("Email is not valid");
+			}
 		}
 	}
 	
@@ -222,6 +222,41 @@ public class CreateController implements Initializable, EventHandler<ActionEvent
 		// all field provided
 		return true;
 			
+	}
+	
+	public boolean isEmailValid() {
+		
+		// email is expected to have a minumum format of <letter> <@> <letter>
+		// the email must therefore have a minimum length of 3
+		
+		String email = accountEmailTextField.getText().trim();
+		
+		// email is an empty String
+		if( email == null || email.trim() == "" ) {
+			return false;
+		}
+		
+		// too short too possibly have the correct format
+		if( email.length() < 3 ) {
+			return false;
+		}
+		
+		// ends with '@'
+		if( email.charAt(email.length()-1) == '@' ) {
+			return false;
+		}
+		
+		// starts with '@'
+		if( email.charAt(0) == '@' ) {
+			return false;
+		}
+		
+		// does not contain '@'
+		if( email.indexOf('@') == -1 ) {
+			return false;
+		}
+		
+		return true;
 	}
 	
 	@Override

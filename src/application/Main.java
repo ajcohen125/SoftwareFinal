@@ -22,7 +22,7 @@ public class Main extends Application {
 	public static ArrayList<Item> grainList;
 	public static ArrayList<Item> snackList;
 	
-	//public static ArrayList<Receipt> receiptList;
+	public static ArrayList<Receipt> receiptList; // do not comment out
 	public static Cart currentCart;
 	public static Customer user; 
 	public static Cart cart;
