@@ -276,6 +276,7 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 					
 					newQuantity = inventoryItem.getQuantity() - cartItem.getQuantity();
 					inventoryItem.setQuantity(newQuantity);
+					inventoryItem.updateDBEntry();
 				}
 			}
 		}
@@ -286,7 +287,6 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		Main.grainList.clear();
 		
 		for(Item temp: Main.itemList){
-			System.out.println(temp.name);
 			switch(temp.category) {
 			case "Produce":
 				Main.produceList.add(temp);

@@ -169,7 +169,6 @@ public class Customer {
 				
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		this.setPayment(p);
@@ -194,7 +193,6 @@ public class Customer {
 				tempList.add(temp);
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		};
 		

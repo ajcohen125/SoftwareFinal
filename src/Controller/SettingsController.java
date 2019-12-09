@@ -27,8 +27,6 @@ import javafx.scene.image.ImageView;
 import Model.*;
 import java.util.ArrayList;
 
-// TODO
-// Write updateAccountInfo() and createAccount()
 
 public class SettingsController implements Initializable, EventHandler<ActionEvent> {
 	
@@ -167,15 +165,6 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 		Main.forwardView = Main.backwardView;
 		Main.backwardView = temp;
 	}
-	
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	
-	// DATA IS ONLY CHANGED LOCALLY
-	// CHANGES ARE NOT SAVED TO THE DATABASE
 	
 	// updates user info
 	public void updateAccountInfo() {

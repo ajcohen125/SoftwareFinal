@@ -1,5 +1,7 @@
 package Model;
 
+import Database.DataBase;
+
 public class Item {
 
     public String ID;
@@ -82,8 +84,17 @@ public class Item {
     	return s;
     }
     
-    public void writeToDb() {
-    	// preparedstatement = adfasdfjs("insert into table (name, email ...) values(?, ?, ? ...")
-        // preparedstatement.insertString(1, name)
+    public void updateDBEntry() {
+    	String sql = "UPDATE Items SET "
+    			+ "Quantity=" + this.quantity + " WHERE ItemID='" + this.ID + "';";
+    	
+    	int r = DataBase.update(sql);
+    	
+    	if (r == -2) {
+    		System.out.println("Could not update item quantity in database");
+    	}
+    	else {
+    		System.out.println("Updated item quantity in databse");
+    	}
     }
 }

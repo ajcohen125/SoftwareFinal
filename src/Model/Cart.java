@@ -118,9 +118,4 @@ public class Cart {
     	
     	return s;
     }
-    
-    public void writeToDb() {
-    	// preparedstatement = adfasdfjs("insert into table (name, email ...) values(?, ?, ? ...")
-        // preparedstatement.insertString(1, name)
-    }
 }

@@ -30,16 +30,6 @@ import javafx.scene.image.ImageView;
 import Model.*;
 import java.util.ArrayList;
 
-/* TODO
- * 
- * I could not get data to display using sample data, so that still needs to be fixed.
- * 
- * A table was added.
- * Load items into an ArrayList in loadSearchData()
- * The ArrayList is converted to an ObservableList<>
- * A TableView is created using the ObservableList<>
- */
-
 public class SearchController implements Initializable, EventHandler<ActionEvent> {
 	
 	public static final int ALL = 0;

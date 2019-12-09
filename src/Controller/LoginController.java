@@ -31,9 +31,6 @@ import javafx.scene.image.ImageView;
 import Model.*;
 import java.util.ArrayList;
 
-// TODO
-// validateCredentials()
-//     f.y.i User is taken to the home page if login is sucessful
 
 public class LoginController implements Initializable, EventHandler<ActionEvent> {
 	
@@ -139,15 +136,9 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 		}
 	}
 	
-	// TODO
-	// TODO
-	// TODO
-	// TODO
-	// TODO
 	
 	public boolean validateCredentials() {
 		
-		// TODO: database stuff
 		// String email = "hjt210@my.utsa.edu";  
 		// String passwordInput = "password";
 		
@@ -185,7 +176,6 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 					return false;
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

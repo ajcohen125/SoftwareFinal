@@ -67,7 +67,6 @@ public class Main extends Application {
 				itemList.add(itemTest);
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			System.out.println("error in MYSQL");
 			e.printStackTrace();
 		}
@@ -90,35 +89,6 @@ public class Main extends Application {
 			}
 		}
 		
-		//TODO: remove this line when we get the full cart set up
-		currentCart.itemList = itemList; //FOR TESTING ONLY
-		
-		// Test for inserting a customer into the DB
-		Customer test = Customer.dummyCustomer();
-		sql = "INSERT INTO Accounts (Username, "
-				+ "Password, Email, "
-				+ "Address, "
-				+ "CCNum, CCName, "
-				+ "ExpDate, CCV, "
-				+ "BillingAddress) VALUES"
-				+ " ('" + test.name + "', '"
-				+ test.password + "', '"
-				+ test.email + "', '"
-				+ test.address + "', '"
-				+ test.payment.ccNum + "', '"
-				+ test.payment.name + "', '"
-				+ test.payment.expDate + "', '"
-				+ test.payment.CVV + "', '"
-				+ test.payment.address
-				+ "')";
-		//System.out.println(sql);
-		//int i = DataBase.update(sql);
-		//System.out.println(i);
-		
-		// Try and delete newly created user
-		//sql = "DELETE FROM Accounts WHERE Username = 'John Smith'";
-		//int i = DataBase.update(sql);
-		//System.out.println(i);
 	}
 	
 	public void initLayout() {
