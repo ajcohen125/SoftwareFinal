@@ -245,8 +245,9 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 			// user had more credit than needed
 			else {
 				creditUsed = Main.cart.totalCost;
-				Main.user.setCredit(Main.user.getCredit()-creditUsed);
 			}
+			
+			Main.user.setCredit(Main.user.getCredit()-creditUsed);
 		}
 		
 		r.email = Main.user.email;
@@ -259,7 +260,7 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		else
 			r.shipping = "EXPEDITED";
 		
-		Main.receiptList.add(r);
+		Main.receiptList.add(0, r);
 		
 		r.writeToDb();
 	}
@@ -273,10 +274,8 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 				
 				if( cartItem.getID() == inventoryItem.getID()) {
 					
-					// System.out.println(inventoryItem.getName()+": "+inventoryItem.getQuantity());
 					newQuantity = inventoryItem.getQuantity() - cartItem.getQuantity();
 					inventoryItem.setQuantity(newQuantity);
-					// System.out.println(inventoryItem.getName()+": "+inventoryItem.getQuantity());
 				}
 			}
 		}

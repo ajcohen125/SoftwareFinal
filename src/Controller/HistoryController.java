@@ -19,6 +19,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -64,16 +65,26 @@ public class HistoryController implements Initializable, EventHandler<ActionEven
 	@FXML
 	TableView<Item> selectedReceiptTableView;
 	@FXML
-	TableColumn<Item, String> idCol;
-	@FXML
 	TableColumn<Item, String> nameCol;
+	@FXML
+	TableColumn<Item, String> idCol;
 	@FXML
 	TableColumn<Item, Double> priceCol;
 	@FXML
 	TableColumn<Item, Integer> quantityCol;
+	@FXML
+	TableColumn<Item, Double> itemTotalCol;
+	
+	@FXML
+	Label deliveryLabel;
+	@FXML
+	Label storeCreditUsedLabel;
+	@FXML
+	Label totalCostLabel;
 	
 	// LOCAL
 	Receipt selectedReceipt;
+	ObservableList<Item> items ;
 		
 	@Override
 	public void handle(ActionEvent e) {
@@ -159,6 +170,11 @@ public class HistoryController implements Initializable, EventHandler<ActionEven
 		
 		loadReceipts();
 		
+		// what to do when the table is pressed
+		allReceiptsTableView.setOnMousePressed(e -> {
+			selectedReceipt = allReceiptsTableView.getSelectionModel().getSelectedItem();
+			loadSelectedReceipt();
+		});
 	}
 	
 	public void loadReceipts() {
@@ -176,7 +192,22 @@ public class HistoryController implements Initializable, EventHandler<ActionEven
 	
 	public void loadSelectedReceipt() {
 		
+		items = FXCollections.observableArrayList(selectedReceipt.getItemList());
 		
+		nameCol.setCellValueFactory(new PropertyValueFactory<Item, String>("name"));
+		
+		idCol.setCellValueFactory(new PropertyValueFactory<Item, String>("ID"));	
+		
+		priceCol.setCellValueFactory(new PropertyValueFactory<Item, Double>("price"));
+		
+		quantityCol.setCellValueFactory(new PropertyValueFactory<Item, Integer>("quantity"));
+
+		selectedReceiptTableView.setItems(items);
+		selectedReceiptTableView.refresh();
+		
+		deliveryLabel.setText(selectedReceipt.getShipping());
+		storeCreditUsedLabel.setText("$ "+selectedReceipt.getCreditUsed());
+		totalCostLabel.setText("$ "+selectedReceipt.getTotalCost());
 	}
 	
 	public void setUpNavigationBar() {

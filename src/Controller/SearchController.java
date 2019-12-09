@@ -190,7 +190,7 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 		// create ObservableList from ArrayList
 		ObservableList<Item> items = FXCollections.observableArrayList();
 		for (Item i: Main.itemList) {
-			if (category.equals("All"))
+			// if (category.equals("All"))
 				items.add(i);
 			/*else if (category.equals("Produce") && i.category.equals(category))
 				items.add(i);

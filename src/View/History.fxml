@@ -30,21 +30,38 @@
       </TableView>
       <TableView fx:id="selectedReceiptTableView" layoutX="445.0" layoutY="127.0" prefHeight="435.0" prefWidth="694.0">
         <columns>
-          <TableColumn prefWidth="109.0" text="C1" />
-          <TableColumn prefWidth="184.0" text="C2" />
+          <TableColumn fx:id="nameCol" prefWidth="236.0" text="Name" />
+          <TableColumn fx:id="idCol" prefWidth="133.0" text="Id" />
+            <TableColumn fx:id="priceCol" prefWidth="217.0" text="Price" />
+            <TableColumn fx:id="quantityCol" prefWidth="107.0" text="Quantity" />
         </columns>
       </TableView>
-      <Label layoutX="445.0" layoutY="719.0" prefHeight="37.0" prefWidth="166.0" text="Total Cost:">
+      <Label layoutX="445.0" layoutY="719.0" prefHeight="37.0" prefWidth="122.0" text="Total Cost:">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="445.0" layoutY="672.0" prefHeight="37.0" prefWidth="214.0" text="Store Credit Used: ">
+      <Label layoutX="445.0" layoutY="672.0" prefHeight="37.0" prefWidth="201.0" text="Store Credit Used: ">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="445.0" layoutY="626.0" prefHeight="37.0" prefWidth="214.0" text="Delivery: ">
+      <Label layoutX="445.0" layoutY="626.0" prefHeight="37.0" prefWidth="102.0" text="Delivery: ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="deliveryLabel" layoutX="560.0" layoutY="627.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="storeCreditUsedLabel" layoutX="656.0" layoutY="673.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalCostLabel" layoutX="576.0" layoutY="720.0">
          <font>
             <Font size="24.0" />
          </font>

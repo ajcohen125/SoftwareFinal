@@ -83,6 +83,15 @@ public class Receipt {
 		this.creditUsed = creditUsed;
 	}
 	
+	public String getShipping() {
+		return shipping;
+	}
+
+	public void setShipping(String shipping) {
+		this.shipping = shipping;
+	}
+
+	
     public String marshall() {
     	String str ="";
     	
