@@ -193,6 +193,10 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 		p.setAddress(cardAddressTextField.getText().trim());
 		p.setExpDate(cardExpDateTextField.getText().trim());
 		
+		//write to database
+		c.updateDB();
+		p.updateDB();
+		
 	}
 	
 	// creates a new account

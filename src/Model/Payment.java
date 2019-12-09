@@ -94,4 +94,24 @@ public class Payment {
     		System.out.println("Wrote Payment to database");
     	}
     }
+    
+    public void updateDB() {
+    	String sql = "UPDATE Payment SET "
+    			+ "ccNum='" + this.ccNum +"', "
+    			+ "expDate='" + this.expDate +"', "
+    			+ "name='" + this.name + "', "
+    			+ "cvv='" + this.CVV + "', "
+    			+ "address='" + this.address + "' " 
+    			+ "WHERE name='" + this.name + "';";
+    	
+    	
+    	int r = DataBase.update(sql);
+    	
+    	if (r == -2) {
+    		System.out.println("Did not update payment in database");
+    	}
+    	else {
+    		System.out.println("Updated payment in database");
+    	}
+    }
 }

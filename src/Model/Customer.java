@@ -133,6 +133,26 @@ public class Customer {
     	this.payment.writeToDb();
     }
     
+    public void updateDB() {
+    	String sql = "UPDATE Customer SET "
+    			+ "name='" + this.name +"', "
+    			+ "email='" + this.email +"', "
+    			+ "password='" + this.password + "', "
+    			+ "address='" + this.address + "', "
+    			+ "credit=" + this.credit + " "
+    			+ "WHERE name='" + this.name + "';";
+    	
+    	
+    	int r = DataBase.update(sql);
+    	
+    	if (r == -2) {
+    		System.out.println("Did not update customer in database");
+    	}
+    	else {
+    		System.out.println("Updated customer in database");
+    	}
+    }
+    
     public void getPaymentFromDB() {
     	Payment p = new Payment();
     	String sql= "SELECT * from Payment WHERE name='" + this.name +"';";
