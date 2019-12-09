@@ -58,7 +58,7 @@ public class HistoryController implements Initializable, EventHandler<ActionEven
 	@FXML
 	TableView<Receipt> allReceiptsTableView;
 	@FXML
-	TableColumn<Receipt, String> receiptNumberCol;
+	TableColumn<Receipt, Integer> receiptNumberCol;
 	@FXML
 	TableColumn<Receipt, Double> totalCostCol;
 	
@@ -84,7 +84,8 @@ public class HistoryController implements Initializable, EventHandler<ActionEven
 	
 	// LOCAL
 	Receipt selectedReceipt;
-	ObservableList<Item> items ;
+	ObservableList<Item> items;
+	ObservableList<Receipt> receiptHistory;
 		
 	@Override
 	public void handle(ActionEvent e) {
@@ -180,9 +181,10 @@ public class HistoryController implements Initializable, EventHandler<ActionEven
 	public void loadReceipts() {
 		
 		// add options to the combo box
-		ObservableList<Receipt> receiptHistory = FXCollections.observableArrayList(Main.receiptList);
+		receiptHistory = FXCollections.observableArrayList();
+		receiptHistory = Main.user.getReceiptTableList();
 		
-		receiptNumberCol.setCellValueFactory(new PropertyValueFactory<Receipt, String>("receiptNum"));
+		receiptNumberCol.setCellValueFactory(new PropertyValueFactory<Receipt, Integer>("receiptNum"));
 		
 		totalCostCol.setCellValueFactory(new PropertyValueFactory<Receipt, Double>("totalCost"));
 		
@@ -192,7 +194,8 @@ public class HistoryController implements Initializable, EventHandler<ActionEven
 	
 	public void loadSelectedReceipt() {
 		
-		items = FXCollections.observableArrayList(selectedReceipt.getItemList());
+		items = FXCollections.observableArrayList();
+		items = selectedReceipt.getItemTableList();
 		
 		nameCol.setCellValueFactory(new PropertyValueFactory<Item, String>("name"));
 		

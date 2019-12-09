@@ -1,8 +1,11 @@
 package Model;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import Database.DataBase;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Customer {
 
@@ -12,6 +15,7 @@ public class Customer {
     public String address;
     public Payment payment;
     public double credit;
+    public ArrayList<Receipt> receiptList;
 
     public Customer(){
 
@@ -21,6 +25,7 @@ public class Customer {
         this.address = null;
         this.payment = null;
         this.credit = 0;
+        receiptList = new ArrayList<Receipt>();
     }
 
     // If an argument was not provided, pass in null when creating an instance of Customer
@@ -32,6 +37,7 @@ public class Customer {
         this.address = address;
         this.payment = payment;
         this.credit = credit;
+        receiptList = new ArrayList<Receipt>();
     }
     
     // String ccNum, String expDate, String name, String CVV, String address
@@ -90,6 +96,14 @@ public class Customer {
       this.credit = credit;
     }
     
+    public ArrayList<Receipt> getReceiptList() {
+        return receiptList;
+      }
+
+    public void setReceiptList(ArrayList<Receipt> receiptList) {
+        this.receiptList = receiptList;
+      }
+    
     public String toString() {
     	
     	String s = "";
@@ -140,6 +154,40 @@ public class Customer {
 		}
 		this.setPayment(p);
     }
+    
+    public void getReceiptListFromDB() {
+    	String sql = "SELECT * FROM Receipt WHERE email ='" + this.email + "';";
+    	ArrayList<Receipt> tempList = new ArrayList<Receipt>();
+    	
+    	java.sql.ResultSet r = DataBase.select(sql);
+    	
+    	try {
+			while(r.next()){
+				Receipt temp = new Receipt();
+				temp.email = r.getString(1);
+				temp.receiptNum = r.getInt(2);
+				temp.itemList = Receipt.unmarshall(r.getString(3));
+				temp.totalCost = r.getDouble(4);
+				temp.shipping = r.getString(5);
+				temp.creditUsed = r.getDouble(6);
+				
+				tempList.add(temp);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		};
+		
+		setReceiptList(tempList);
+    }
+    
+    public ObservableList<Receipt> getReceiptTableList(){
+		ObservableList<Receipt> tableList = FXCollections.observableArrayList();
+			
+		for(int i = 0; i < this.getReceiptList().size(); i++) {
+			tableList.add(receiptList.get(i));
+		}
+		
+		return tableList;
+	}
 }
-
-// System.out.print("Name: %s", this.name);

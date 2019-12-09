@@ -107,18 +107,18 @@ public class Receipt {
     }
     
     public static ArrayList<Item> unmarshall(String str) {
-    	Item temp = new Item();
     	ArrayList<Item> items = new ArrayList<Item>();
     	
     	String[] strSplit = str.split(":");
     	
     	for(String i: strSplit) {
+    		Item temp = new Item();
     		String[] iSplit = i.split(",");
     		
     		temp.ID = iSplit[0];
     		temp.name = iSplit[1];
     		temp.price = Double.parseDouble(iSplit[2]);
-    		temp.quantity = Integer.parseInt(iSplit[4]);
+    		temp.quantity = Integer.parseInt(iSplit[3]);
     		
     		items.add(temp);
     	}
@@ -148,7 +148,7 @@ public class Receipt {
     	}
     }
     
-    public ObservableList<Item> getAssignmentTableList(){
+    public ObservableList<Item> getItemTableList(){
 		ObservableList<Item> tableList = FXCollections.observableArrayList();
 			
 		for(int i = 0; i < this.getItemList().size(); i++) {

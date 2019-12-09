@@ -260,7 +260,7 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		else
 			r.shipping = "EXPEDITED";
 		
-		Main.receiptList.add(0, r);
+		Main.user.receiptList.add(r);
 		
 		r.writeToDb();
 	}
@@ -436,7 +436,7 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		
 		// create ObservableList from ArrayList
 		items = FXCollections.observableArrayList();
-		items = Main.cart.getAssignmentTableList();
+		items = Main.cart.getItemTableList();
 		
 		idCol.setCellValueFactory(new PropertyValueFactory<Item, String>("ID"));
 		

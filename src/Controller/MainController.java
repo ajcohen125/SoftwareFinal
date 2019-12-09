@@ -170,7 +170,6 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 			Main.selectedItem = null;
 			Main.justLaunched = false;
 			Main.cart = new Cart();
-			Main.receiptList = new ArrayList<Receipt>();
 		}
 		
 		else {

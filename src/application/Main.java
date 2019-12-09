@@ -22,7 +22,7 @@ public class Main extends Application {
 	public static ArrayList<Item> grainList;
 	public static ArrayList<Item> snackList;
 	
-	public static ArrayList<Receipt> receiptList;
+	//public static ArrayList<Receipt> receiptList;
 	public static Cart currentCart;
 	public static Customer user; 
 	public static Cart cart;
@@ -58,7 +58,7 @@ public class Main extends Application {
 		java.sql.ResultSet r = DataBase.select(sql);
 		try {
 			while(r.next()){
-				Item itemTest = new Item("001", "Toothbrush", 4.00, 5);
+				Item itemTest = new Item();
 				itemTest.ID = r.getString(1);
 				itemTest.name  = r.getString(2);
 				itemTest.price = r.getDouble(3);

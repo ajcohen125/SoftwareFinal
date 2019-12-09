@@ -51,17 +51,17 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="deliveryLabel" layoutX="560.0" layoutY="627.0">
+      <Label fx:id="deliveryLabel" layoutX="560.0" layoutY="627.0" text="\$0">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="storeCreditUsedLabel" layoutX="656.0" layoutY="673.0">
+      <Label fx:id="storeCreditUsedLabel" layoutX="656.0" layoutY="673.0" text="\$0">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label fx:id="totalCostLabel" layoutX="576.0" layoutY="720.0">
+      <Label fx:id="totalCostLabel" layoutX="576.0" layoutY="720.0" text="\$0">
          <font>
             <Font size="24.0" />
          </font>

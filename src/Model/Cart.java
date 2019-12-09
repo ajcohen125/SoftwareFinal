@@ -94,7 +94,7 @@ public class Cart {
 		}
     }
     
-    public ObservableList<Item> getAssignmentTableList(){
+    public ObservableList<Item> getItemTableList(){
 		ObservableList<Item> tableList = FXCollections.observableArrayList();
 			
 		for(int i = 0; i < this.getItemList().size(); i++) {

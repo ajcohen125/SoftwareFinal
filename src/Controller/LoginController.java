@@ -173,7 +173,10 @@ public class LoginController implements Initializable, EventHandler<ActionEvent>
 					c.setAddress(r.getString(4));
 					c.setCredit(r.getDouble(5));
 					
+					System.out.println("Getting payment info from DB");
 					c.getPaymentFromDB();
+					System.out.println("Getting receipts from DB");
+					c.getReceiptListFromDB();
 					
 					Main.user = c;
 					return true;
