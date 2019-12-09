@@ -188,7 +188,6 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 			}
 			break;
 		case "Grains":
-			System.out.println(Main.grainList);
 			for (Item i: Main.grainList) {
 				items.add(i);
 			}
@@ -204,7 +203,6 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 			}
 			break;
 		case "All":
-			System.out.println(Main.itemList.toString());
 			for (Item i: Main.itemList) {
 				items.add(i);
 			}
