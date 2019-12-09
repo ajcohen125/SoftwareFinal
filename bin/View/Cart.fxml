@@ -52,11 +52,6 @@
          </font>
       </TextField>
       <Button fx:id="deleteBtn" layoutX="201.0" layoutY="718.0" mnemonicParsing="false" onAction="#handle" text="Delete" />
-      <Label layoutX="67.0" layoutY="705.0" text="Label">
-         <font>
-            <Font size="39.0" />
-         </font>
-      </Label>
       <Label layoutX="669.0" layoutY="97.0" text="Email receipt to:">
          <font>
             <Font size="20.0" />
