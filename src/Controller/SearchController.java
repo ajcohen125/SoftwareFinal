@@ -104,8 +104,6 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 		}
 		
 		else if( searchBtn == e.getSource()) {	
-			category = optionsComboBox.getValue();
-			loadSearchResults();
 			goToView("../View/Search.fxml");
 		}
 		
@@ -180,26 +178,47 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 		
 		System.out.println("Switched to Search View!");
 		
-		loadSearchResults();
+		items = FXCollections.observableArrayList();
 		
 		setUpNavigationBar();
+		
+		category = optionsComboBox.getValue();
+		
+		loadSearchResults();		
 	}
 	
 	public void loadSearchResults() {
 		
 		// create ObservableList from ArrayList
-		ObservableList<Item> items = FXCollections.observableArrayList();
-		for (Item i: Main.itemList) {
-			// if (category.equals("All"))
+		items.clear();
+		switch(category) {
+		case "Produce":
+			for (Item i: Main.produceList) {
 				items.add(i);
-			/*else if (category.equals("Produce") && i.category.equals(category))
+			}
+			break;
+		case "Grains":
+			System.out.println(Main.grainList);
+			for (Item i: Main.grainList) {
 				items.add(i);
-			else if (category.equals("Drinks") && i.category.equals(category))
+			}
+			break;
+		case "Drinks":
+			for (Item i: Main.drinkList) {
 				items.add(i);
-			else if (category.equals("Grains") && i.category.equals(category))
+			}
+			break;
+		case "Snacks":
+			for (Item i: Main.snackList) {
 				items.add(i);
-			else if (category.equals("Snacks") && i.category.equals(category))
-				items.add(i);*/
+			}
+			break;
+		case "All":
+			System.out.println(Main.itemList.toString());
+			for (Item i: Main.itemList) {
+				items.add(i);
+			}
+			break;
 		}
 		
 		idCol.setCellValueFactory(new PropertyValueFactory<Item, String>("ID"));
@@ -209,7 +228,7 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 		priceCol.setCellValueFactory(new PropertyValueFactory<Item, Double>("price"));
 		
 		quantityCol.setCellValueFactory(new PropertyValueFactory<Item, Integer>("quantity"));
-
+		
 		results.setItems(items);
 		
 		results.getSortOrder().add(nameCol);
@@ -249,7 +268,6 @@ public class SearchController implements Initializable, EventHandler<ActionEvent
 		optionsComboBox.getSelectionModel().selectFirst();
 		optionsComboBox.getSelectionModel().select(Main.selectedOption);
 		
-		category = optionsComboBox.getValue();
 	}
 	
 }

@@ -24,7 +24,7 @@ public class Main extends Application {
 	
 	public static ArrayList<Receipt> receiptList;
 	public static Cart currentCart;
-	public static Customer user;
+	public static Customer user; 
 	public static Cart cart;
 	public static Item curItem;
 	public static int selectedOption;           // currently unused
@@ -47,6 +47,11 @@ public class Main extends Application {
 		// itemList - an array list of EVERY ITEM we have
 		// added a change so I can stage this
 		itemList = new ArrayList<Item>();
+		produceList = new ArrayList<Item>();
+		drinkList = new ArrayList<Item>();
+		grainList = new ArrayList<Item>();
+		snackList = new ArrayList<Item>();
+		
 		currentCart = new Cart();
 		
 		String sql = "SELECT * FROM Items;";
@@ -60,8 +65,6 @@ public class Main extends Application {
 				itemTest.quantity =  r.getInt(4);
 				itemTest.category = r.getString(5);
 				itemList.add(itemTest);
-				
-				
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -71,6 +74,20 @@ public class Main extends Application {
 		
 		for(Item temp: itemList){
 			System.out.println(temp.name);
+			switch(temp.category) {
+			case "Produce":
+				produceList.add(temp);
+				break;
+			case "Drinks":
+				drinkList.add(temp);
+				break;
+			case "Snacks":
+				snackList.add(temp);
+				break;
+			case "Grains":
+				grainList.add(temp);
+				break;
+			}
 		}
 		
 		//TODO: remove this line when we get the full cart set up

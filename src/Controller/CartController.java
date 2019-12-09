@@ -279,6 +279,29 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 				}
 			}
 		}
+		
+		Main.produceList.clear();
+		Main.drinkList.clear();
+		Main.snackList.clear();
+		Main.grainList.clear();
+		
+		for(Item temp: Main.itemList){
+			System.out.println(temp.name);
+			switch(temp.category) {
+			case "Produce":
+				Main.produceList.add(temp);
+				break;
+			case "Drinks":
+				Main.drinkList.add(temp);
+				break;
+			case "Snacks":
+				Main.snackList.add(temp);
+				break;
+			case "Grains":
+				Main.grainList.add(temp);
+				break;
+			}
+		}
 	}
 	
 	// set the variables in Main before switching views
