@@ -1,0 +1,991 @@
+2019-12-09 13:47:17,965 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2019-12-09 13:47:17,965 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2019-12-09 13:47:17,965 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2019-12-09 13:47:17,965 [INFO] in scala-execution-context-global-31 - Warning: Quantum will not submit render jobs, nothing should draw
+2019-12-09 13:47:17,965 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - finished init!
+2019-12-09 13:47:17,978 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - JavaFX version: 8.0.231-b10
+2019-12-09 13:47:17,995 [INFO] in scala-execution-context-global-31 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2019-12-09 13:47:18,019 [INFO] in scala-execution-context-global-31 - [info] c.j.i.c.m.ChartJSONImExporter - Nothing to import
+2019-12-09 13:47:18,199 [INFO] in scala-execution-context-global-31 - [info] play.api.Play - Application started (Prod)
+2019-12-09 13:47:18,868 [INFO] in scala-execution-context-global-31 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 13:47:19,917 [INFO] in scala-execution-context-global-31 - [info] c.jpro - application requested: 0!software
+2019-12-09 13:47:19,927 [INFO] in scala-execution-context-global-31 - [info] c.jpro - Creating Application: 0!software
+2019-12-09 13:47:19,929 [INFO] in scala-execution-context-global-31 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 13:47:19,929 [INFO] in scala-execution-context-global-31 - [info] c.jpro - host          localhost:8080
+2019-12-09 13:47:19,929 [INFO] in scala-execution-context-global-31 - [info] c.jpro - uri           /app/0!software
+2019-12-09 13:47:20,147 [INFO] in scala-execution-context-global-31 - [error] c.j.i.s.ViewSerializerActor - JavaFXStreamer - got Exception: 
+2019-12-09 13:47:20,148 [INFO] in scala-execution-context-global-31 - java.lang.ClassNotFoundException: com.jpro.application.Main
+2019-12-09 13:47:20,148 [INFO] in scala-execution-context-global-31 - 	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+2019-12-09 13:47:20,148 [INFO] in scala-execution-context-global-43 - 	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+2019-12-09 13:47:20,148 [INFO] in scala-execution-context-global-31 - 	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+2019-12-09 13:47:20,148 [INFO] in scala-execution-context-global-31 - 	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+2019-12-09 13:47:20,148 [INFO] in scala-execution-context-global-50 - 	at simplefx.util.ReflectionUtil.loadClass(ReflectionUtil.scala:38)
+2019-12-09 13:47:20,148 [INFO] in scala-execution-context-global-51 - 	at simplefx.util.ReflectionUtil.callNew(ReflectionUtil.scala:103)
+2019-12-09 13:47:20,148 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.config.ApplicationStarter$.startApplication(ApplicationStarter.scala:111)
+2019-12-09 13:47:20,148 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.config.ApplicationStarter$.requestApplication(ApplicationStarter.scala:97)
+2019-12-09 13:47:20,148 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.config.ApplicationStarter$.getApplication(ApplicationStarter.scala:63)
+2019-12-09 13:47:20,148 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+2019-12-09 13:48:28,616 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2019-12-09 13:48:28,617 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2019-12-09 13:48:28,617 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2019-12-09 13:48:28,617 [INFO] in scala-execution-context-global-43 - Warning: Quantum will not submit render jobs, nothing should draw
+2019-12-09 13:48:28,617 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.Initializer$ - finished init!
+2019-12-09 13:48:28,628 [INFO] in scala-execution-context-global-44 - [info] c.j.i.s.Initializer$ - JavaFX version: 8.0.231-b10
+2019-12-09 13:48:28,646 [INFO] in scala-execution-context-global-44 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2019-12-09 13:48:28,670 [INFO] in scala-execution-context-global-44 - [info] c.j.i.c.m.ChartJSONImExporter - Nothing to import
+2019-12-09 13:48:28,837 [INFO] in scala-execution-context-global-44 - [info] play.api.Play - Application started (Prod)
+2019-12-09 13:48:29,395 [INFO] in scala-execution-context-global-44 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 13:48:30,270 [INFO] in scala-execution-context-global-44 - [info] c.jpro - application requested: 0!software
+2019-12-09 13:48:30,278 [INFO] in scala-execution-context-global-44 - [info] c.jpro - Creating Application: 0!software
+2019-12-09 13:48:30,281 [INFO] in scala-execution-context-global-44 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 13:48:30,281 [INFO] in scala-execution-context-global-44 - [info] c.jpro - host          localhost:8080
+2019-12-09 13:48:30,281 [INFO] in scala-execution-context-global-44 - [info] c.jpro - uri           /app/0!software
+2019-12-09 13:48:30,558 [INFO] in scala-execution-context-global-44 - [error] c.j.i.s.ViewSerializerActor - JavaFXStreamer - got Exception: 
+2019-12-09 13:48:30,558 [INFO] in scala-execution-context-global-44 - java.lang.ClassNotFoundException: com.jpro.application.Main
+2019-12-09 13:48:30,558 [INFO] in scala-execution-context-global-44 - 	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+2019-12-09 13:48:30,558 [INFO] in scala-execution-context-global-44 - 	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+2019-12-09 13:48:30,558 [INFO] in scala-execution-context-global-44 - 	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+2019-12-09 13:48:30,558 [INFO] in scala-execution-context-global-44 - 	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+2019-12-09 13:48:30,558 [INFO] in scala-execution-context-global-44 - 	at simplefx.util.ReflectionUtil.loadClass(ReflectionUtil.scala:38)
+2019-12-09 13:48:30,558 [INFO] in scala-execution-context-global-44 - 	at simplefx.util.ReflectionUtil.callNew(ReflectionUtil.scala:103)
+2019-12-09 13:48:30,558 [INFO] in scala-execution-context-global-44 - 	at com.jpro.internal.config.ApplicationStarter$.startApplication(ApplicationStarter.scala:111)
+2019-12-09 13:48:30,558 [INFO] in scala-execution-context-global-44 - 	at com.jpro.internal.config.ApplicationStarter$.requestApplication(ApplicationStarter.scala:97)
+2019-12-09 13:48:30,558 [INFO] in scala-execution-context-global-44 - 	at com.jpro.internal.config.ApplicationStarter$.getApplication(ApplicationStarter.scala:63)
+2019-12-09 13:48:30,558 [INFO] in scala-execution-context-global-44 - 	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+2019-12-09 13:49:28,283 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2019-12-09 13:49:28,284 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2019-12-09 13:49:28,284 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2019-12-09 13:49:28,284 [INFO] in scala-execution-context-global-43 - Warning: Quantum will not submit render jobs, nothing should draw
+2019-12-09 13:49:28,284 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.Initializer$ - finished init!
+2019-12-09 13:49:28,295 [INFO] in scala-execution-context-global-44 - [info] c.j.i.s.Initializer$ - JavaFX version: 8.0.231-b10
+2019-12-09 13:49:28,312 [INFO] in scala-execution-context-global-44 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2019-12-09 13:49:28,334 [INFO] in scala-execution-context-global-44 - [info] c.j.i.c.m.ChartJSONImExporter - Nothing to import
+2019-12-09 13:49:28,504 [INFO] in scala-execution-context-global-44 - [info] play.api.Play - Application started (Prod)
+2019-12-09 13:49:29,062 [INFO] in scala-execution-context-global-44 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 13:49:29,949 [INFO] in scala-execution-context-global-44 - [info] c.jpro - application requested: 0!software
+2019-12-09 13:49:29,958 [INFO] in scala-execution-context-global-44 - [info] c.jpro - Creating Application: 0!software
+2019-12-09 13:49:29,960 [INFO] in scala-execution-context-global-44 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 13:49:29,960 [INFO] in scala-execution-context-global-44 - [info] c.jpro - host          localhost:8080
+2019-12-09 13:49:29,960 [INFO] in scala-execution-context-global-44 - [info] c.jpro - uri           /app/0!software
+2019-12-09 13:49:30,348 [ERROR] in scala-execution-context-global-44 - java.lang.IllegalStateException: Location is not set.
+2019-12-09 13:49:30,349 [ERROR] in scala-execution-context-global-44 - 	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2434)
+2019-12-09 13:49:30,349 [ERROR] in scala-execution-context-global-44 - 	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2409)
+2019-12-09 13:49:30,349 [ERROR] in scala-execution-context-global-44 - 	at application.Main.initLayout(Main.java:99)
+2019-12-09 13:49:30,349 [ERROR] in scala-execution-context-global-44 - 	at application.Main.start(Main.java:42)
+2019-12-09 13:49:30,349 [ERROR] in scala-execution-context-global-44 - 	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1(ApplicationStarter.scala:133)
+2019-12-09 13:49:30,349 [ERROR] in scala-execution-context-global-44 - 	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1$adapted(ApplicationStarter.scala:131)
+2019-12-09 13:49:30,349 [ERROR] in scala-execution-context-global-44 - 	at com.jpro.internal.communicator.InstanceImpl.start(InstanceImpl.scala:31)
+2019-12-09 13:49:30,349 [ERROR] in scala-execution-context-global-43 - 	at com.jpro.internal.communicator.InstanceImpl.$anonfun$new$2(InstanceImpl.scala:25)
+2019-12-09 13:49:30,349 [ERROR] in scala-execution-context-global-43 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:49:30,349 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2(CoreTimeEvent.scala:133)
+2019-12-09 13:49:30,349 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2$adapted(CoreTimeEvent.scala:133)
+2019-12-09 13:49:30,349 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$triggerOnChange$3(CoreTypesBindable.scala:208)
+2019-12-09 13:49:30,349 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl(CoreScheduler.scala:73)
+2019-12-09 13:49:30,349 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl$(CoreScheduler.scala:52)
+2019-12-09 13:49:30,349 [ERROR] in scala-execution-context-global-44 - 	at simplefx.cores.standard.Core.runSchedulerImpl(Core.scala:9)
+2019-12-09 13:49:30,349 [ERROR] in scala-execution-context-global-44 - 	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop(CoreScheduler.scala:44)
+2019-12-09 13:49:30,349 [ERROR] in scala-execution-context-global-44 - 	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop$(CoreScheduler.scala:42)
+2019-12-09 13:49:30,349 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.Core.tryStartSchedulerStop(Core.scala:9)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit(CoreTypesEvent.scala:64)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$(CoreTypesEvent.scala:64)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit(CoreTypesBindable.scala:24)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp(CoreTypesEvent.scala:64)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp$(CoreTypesEvent.scala:64)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit$mcZ$sp(CoreTypesBindable.scala:24)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:103)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:88)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:88)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:24)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set(CoreTypesBindable.scala:161)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$(CoreTypesBindable.scala:161)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-44 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.set(CoreTypesBindable.scala:24)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-44 - 	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$mcZ$sp(CoreTypesBindable.scala:161)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-44 - 	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$mcZ$sp$(CoreTypesBindable.scala:161)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-44 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.set$mcZ$sp(CoreTypesBindable.scala:24)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-44 - 	at com.jpro.internal.stats.ViewInfo.active_$eq(ViewInfo.scala:35)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-43 - 	at com.jpro.internal.stats.ViewInfo.active_$eq$(ViewInfo.scala:35)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-43 - 	at com.jpro.internal.communicator.ViewImpl.active_$eq(ViewImpl.scala:25)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-43 - 	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:53)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-43 - 	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-43 - 	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-43 - 	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$1.$anonfun$applyOrElse$2(ViewSerializerActor.scala:49)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-43 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-43 - 	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+2019-12-09 13:49:30,350 [ERROR] in scala-execution-context-global-43 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:49:30,351 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+2019-12-09 13:49:30,351 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+2019-12-09 13:49:30,351 [ERROR] in scala-execution-context-global-43 - 	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:57)
+2019-12-09 13:49:30,351 [ERROR] in scala-execution-context-global-43 - 	at java.security.AccessController.doPrivileged(Native Method)
+2019-12-09 13:49:30,351 [ERROR] in scala-execution-context-global-43 - 	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+2019-12-09 13:49:30,351 [ERROR] in scala-execution-context-global-43 - 	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+2019-12-09 13:49:30,351 [ERROR] in scala-execution-context-global-43 - 	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+2019-12-09 13:49:30,351 [ERROR] in scala-execution-context-global-43 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:557)
+2019-12-09 13:49:30,352 [ERROR] in scala-execution-context-global-31 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:541)
+2019-12-09 13:49:30,352 [ERROR] in scala-execution-context-global-31 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:534)
+2019-12-09 13:49:30,352 [ERROR] in scala-execution-context-global-31 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:340)
+2019-12-09 13:49:30,352 [ERROR] in scala-execution-context-global-31 - 	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+2019-12-09 13:49:30,353 [ERROR] in scala-execution-context-global-31 - 	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+2019-12-09 13:49:30,353 [ERROR] in scala-execution-context-global-31 - 	at java.lang.Thread.run(Thread.java:748)
+2019-12-09 13:49:30,357 [INFO] in scala-execution-context-global-52 - [error] c.j.i.c.InstanceImpl - Error while starting application: 
+2019-12-09 13:49:30,357 [INFO] in scala-execution-context-global-52 - java.lang.NullPointerException: null
+2019-12-09 13:49:30,357 [INFO] in scala-execution-context-global-51 - 	at application.Main.start(Main.java:60)
+2019-12-09 13:49:30,357 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1(ApplicationStarter.scala:133)
+2019-12-09 13:49:30,357 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1$adapted(ApplicationStarter.scala:131)
+2019-12-09 13:49:30,357 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.communicator.InstanceImpl.start(InstanceImpl.scala:31)
+2019-12-09 13:49:30,357 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.communicator.InstanceImpl.$anonfun$new$2(InstanceImpl.scala:25)
+2019-12-09 13:49:30,357 [INFO] in scala-execution-context-global-51 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:49:30,357 [INFO] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2(CoreTimeEvent.scala:133)
+2019-12-09 13:49:30,357 [INFO] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2$adapted(CoreTimeEvent.scala:133)
+2019-12-09 13:49:30,357 [INFO] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$triggerOnChange$3(CoreTypesBindable.scala:208)
+2019-12-09 13:49:30,358 [INFO] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl(CoreScheduler.scala:73)
+2019-12-09 13:49:30,358 [INFO] in scala-execution-context-global-51 - [warn] c.j.i.c.InstanceImpl - Application didn't show the stage. JPro is now calling show()
+2019-12-09 13:49:30,373 [INFO] in scala-execution-context-global-53 - [error] c.j.i.s.ViewSerializerActor - JavaFXStreamer - got Exception: 
+2019-12-09 13:49:30,373 [INFO] in scala-execution-context-global-53 - java.lang.NullPointerException: null
+2019-12-09 13:49:30,373 [INFO] in scala-execution-context-global-53 - 	at simplefx.util.ReflectionUtil$UseReflection.applyDynamic(ReflectionUtil.scala:18)
+2019-12-09 13:49:30,373 [INFO] in scala-execution-context-global-53 - 	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:87)
+2019-12-09 13:49:30,373 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+2019-12-09 13:49:30,373 [INFO] in scala-execution-context-global-52 - 	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+2019-12-09 13:49:30,373 [INFO] in scala-execution-context-global-52 - 	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$1.$anonfun$applyOrElse$2(ViewSerializerActor.scala:49)
+2019-12-09 13:49:30,373 [INFO] in scala-execution-context-global-53 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:49:30,373 [INFO] in scala-execution-context-global-53 - 	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+2019-12-09 13:49:30,373 [INFO] in scala-execution-context-global-53 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:49:30,373 [INFO] in scala-execution-context-global-53 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+2019-12-09 13:49:30,373 [INFO] in scala-execution-context-global-53 - 	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+2019-12-09 13:49:30,380 [ERROR] in scala-execution-context-global-52 - java.lang.NullPointerException: Can't access extension-class for null
+2019-12-09 13:49:30,380 [ERROR] in scala-execution-context-global-52 - 	at simplefx.macros.Extension$.setRef(Extension.scala:72)
+2019-12-09 13:49:30,380 [ERROR] in scala-execution-context-global-53 - 	at simplefx.scene.packageTrait$.toSceneExtension(packageTraitScene.scala:15)
+2019-12-09 13:49:30,380 [ERROR] in scala-execution-context-global-53 - 	at simplefx.scene.packageTrait$ImportTrait.toSceneExtension(packageTraitScene.scala:15)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-53 - 	at simplefx.scene.packageTrait$ImportTrait.toSceneExtension$(packageTraitScene.scala:15)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-53 - 	at simplefx.all$.toSceneExtension(all.scala:5)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-53 - 	at com.jpro.meta.stream.FXSerializerImpl.transferScene(FXSerializer.scala:102)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-53 - 	at com.jpro.meta.stream.FXAppSerializer.$anonfun$new$6(FXAppSerializer.scala:39)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-53 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-53 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$EventLikeAlternateSignature.$anonfun$$minus$minus$greater$1(CoreTypesEvent.scala:16)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-53 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$trigger$2(CoreTypesBindable.scala:192)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-53 - 	at simplefx.cores.interfaces.parts.CoreTypesDisposer.withDetectDisposer(CoreTypesDisposer.scala:65)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-53 - 	at simplefx.cores.interfaces.parts.CoreTypesDisposer.withDetectDisposer$(CoreTypesDisposer.scala:63)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-52 - 	at simplefx.cores.standard.Core.withDetectDisposer(Core.scala:9)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-52 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$trigger$1(CoreTypesBindable.scala:191)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-52 - 	at simplefx.cores.interfaces.parts.CoreTypesGetter.withGetter(CoreTypesGetter.scala:12)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-52 - 	at simplefx.cores.interfaces.parts.CoreTypesGetter.withGetter$(CoreTypesGetter.scala:10)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-52 - 	at simplefx.cores.standard.Core.withGetter(Core.scala:9)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-52 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.trigger(CoreTypesBindable.scala:190)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-52 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$EventLike.$minus$minus$greater(CoreTypesEvent.scala:25)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$EventLike.$minus$minus$greater$(CoreTypesEvent.scala:25)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$minus$minus$greater(CoreTypesBindable.scala:24)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-52 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$EventLikeAlternateSignature.$minus$minus$greater(CoreTypesEvent.scala:16)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-52 - 	at com.jpro.meta.stream.FXAppSerializer.$anonfun$new$5(FXAppSerializer.scala:39)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-52 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-53 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2(CoreTimeEvent.scala:133)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-53 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2$adapted(CoreTimeEvent.scala:133)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$triggerOnChange$3(CoreTypesBindable.scala:208)
+2019-12-09 13:49:30,381 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl(CoreScheduler.scala:73)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl$(CoreScheduler.scala:52)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.Core.runSchedulerImpl(Core.scala:9)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop(CoreScheduler.scala:44)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop$(CoreScheduler.scala:42)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.Core.tryStartSchedulerStop(Core.scala:9)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit(CoreTypesEvent.scala:64)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$(CoreTypesEvent.scala:64)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit(CoreTypesBindable.scala:24)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp(CoreTypesEvent.scala:64)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp$(CoreTypesEvent.scala:64)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit$mcZ$sp(CoreTypesBindable.scala:24)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:103)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:88)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:88)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:24)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.interfaces.parts.CoreTypesBindable$SOBindableAssign.$colon$eq(CoreTypesBindable.scala:150)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.interfaces.parts.CoreTypesBindable$SOBindableAssign.$colon$eq$(CoreTypesBindable.scala:149)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$colon$eq(CoreTypesBindable.scala:24)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at com.jpro.internal.communicator.ViewImpl.$anonfun$new$1(ViewImpl.scala:56)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-51 - 	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:57)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at java.security.AccessController.doPrivileged(Native Method)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+2019-12-09 13:49:30,382 [ERROR] in scala-execution-context-global-43 - 	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+2019-12-09 13:49:30,383 [ERROR] in scala-execution-context-global-43 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:557)
+2019-12-09 13:49:30,383 [ERROR] in scala-execution-context-global-43 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:541)
+2019-12-09 13:49:30,383 [ERROR] in scala-execution-context-global-43 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:534)
+2019-12-09 13:49:30,383 [ERROR] in scala-execution-context-global-43 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:340)
+2019-12-09 13:49:30,383 [ERROR] in scala-execution-context-global-43 - 	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+2019-12-09 13:49:30,383 [ERROR] in scala-execution-context-global-43 - 	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+2019-12-09 13:49:30,383 [ERROR] in scala-execution-context-global-43 - 	at java.lang.Thread.run(Thread.java:748)
+2019-12-09 13:49:31,394 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - WORKAROUND! setting XY for Window because current XY is NaN
+2019-12-09 13:51:29,137 [INFO] in scala-execution-context-global-33 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2019-12-09 13:51:29,138 [INFO] in scala-execution-context-global-33 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2019-12-09 13:51:29,138 [INFO] in scala-execution-context-global-33 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2019-12-09 13:51:29,138 [INFO] in scala-execution-context-global-45 - Warning: Quantum will not submit render jobs, nothing should draw
+2019-12-09 13:51:29,138 [INFO] in scala-execution-context-global-45 - [info] c.j.i.s.Initializer$ - finished init!
+2019-12-09 13:51:29,149 [INFO] in scala-execution-context-global-46 - [info] c.j.i.s.Initializer$ - JavaFX version: 8.0.231-b10
+2019-12-09 13:51:29,168 [INFO] in scala-execution-context-global-46 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2019-12-09 13:51:29,192 [INFO] in scala-execution-context-global-46 - [info] c.j.i.c.m.ChartJSONImExporter - Nothing to import
+2019-12-09 13:51:29,354 [INFO] in scala-execution-context-global-46 - [info] play.api.Play - Application started (Prod)
+2019-12-09 13:51:29,918 [INFO] in scala-execution-context-global-46 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 13:51:30,791 [INFO] in scala-execution-context-global-46 - [info] c.jpro - application requested: 0!software
+2019-12-09 13:51:30,800 [INFO] in scala-execution-context-global-46 - [info] c.jpro - Creating Application: 0!software
+2019-12-09 13:51:30,802 [INFO] in scala-execution-context-global-46 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 13:51:30,803 [INFO] in scala-execution-context-global-46 - [info] c.jpro - host          localhost:8080
+2019-12-09 13:51:30,803 [INFO] in scala-execution-context-global-46 - [info] c.jpro - uri           /app/0!software
+2019-12-09 13:51:31,203 [ERROR] in scala-execution-context-global-33 - java.lang.IllegalStateException: Location is not set.
+2019-12-09 13:51:31,203 [ERROR] in scala-execution-context-global-33 - 	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2434)
+2019-12-09 13:51:31,203 [ERROR] in scala-execution-context-global-33 - 	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2409)
+2019-12-09 13:51:31,203 [ERROR] in scala-execution-context-global-33 - 	at application.Main.initLayout(Main.java:99)
+2019-12-09 13:51:31,203 [ERROR] in scala-execution-context-global-33 - 	at application.Main.start(Main.java:42)
+2019-12-09 13:51:31,203 [ERROR] in scala-execution-context-global-33 - 	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1(ApplicationStarter.scala:133)
+2019-12-09 13:51:31,203 [ERROR] in scala-execution-context-global-46 - 	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1$adapted(ApplicationStarter.scala:131)
+2019-12-09 13:51:31,203 [ERROR] in scala-execution-context-global-46 - 	at com.jpro.internal.communicator.InstanceImpl.start(InstanceImpl.scala:31)
+2019-12-09 13:51:31,203 [ERROR] in scala-execution-context-global-33 - 	at com.jpro.internal.communicator.InstanceImpl.$anonfun$new$2(InstanceImpl.scala:25)
+2019-12-09 13:51:31,203 [ERROR] in scala-execution-context-global-33 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2(CoreTimeEvent.scala:133)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2$adapted(CoreTimeEvent.scala:133)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$triggerOnChange$3(CoreTypesBindable.scala:208)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl(CoreScheduler.scala:73)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-45 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl$(CoreScheduler.scala:52)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-45 - 	at simplefx.cores.standard.Core.runSchedulerImpl(Core.scala:9)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-45 - 	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop(CoreScheduler.scala:44)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-45 - 	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop$(CoreScheduler.scala:42)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.standard.Core.tryStartSchedulerStop(Core.scala:9)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit(CoreTypesEvent.scala:64)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$(CoreTypesEvent.scala:64)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit(CoreTypesBindable.scala:24)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp(CoreTypesEvent.scala:64)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp$(CoreTypesEvent.scala:64)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit$mcZ$sp(CoreTypesBindable.scala:24)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:103)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:88)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:88)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:24)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set(CoreTypesBindable.scala:161)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$(CoreTypesBindable.scala:161)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.set(CoreTypesBindable.scala:24)
+2019-12-09 13:51:31,204 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$mcZ$sp(CoreTypesBindable.scala:161)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$mcZ$sp$(CoreTypesBindable.scala:161)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.set$mcZ$sp(CoreTypesBindable.scala:24)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-33 - 	at com.jpro.internal.stats.ViewInfo.active_$eq(ViewInfo.scala:35)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-33 - 	at com.jpro.internal.stats.ViewInfo.active_$eq$(ViewInfo.scala:35)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-33 - 	at com.jpro.internal.communicator.ViewImpl.active_$eq(ViewImpl.scala:25)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-33 - 	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:53)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-33 - 	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-33 - 	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-33 - 	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$1.$anonfun$applyOrElse$2(ViewSerializerActor.scala:49)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-33 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-33 - 	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-33 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-33 - 	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:57)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-45 - 	at java.security.AccessController.doPrivileged(Native Method)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-45 - 	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-45 - 	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-45 - 	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-45 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:557)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-45 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:541)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-45 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:534)
+2019-12-09 13:51:31,205 [ERROR] in scala-execution-context-global-45 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:340)
+2019-12-09 13:51:31,206 [ERROR] in scala-execution-context-global-45 - 	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+2019-12-09 13:51:31,206 [ERROR] in scala-execution-context-global-45 - 	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+2019-12-09 13:51:31,206 [ERROR] in scala-execution-context-global-45 - 	at java.lang.Thread.run(Thread.java:748)
+2019-12-09 13:51:31,211 [INFO] in scala-execution-context-global-45 - [error] c.j.i.c.InstanceImpl - Error while starting application: 
+2019-12-09 13:51:31,211 [INFO] in scala-execution-context-global-45 - java.lang.NullPointerException: null
+2019-12-09 13:51:31,212 [INFO] in scala-execution-context-global-45 - 	at application.Main.start(Main.java:60)
+2019-12-09 13:51:31,212 [INFO] in scala-execution-context-global-45 - 	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1(ApplicationStarter.scala:133)
+2019-12-09 13:51:31,212 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1$adapted(ApplicationStarter.scala:131)
+2019-12-09 13:51:31,212 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.communicator.InstanceImpl.start(InstanceImpl.scala:31)
+2019-12-09 13:51:31,212 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.communicator.InstanceImpl.$anonfun$new$2(InstanceImpl.scala:25)
+2019-12-09 13:51:31,212 [INFO] in scala-execution-context-global-51 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:51:31,212 [INFO] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2(CoreTimeEvent.scala:133)
+2019-12-09 13:51:31,212 [INFO] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2$adapted(CoreTimeEvent.scala:133)
+2019-12-09 13:51:31,212 [INFO] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$triggerOnChange$3(CoreTypesBindable.scala:208)
+2019-12-09 13:51:31,212 [INFO] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl(CoreScheduler.scala:73)
+2019-12-09 13:51:31,212 [INFO] in scala-execution-context-global-51 - [warn] c.j.i.c.InstanceImpl - Application didn't show the stage. JPro is now calling show()
+2019-12-09 13:51:31,227 [INFO] in scala-execution-context-global-51 - [error] c.j.i.s.ViewSerializerActor - JavaFXStreamer - got Exception: 
+2019-12-09 13:51:31,227 [INFO] in scala-execution-context-global-51 - java.lang.NullPointerException: null
+2019-12-09 13:51:31,227 [INFO] in scala-execution-context-global-51 - 	at simplefx.util.ReflectionUtil$UseReflection.applyDynamic(ReflectionUtil.scala:18)
+2019-12-09 13:51:31,227 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:87)
+2019-12-09 13:51:31,227 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+2019-12-09 13:51:31,227 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+2019-12-09 13:51:31,227 [INFO] in scala-execution-context-global-51 - 	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$1.$anonfun$applyOrElse$2(ViewSerializerActor.scala:49)
+2019-12-09 13:51:31,227 [INFO] in scala-execution-context-global-51 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:51:31,227 [INFO] in scala-execution-context-global-51 - 	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+2019-12-09 13:51:31,227 [INFO] in scala-execution-context-global-51 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:51:31,227 [INFO] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+2019-12-09 13:51:31,227 [INFO] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - java.lang.NullPointerException: Can't access extension-class for null
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at simplefx.macros.Extension$.setRef(Extension.scala:72)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at simplefx.scene.packageTrait$.toSceneExtension(packageTraitScene.scala:15)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at simplefx.scene.packageTrait$ImportTrait.toSceneExtension(packageTraitScene.scala:15)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at simplefx.scene.packageTrait$ImportTrait.toSceneExtension$(packageTraitScene.scala:15)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-33 - 	at simplefx.all$.toSceneExtension(all.scala:5)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-33 - 	at com.jpro.meta.stream.FXSerializerImpl.transferScene(FXSerializer.scala:102)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at com.jpro.meta.stream.FXAppSerializer.$anonfun$new$6(FXAppSerializer.scala:39)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$EventLikeAlternateSignature.$anonfun$$minus$minus$greater$1(CoreTypesEvent.scala:16)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$trigger$2(CoreTypesBindable.scala:192)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.interfaces.parts.CoreTypesDisposer.withDetectDisposer(CoreTypesDisposer.scala:65)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.interfaces.parts.CoreTypesDisposer.withDetectDisposer$(CoreTypesDisposer.scala:63)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.standard.Core.withDetectDisposer(Core.scala:9)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$trigger$1(CoreTypesBindable.scala:191)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.interfaces.parts.CoreTypesGetter.withGetter(CoreTypesGetter.scala:12)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.interfaces.parts.CoreTypesGetter.withGetter$(CoreTypesGetter.scala:10)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.standard.Core.withGetter(Core.scala:9)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.trigger(CoreTypesBindable.scala:190)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$EventLike.$minus$minus$greater(CoreTypesEvent.scala:25)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$EventLike.$minus$minus$greater$(CoreTypesEvent.scala:25)
+2019-12-09 13:51:31,234 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$minus$minus$greater(CoreTypesBindable.scala:24)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$EventLikeAlternateSignature.$minus$minus$greater(CoreTypesEvent.scala:16)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-51 - 	at com.jpro.meta.stream.FXAppSerializer.$anonfun$new$5(FXAppSerializer.scala:39)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-45 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-45 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2(CoreTimeEvent.scala:133)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-45 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2$adapted(CoreTimeEvent.scala:133)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-45 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$triggerOnChange$3(CoreTypesBindable.scala:208)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-45 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl(CoreScheduler.scala:73)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-45 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl$(CoreScheduler.scala:52)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-45 - 	at simplefx.cores.standard.Core.runSchedulerImpl(Core.scala:9)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-45 - 	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop(CoreScheduler.scala:44)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-45 - 	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop$(CoreScheduler.scala:42)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-45 - 	at simplefx.cores.standard.Core.tryStartSchedulerStop(Core.scala:9)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-45 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit(CoreTypesEvent.scala:64)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-45 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$(CoreTypesEvent.scala:64)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit(CoreTypesBindable.scala:24)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp(CoreTypesEvent.scala:64)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp$(CoreTypesEvent.scala:64)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit$mcZ$sp(CoreTypesBindable.scala:24)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:103)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:88)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:88)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-33 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:24)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.interfaces.parts.CoreTypesBindable$SOBindableAssign.$colon$eq(CoreTypesBindable.scala:150)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.interfaces.parts.CoreTypesBindable$SOBindableAssign.$colon$eq$(CoreTypesBindable.scala:149)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$colon$eq(CoreTypesBindable.scala:24)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-51 - 	at com.jpro.internal.communicator.ViewImpl.$anonfun$new$1(ViewImpl.scala:56)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+2019-12-09 13:51:31,235 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+2019-12-09 13:51:31,236 [ERROR] in scala-execution-context-global-33 - 	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:57)
+2019-12-09 13:51:31,236 [ERROR] in scala-execution-context-global-33 - 	at java.security.AccessController.doPrivileged(Native Method)
+2019-12-09 13:51:31,236 [ERROR] in scala-execution-context-global-33 - 	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+2019-12-09 13:51:31,236 [ERROR] in scala-execution-context-global-33 - 	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+2019-12-09 13:51:31,236 [ERROR] in scala-execution-context-global-33 - 	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+2019-12-09 13:51:31,236 [ERROR] in scala-execution-context-global-33 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:557)
+2019-12-09 13:51:31,236 [ERROR] in scala-execution-context-global-33 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:541)
+2019-12-09 13:51:31,236 [ERROR] in scala-execution-context-global-33 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:534)
+2019-12-09 13:51:31,236 [ERROR] in scala-execution-context-global-33 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:340)
+2019-12-09 13:51:31,236 [ERROR] in scala-execution-context-global-33 - 	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+2019-12-09 13:51:31,236 [ERROR] in scala-execution-context-global-33 - 	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+2019-12-09 13:51:31,236 [ERROR] in scala-execution-context-global-33 - 	at java.lang.Thread.run(Thread.java:748)
+2019-12-09 13:51:32,247 [INFO] in scala-execution-context-global-33 - [info] c.j.m.s.Util$ - WORKAROUND! setting XY for Window because current XY is NaN
+2019-12-09 13:52:04,091 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2019-12-09 13:52:04,091 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2019-12-09 13:52:04,091 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2019-12-09 13:52:04,091 [INFO] in scala-execution-context-global-31 - Warning: Quantum will not submit render jobs, nothing should draw
+2019-12-09 13:52:04,091 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - finished init!
+2019-12-09 13:52:04,102 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.Initializer$ - JavaFX version: 8.0.231-b10
+2019-12-09 13:52:04,119 [INFO] in scala-execution-context-global-43 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2019-12-09 13:52:04,142 [INFO] in scala-execution-context-global-43 - [info] c.j.i.c.m.ChartJSONImExporter - Nothing to import
+2019-12-09 13:52:04,309 [INFO] in scala-execution-context-global-43 - [info] play.api.Play - Application started (Prod)
+2019-12-09 13:52:04,871 [INFO] in scala-execution-context-global-43 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 13:52:05,804 [INFO] in scala-execution-context-global-43 - [info] c.jpro - application requested: 0!software
+2019-12-09 13:52:05,813 [INFO] in scala-execution-context-global-43 - [info] c.jpro - Creating Application: 0!software
+2019-12-09 13:52:05,815 [INFO] in scala-execution-context-global-43 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 13:52:05,816 [INFO] in scala-execution-context-global-43 - [info] c.jpro - host          localhost:8080
+2019-12-09 13:52:05,816 [INFO] in scala-execution-context-global-43 - [info] c.jpro - uri           /app/0!software
+2019-12-09 13:52:06,196 [ERROR] in scala-execution-context-global-43 - java.lang.IllegalStateException: Location is not set.
+2019-12-09 13:52:06,196 [ERROR] in scala-execution-context-global-43 - 	at javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2434)
+2019-12-09 13:52:06,196 [ERROR] in scala-execution-context-global-43 - 	at javafx.fxml.FXMLLoader.load(FXMLLoader.java:2409)
+2019-12-09 13:52:06,196 [ERROR] in scala-execution-context-global-43 - 	at application.Main.initLayout(Main.java:100)
+2019-12-09 13:52:06,196 [ERROR] in scala-execution-context-global-43 - 	at application.Main.start(Main.java:43)
+2019-12-09 13:52:06,196 [ERROR] in scala-execution-context-global-31 - 	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1(ApplicationStarter.scala:133)
+2019-12-09 13:52:06,196 [ERROR] in scala-execution-context-global-43 - 	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1$adapted(ApplicationStarter.scala:131)
+2019-12-09 13:52:06,196 [ERROR] in scala-execution-context-global-43 - 	at com.jpro.internal.communicator.InstanceImpl.start(InstanceImpl.scala:31)
+2019-12-09 13:52:06,196 [ERROR] in scala-execution-context-global-43 - 	at com.jpro.internal.communicator.InstanceImpl.$anonfun$new$2(InstanceImpl.scala:25)
+2019-12-09 13:52:06,196 [ERROR] in scala-execution-context-global-43 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2(CoreTimeEvent.scala:133)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2$adapted(CoreTimeEvent.scala:133)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$triggerOnChange$3(CoreTypesBindable.scala:208)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl(CoreScheduler.scala:73)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl$(CoreScheduler.scala:52)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.Core.runSchedulerImpl(Core.scala:9)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop(CoreScheduler.scala:44)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop$(CoreScheduler.scala:42)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.Core.tryStartSchedulerStop(Core.scala:9)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-52 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit(CoreTypesEvent.scala:64)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-52 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$(CoreTypesEvent.scala:64)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-52 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit(CoreTypesBindable.scala:24)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp(CoreTypesEvent.scala:64)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp$(CoreTypesEvent.scala:64)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit$mcZ$sp(CoreTypesBindable.scala:24)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-51 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:103)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:88)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:88)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:24)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set(CoreTypesBindable.scala:161)
+2019-12-09 13:52:06,197 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$(CoreTypesBindable.scala:161)
+2019-12-09 13:52:06,198 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.set(CoreTypesBindable.scala:24)
+2019-12-09 13:52:06,198 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$mcZ$sp(CoreTypesBindable.scala:161)
+2019-12-09 13:52:06,198 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$mcZ$sp$(CoreTypesBindable.scala:161)
+2019-12-09 13:52:06,198 [ERROR] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.set$mcZ$sp(CoreTypesBindable.scala:24)
+2019-12-09 13:52:06,198 [ERROR] in scala-execution-context-global-52 - 	at com.jpro.internal.stats.ViewInfo.active_$eq(ViewInfo.scala:35)
+2019-12-09 13:52:06,198 [ERROR] in scala-execution-context-global-52 - 	at com.jpro.internal.stats.ViewInfo.active_$eq$(ViewInfo.scala:35)
+2019-12-09 13:52:06,198 [ERROR] in scala-execution-context-global-52 - 	at com.jpro.internal.communicator.ViewImpl.active_$eq(ViewImpl.scala:25)
+2019-12-09 13:52:06,198 [ERROR] in scala-execution-context-global-52 - 	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:53)
+2019-12-09 13:52:06,198 [ERROR] in scala-execution-context-global-31 - 	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+2019-12-09 13:52:06,198 [ERROR] in scala-execution-context-global-52 - 	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+2019-12-09 13:52:06,198 [ERROR] in scala-execution-context-global-52 - 	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$1.$anonfun$applyOrElse$2(ViewSerializerActor.scala:49)
+2019-12-09 13:52:06,198 [ERROR] in scala-execution-context-global-52 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:52:06,198 [ERROR] in scala-execution-context-global-52 - 	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+2019-12-09 13:52:06,198 [ERROR] in scala-execution-context-global-52 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:52:06,198 [ERROR] in scala-execution-context-global-52 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+2019-12-09 13:52:06,198 [ERROR] in scala-execution-context-global-52 - 	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+2019-12-09 13:52:06,198 [ERROR] in scala-execution-context-global-52 - 	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:57)
+2019-12-09 13:52:06,198 [ERROR] in scala-execution-context-global-52 - 	at java.security.AccessController.doPrivileged(Native Method)
+2019-12-09 13:52:06,199 [ERROR] in scala-execution-context-global-52 - 	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+2019-12-09 13:52:06,199 [ERROR] in scala-execution-context-global-52 - 	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+2019-12-09 13:52:06,199 [ERROR] in scala-execution-context-global-52 - 	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+2019-12-09 13:52:06,199 [ERROR] in scala-execution-context-global-52 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:557)
+2019-12-09 13:52:06,199 [ERROR] in scala-execution-context-global-52 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:541)
+2019-12-09 13:52:06,199 [ERROR] in scala-execution-context-global-52 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:534)
+2019-12-09 13:52:06,199 [ERROR] in scala-execution-context-global-52 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:340)
+2019-12-09 13:52:06,199 [ERROR] in scala-execution-context-global-52 - 	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+2019-12-09 13:52:06,199 [ERROR] in scala-execution-context-global-52 - 	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+2019-12-09 13:52:06,199 [ERROR] in scala-execution-context-global-52 - 	at java.lang.Thread.run(Thread.java:748)
+2019-12-09 13:52:06,203 [INFO] in scala-execution-context-global-55 - [error] c.j.i.c.InstanceImpl - Error while starting application: 
+2019-12-09 13:52:06,203 [INFO] in scala-execution-context-global-55 - java.lang.NullPointerException: null
+2019-12-09 13:52:06,203 [INFO] in scala-execution-context-global-55 - 	at application.Main.start(Main.java:61)
+2019-12-09 13:52:06,203 [INFO] in scala-execution-context-global-55 - 	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1(ApplicationStarter.scala:133)
+2019-12-09 13:52:06,203 [INFO] in scala-execution-context-global-53 - 	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1$adapted(ApplicationStarter.scala:131)
+2019-12-09 13:52:06,203 [INFO] in scala-execution-context-global-53 - 	at com.jpro.internal.communicator.InstanceImpl.start(InstanceImpl.scala:31)
+2019-12-09 13:52:06,203 [INFO] in scala-execution-context-global-53 - 	at com.jpro.internal.communicator.InstanceImpl.$anonfun$new$2(InstanceImpl.scala:25)
+2019-12-09 13:52:06,203 [INFO] in scala-execution-context-global-53 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:52:06,203 [INFO] in scala-execution-context-global-54 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2(CoreTimeEvent.scala:133)
+2019-12-09 13:52:06,203 [INFO] in scala-execution-context-global-54 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2$adapted(CoreTimeEvent.scala:133)
+2019-12-09 13:52:06,203 [INFO] in scala-execution-context-global-54 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$triggerOnChange$3(CoreTypesBindable.scala:208)
+2019-12-09 13:52:06,203 [INFO] in scala-execution-context-global-54 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl(CoreScheduler.scala:73)
+2019-12-09 13:52:06,204 [INFO] in scala-execution-context-global-54 - [warn] c.j.i.c.InstanceImpl - Application didn't show the stage. JPro is now calling show()
+2019-12-09 13:52:06,219 [INFO] in scala-execution-context-global-54 - [error] c.j.i.s.ViewSerializerActor - JavaFXStreamer - got Exception: 
+2019-12-09 13:52:06,219 [INFO] in scala-execution-context-global-54 - java.lang.NullPointerException: null
+2019-12-09 13:52:06,219 [INFO] in scala-execution-context-global-55 - 	at simplefx.util.ReflectionUtil$UseReflection.applyDynamic(ReflectionUtil.scala:18)
+2019-12-09 13:52:06,219 [INFO] in scala-execution-context-global-55 - 	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:87)
+2019-12-09 13:52:06,219 [INFO] in scala-execution-context-global-55 - 	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+2019-12-09 13:52:06,219 [INFO] in scala-execution-context-global-55 - 	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+2019-12-09 13:52:06,219 [INFO] in scala-execution-context-global-55 - 	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$1.$anonfun$applyOrElse$2(ViewSerializerActor.scala:49)
+2019-12-09 13:52:06,219 [INFO] in scala-execution-context-global-55 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:52:06,219 [INFO] in scala-execution-context-global-55 - 	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+2019-12-09 13:52:06,219 [INFO] in scala-execution-context-global-55 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:52:06,219 [INFO] in scala-execution-context-global-55 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+2019-12-09 13:52:06,219 [INFO] in scala-execution-context-global-55 - 	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+2019-12-09 13:52:06,225 [ERROR] in scala-execution-context-global-55 - java.lang.NullPointerException: Can't access extension-class for null
+2019-12-09 13:52:06,225 [ERROR] in scala-execution-context-global-55 - 	at simplefx.macros.Extension$.setRef(Extension.scala:72)
+2019-12-09 13:52:06,225 [ERROR] in scala-execution-context-global-55 - 	at simplefx.scene.packageTrait$.toSceneExtension(packageTraitScene.scala:15)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-55 - 	at simplefx.scene.packageTrait$ImportTrait.toSceneExtension(packageTraitScene.scala:15)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-55 - 	at simplefx.scene.packageTrait$ImportTrait.toSceneExtension$(packageTraitScene.scala:15)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-55 - 	at simplefx.all$.toSceneExtension(all.scala:5)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-55 - 	at com.jpro.meta.stream.FXSerializerImpl.transferScene(FXSerializer.scala:102)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-55 - 	at com.jpro.meta.stream.FXAppSerializer.$anonfun$new$6(FXAppSerializer.scala:39)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-55 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-55 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$EventLikeAlternateSignature.$anonfun$$minus$minus$greater$1(CoreTypesEvent.scala:16)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-55 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$trigger$2(CoreTypesBindable.scala:192)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-54 - 	at simplefx.cores.interfaces.parts.CoreTypesDisposer.withDetectDisposer(CoreTypesDisposer.scala:65)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.interfaces.parts.CoreTypesDisposer.withDetectDisposer$(CoreTypesDisposer.scala:63)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.Core.withDetectDisposer(Core.scala:9)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$trigger$1(CoreTypesBindable.scala:191)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.interfaces.parts.CoreTypesGetter.withGetter(CoreTypesGetter.scala:12)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.interfaces.parts.CoreTypesGetter.withGetter$(CoreTypesGetter.scala:10)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.Core.withGetter(Core.scala:9)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.trigger(CoreTypesBindable.scala:190)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$EventLike.$minus$minus$greater(CoreTypesEvent.scala:25)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$EventLike.$minus$minus$greater$(CoreTypesEvent.scala:25)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$minus$minus$greater(CoreTypesBindable.scala:24)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$EventLikeAlternateSignature.$minus$minus$greater(CoreTypesEvent.scala:16)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-31 - 	at com.jpro.meta.stream.FXAppSerializer.$anonfun$new$5(FXAppSerializer.scala:39)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-31 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2(CoreTimeEvent.scala:133)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-55 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2$adapted(CoreTimeEvent.scala:133)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-54 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$triggerOnChange$3(CoreTypesBindable.scala:208)
+2019-12-09 13:52:06,226 [ERROR] in scala-execution-context-global-54 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl(CoreScheduler.scala:73)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-54 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl$(CoreScheduler.scala:52)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-54 - 	at simplefx.cores.standard.Core.runSchedulerImpl(Core.scala:9)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-55 - 	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop(CoreScheduler.scala:44)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-55 - 	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop$(CoreScheduler.scala:42)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.Core.tryStartSchedulerStop(Core.scala:9)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit(CoreTypesEvent.scala:64)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$(CoreTypesEvent.scala:64)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit(CoreTypesBindable.scala:24)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp(CoreTypesEvent.scala:64)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp$(CoreTypesEvent.scala:64)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit$mcZ$sp(CoreTypesBindable.scala:24)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:103)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:88)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:88)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:24)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.interfaces.parts.CoreTypesBindable$SOBindableAssign.$colon$eq(CoreTypesBindable.scala:150)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.interfaces.parts.CoreTypesBindable$SOBindableAssign.$colon$eq$(CoreTypesBindable.scala:149)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$colon$eq(CoreTypesBindable.scala:24)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at com.jpro.internal.communicator.ViewImpl.$anonfun$new$1(ViewImpl.scala:56)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:57)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at java.security.AccessController.doPrivileged(Native Method)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:557)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:541)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:534)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:340)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+2019-12-09 13:52:06,227 [ERROR] in scala-execution-context-global-31 - 	at java.lang.Thread.run(Thread.java:748)
+2019-12-09 13:52:07,232 [INFO] in scala-execution-context-global-31 - [info] c.j.m.s.Util$ - WORKAROUND! setting XY for Window because current XY is NaN
+2019-12-09 13:53:14,471 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2019-12-09 13:53:14,471 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2019-12-09 13:53:14,471 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2019-12-09 13:53:14,472 [INFO] in scala-execution-context-global-31 - Warning: Quantum will not submit render jobs, nothing should draw
+2019-12-09 13:53:14,472 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - finished init!
+2019-12-09 13:53:14,483 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - JavaFX version: 8.0.231-b10
+2019-12-09 13:53:14,503 [INFO] in scala-execution-context-global-31 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2019-12-09 13:53:14,528 [INFO] in scala-execution-context-global-31 - [info] c.j.i.c.m.ChartJSONImExporter - Nothing to import
+2019-12-09 13:53:14,699 [INFO] in scala-execution-context-global-31 - [info] play.api.Play - Application started (Prod)
+2019-12-09 13:53:15,269 [INFO] in scala-execution-context-global-31 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 13:53:16,111 [INFO] in scala-execution-context-global-31 - [info] c.jpro - application requested: 0!software
+2019-12-09 13:53:16,120 [INFO] in scala-execution-context-global-31 - [info] c.jpro - Creating Application: 0!software
+2019-12-09 13:53:16,122 [INFO] in scala-execution-context-global-31 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 13:53:16,122 [INFO] in scala-execution-context-global-31 - [info] c.jpro - host          localhost:8080
+2019-12-09 13:53:16,123 [INFO] in scala-execution-context-global-31 - [info] c.jpro - uri           /app/0!software
+2019-12-09 13:53:16,658 [INFO] in scala-execution-context-global-31 - Switched to Main View!
+2019-12-09 13:53:17,489 [INFO] in scala-execution-context-global-31 - [error] c.j.i.c.InstanceImpl - Error while starting application: 
+2019-12-09 13:53:17,489 [INFO] in scala-execution-context-global-31 - java.lang.NullPointerException: null
+2019-12-09 13:53:17,489 [INFO] in scala-execution-context-global-31 - 	at application.Main.start(Main.java:61)
+2019-12-09 13:53:17,489 [INFO] in scala-execution-context-global-45 - 	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1(ApplicationStarter.scala:133)
+2019-12-09 13:53:17,489 [INFO] in scala-execution-context-global-45 - 	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1$adapted(ApplicationStarter.scala:131)
+2019-12-09 13:53:17,489 [INFO] in scala-execution-context-global-45 - 	at com.jpro.internal.communicator.InstanceImpl.start(InstanceImpl.scala:31)
+2019-12-09 13:53:17,489 [INFO] in scala-execution-context-global-31 - 	at com.jpro.internal.communicator.InstanceImpl.$anonfun$new$2(InstanceImpl.scala:25)
+2019-12-09 13:53:17,490 [INFO] in scala-execution-context-global-31 - 	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+2019-12-09 13:53:17,490 [INFO] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2(CoreTimeEvent.scala:133)
+2019-12-09 13:53:17,490 [INFO] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2$adapted(CoreTimeEvent.scala:133)
+2019-12-09 13:53:17,490 [INFO] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$triggerOnChange$3(CoreTypesBindable.scala:208)
+2019-12-09 13:53:17,490 [INFO] in scala-execution-context-global-45 - 	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl(CoreScheduler.scala:73)
+2019-12-09 13:53:17,500 [INFO] in scala-execution-context-global-44 - [info] c.j.i.s.ViewSerializerActor - appdef: AppByMain(software,application.Main,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/,http://localhost:8080/app/software,1920.0,937.0,false,en-US,List(en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-5-2-actorRefSource#-1273290292]
+2019-12-09 13:53:17,619 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@6eedd1f5
+2019-12-09 13:53:17,678 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@78099b28
+2019-12-09 13:53:17,687 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@17358a16
+2019-12-09 13:53:17,695 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@7f149aaf
+2019-12-09 13:53:17,703 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@1e75f9f6
+2019-12-09 13:53:17,745 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@1a202989
+2019-12-09 13:53:17,751 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@32ff9240
+2019-12-09 13:53:17,758 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@3a98b6
+2019-12-09 13:53:17,768 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@79b117de
+2019-12-09 13:53:17,775 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@5ef4653d
+2019-12-09 13:53:17,785 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@52abf097
+2019-12-09 13:53:17,794 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@2a40c2fc
+2019-12-09 13:53:17,933 [INFO] in scala-execution-context-global-44 - [info] com.jpro.JS - received msg: new MainID: 1551 userid: 2122215883
+2019-12-09 13:53:31,311 [INFO] in scala-execution-context-global-44 - Switched to Search View!
+2019-12-09 13:53:31,412 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@114ad98a
+2019-12-09 13:53:31,417 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@43e1ecfb
+2019-12-09 13:53:31,422 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@2d9626d6
+2019-12-09 13:53:31,427 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@1a1549f9
+2019-12-09 13:53:31,433 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@6fb4e60e
+2019-12-09 13:53:31,447 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@9cbce12
+2019-12-09 13:53:31,451 [INFO] in scala-execution-context-global-44 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@344d138
+2019-12-09 13:53:31,526 [INFO] in scala-execution-context-global-44 - [info] com.jpro.JS - received msg: new MainID: 3432 userid: 2122215883
+2019-12-09 13:53:33,189 [INFO] in scala-execution-context-global-44 - [info] c.j.i.s.ViewInfo$ - 
+2019-12-09 13:53:33,189 [INFO] in scala-execution-context-global-44 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2019-12-09 13:53:33,192 [INFO] in scala-execution-context-global-45 - [info] c.j.i.s.ViewInfo$ - startTime      : Mon Dec 09 13:53:33 CST 2019      
+2019-12-09 13:53:33,192 [INFO] in scala-execution-context-global-45 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.018 
+2019-12-09 13:53:33,192 [INFO] in scala-execution-context-global-45 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.001  
+2019-12-09 13:53:33,192 [INFO] in scala-execution-context-global-45 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2019-12-09 13:53:33,193 [INFO] in scala-execution-context-global-45 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2019-12-09 13:53:33,193 [INFO] in scala-execution-context-global-45 - [info] c.j.i.s.ViewInfo$ - raw            : 226316
+2019-12-09 13:53:33,193 [INFO] in scala-execution-context-global-45 - [info] c.j.i.s.ViewInfo$ - zipped         : 40881
+2019-12-09 13:53:33,193 [INFO] in scala-execution-context-global-45 - [info] c.j.i.s.ViewInfo$ - 
+2019-12-09 13:53:43,717 [INFO] in scala-execution-context-global-31 - [info] c.j.i.c.InstanceImpl - closing window!
+2019-12-09 13:54:35,004 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2019-12-09 13:54:35,005 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2019-12-09 13:54:35,005 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2019-12-09 13:54:35,005 [INFO] in scala-execution-context-global-31 - Warning: Quantum will not submit render jobs, nothing should draw
+2019-12-09 13:54:35,005 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - finished init!
+2019-12-09 13:54:35,016 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.Initializer$ - JavaFX version: 8.0.231-b10
+2019-12-09 13:54:35,035 [INFO] in scala-execution-context-global-43 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2019-12-09 13:54:35,058 [INFO] in scala-execution-context-global-43 - [info] c.j.i.c.m.ChartJSONImExporter - Nothing to import
+2019-12-09 13:54:35,224 [INFO] in scala-execution-context-global-43 - [info] play.api.Play - Application started (Prod)
+2019-12-09 13:54:35,777 [INFO] in scala-execution-context-global-43 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 13:54:36,705 [INFO] in scala-execution-context-global-43 - [info] c.jpro - application requested: 0!software
+2019-12-09 13:54:36,713 [INFO] in scala-execution-context-global-43 - [info] c.jpro - Creating Application: 0!software
+2019-12-09 13:54:36,715 [INFO] in scala-execution-context-global-43 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 13:54:36,716 [INFO] in scala-execution-context-global-43 - [info] c.jpro - host          localhost:8080
+2019-12-09 13:54:36,716 [INFO] in scala-execution-context-global-43 - [info] c.jpro - uri           /app/0!software
+2019-12-09 13:54:37,206 [INFO] in scala-execution-context-global-43 - Switched to Main View!
+2019-12-09 13:54:38,589 [ERROR] in scala-execution-context-global-43 - Mon Dec 09 13:54:38 CST 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-12-09 13:54:38,807 [INFO] in scala-execution-context-global-43 - Apples
+2019-12-09 13:54:38,807 [INFO] in scala-execution-context-global-43 - Bananas
+2019-12-09 13:54:38,807 [INFO] in scala-execution-context-global-31 - Bread
+2019-12-09 13:54:38,807 [INFO] in scala-execution-context-global-31 - Milk
+2019-12-09 13:54:38,807 [INFO] in scala-execution-context-global-43 - Cereal
+2019-12-09 13:54:38,808 [INFO] in scala-execution-context-global-31 - Oranges
+2019-12-09 13:54:38,808 [INFO] in scala-execution-context-global-31 - Sweet Tea
+2019-12-09 13:54:38,808 [INFO] in scala-execution-context-global-31 - Lemonade
+2019-12-09 13:54:38,808 [INFO] in scala-execution-context-global-31 - Avocados
+2019-12-09 13:54:38,808 [INFO] in scala-execution-context-global-31 - Grapes
+2019-12-09 13:54:38,808 [INFO] in scala-execution-context-global-54 - Water
+2019-12-09 13:54:38,808 [INFO] in scala-execution-context-global-54 - Eggs
+2019-12-09 13:54:38,808 [INFO] in scala-execution-context-global-52 - Chicken
+2019-12-09 13:54:38,808 [INFO] in scala-execution-context-global-52 - Coffee
+2019-12-09 13:54:38,808 [INFO] in scala-execution-context-global-52 - Potato Chips
+2019-12-09 13:54:38,808 [INFO] in scala-execution-context-global-52 - Popcorn
+2019-12-09 13:54:38,808 [INFO] in scala-execution-context-global-52 - Cheddar Cheese
+2019-12-09 13:54:38,808 [INFO] in scala-execution-context-global-52 - Cookies
+2019-12-09 13:54:38,808 [INFO] in scala-execution-context-global-52 - Candy
+2019-12-09 13:54:38,808 [INFO] in scala-execution-context-global-52 - Salsa
+2019-12-09 13:54:38,818 [INFO] in scala-execution-context-global-53 - [info] c.j.i.s.ViewSerializerActor - appdef: AppByMain(software,application.Main,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/,http://localhost:8080/app/software,1920.0,937.0,false,en-US,List(en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-5-2-actorRefSource#-2091301680]
+2019-12-09 13:54:38,937 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@56c382c0
+2019-12-09 13:54:38,989 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@40c126ac
+2019-12-09 13:54:38,998 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@649d094c
+2019-12-09 13:54:39,006 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@29f91c71
+2019-12-09 13:54:39,014 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@6ea0537d
+2019-12-09 13:54:39,059 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@acb0d6a
+2019-12-09 13:54:39,065 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@5f347b0f
+2019-12-09 13:54:39,073 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@59c10e9d
+2019-12-09 13:54:39,083 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@7a0f12f0
+2019-12-09 13:54:39,090 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@76933fd0
+2019-12-09 13:54:39,099 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@259bf182
+2019-12-09 13:54:39,108 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@4d95f342
+2019-12-09 13:54:39,240 [INFO] in scala-execution-context-global-53 - [info] com.jpro.JS - received msg: new MainID: 1551 userid: 2006249910
+2019-12-09 13:54:42,976 [INFO] in scala-execution-context-global-53 - Switched to Search View!
+2019-12-09 13:54:43,159 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@39132f1
+2019-12-09 13:54:43,163 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@5cec1d8d
+2019-12-09 13:54:43,168 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@14559ad4
+2019-12-09 13:54:43,173 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@7b49ac76
+2019-12-09 13:54:43,178 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@55726384
+2019-12-09 13:54:43,192 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@507cc967
+2019-12-09 13:54:43,196 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@21ac78db
+2019-12-09 13:54:43,359 [INFO] in scala-execution-context-global-53 - [error] c.j.m.t.SceneInputListener - error in process input MouseEventToken(MouseMoved,258.0,64.0,MouseButtonToken(3),false,false,false,false,false,false,false,false)
+2019-12-09 13:54:43,360 [INFO] in scala-execution-context-global-53 - java.lang.NullPointerException: null
+2019-12-09 13:54:43,360 [INFO] in scala-execution-context-global-53 - 	at simplefx.util.ReflectionUtil$UseReflection.applyDynamic(ReflectionUtil.scala:18)
+2019-12-09 13:54:43,360 [INFO] in scala-execution-context-global-53 - 	at com.jpro.meta.tk.UtilSceneTKListener$ExtendView.view(UtilSceneTKListener.scala:24)
+2019-12-09 13:54:43,360 [INFO] in scala-execution-context-global-53 - 	at com.jpro.meta.tk.UtilSceneTKListener$ExtendView.isMonocle(UtilSceneTKListener.scala:25)
+2019-12-09 13:54:43,360 [INFO] in scala-execution-context-global-53 - 	at com.jpro.meta.tk.SceneInputListener.processInputInScene(SceneInputListener.scala:126)
+2019-12-09 13:54:43,360 [INFO] in scala-execution-context-global-53 - 	at com.jpro.meta.tk.SceneInputListener.processInput(SceneInputListener.scala:116)
+2019-12-09 13:54:43,360 [INFO] in scala-execution-context-global-53 - 	at com.jpro.meta.tk.SceneInputListener.processInputs(SceneInputListener.scala:97)
+2019-12-09 13:54:43,360 [INFO] in scala-execution-context-global-53 - 	at com.jpro.meta.tk.SceneInputListener.$anonfun$new$3(SceneInputListener.scala:38)
+2019-12-09 13:54:43,360 [INFO] in scala-execution-context-global-31 - 	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+2019-12-09 13:54:43,360 [INFO] in scala-execution-context-global-43 - 	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+2019-12-09 13:54:43,360 [INFO] in scala-execution-context-global-43 - 	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:57)
+2019-12-09 13:54:43,466 [INFO] in scala-execution-context-global-31 - [info] com.jpro.JS - received msg: new MainID: 12124 userid: 2006249910
+2019-12-09 13:54:50,958 [INFO] in scala-execution-context-global-31 - Switched Views!Item name is: Lemonade
+2019-12-09 13:54:51,036 [INFO] in scala-execution-context-global-31 - 
+2019-12-09 13:54:51,036 [INFO] in scala-execution-context-global-31 - --- CART ---
+2019-12-09 13:54:51,036 [INFO] in scala-execution-context-global-31 - 
+2019-12-09 13:54:51,036 [INFO] in scala-execution-context-global-31 - 
+2019-12-09 13:54:51,070 [INFO] in scala-execution-context-global-60 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@8dcb645
+2019-12-09 13:54:51,074 [INFO] in scala-execution-context-global-60 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@39a8d0e8
+2019-12-09 13:54:51,079 [INFO] in scala-execution-context-global-60 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@32971142
+2019-12-09 13:54:51,084 [INFO] in scala-execution-context-global-60 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@5730bedb
+2019-12-09 13:54:51,088 [INFO] in scala-execution-context-global-60 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@63cf4f74
+2019-12-09 13:54:51,098 [INFO] in scala-execution-context-global-60 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@420f64a2
+2019-12-09 13:54:51,102 [INFO] in scala-execution-context-global-60 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@26cfb8
+2019-12-09 13:54:51,161 [INFO] in scala-execution-context-global-60 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@3be22acf
+2019-12-09 13:54:51,668 [INFO] in scala-execution-context-global-60 - [info] com.jpro.JS - received msg: new MainID: 13777 userid: 2006249910
+2019-12-09 13:54:52,977 [INFO] in scala-execution-context-global-60 - Switched to Cart Controller!
+2019-12-09 13:54:53,051 [INFO] in scala-execution-context-global-60 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@7cd13eff
+2019-12-09 13:54:53,057 [INFO] in scala-execution-context-global-60 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@69dca6bb
+2019-12-09 13:54:53,062 [INFO] in scala-execution-context-global-60 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@618ed9a8
+2019-12-09 13:54:53,066 [INFO] in scala-execution-context-global-60 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@31de30d2
+2019-12-09 13:54:53,071 [INFO] in scala-execution-context-global-60 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@156e8302
+2019-12-09 13:54:53,081 [INFO] in scala-execution-context-global-60 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@64007df3
+2019-12-09 13:54:53,085 [INFO] in scala-execution-context-global-60 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@23b43f21
+2019-12-09 13:54:53,180 [INFO] in scala-execution-context-global-60 - [info] com.jpro.JS - received msg: new MainID: 18624 userid: 2006249910
+2019-12-09 13:54:55,764 [INFO] in scala-execution-context-global-60 - [info] c.j.i.s.ViewInfo$ - 
+2019-12-09 13:54:55,765 [INFO] in scala-execution-context-global-60 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2019-12-09 13:54:55,765 [INFO] in scala-execution-context-global-60 - [info] c.j.i.s.ViewInfo$ - startTime      : Mon Dec 09 13:54:55 CST 2019      
+2019-12-09 13:54:55,765 [INFO] in scala-execution-context-global-60 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.017 
+2019-12-09 13:54:55,765 [INFO] in scala-execution-context-global-60 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.000  
+2019-12-09 13:54:55,765 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2019-12-09 13:54:55,766 [INFO] in scala-execution-context-global-60 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2019-12-09 13:54:55,766 [INFO] in scala-execution-context-global-52 - [info] c.j.i.s.ViewInfo$ - raw            : 890623
+2019-12-09 13:54:55,766 [INFO] in scala-execution-context-global-52 - [info] c.j.i.s.ViewInfo$ - zipped         : 124469
+2019-12-09 13:54:55,766 [INFO] in scala-execution-context-global-52 - [info] c.j.i.s.ViewInfo$ - 
+2019-12-09 13:55:06,937 [INFO] in scala-execution-context-global-60 - [info] c.j.i.c.InstanceImpl - closing window!
+2019-12-09 13:57:15,354 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2019-12-09 13:57:15,355 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2019-12-09 13:57:15,355 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2019-12-09 13:57:15,355 [INFO] in scala-execution-context-global-43 - Warning: Quantum will not submit render jobs, nothing should draw
+2019-12-09 13:57:15,355 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.Initializer$ - finished init!
+2019-12-09 13:57:15,366 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - JavaFX version: 8.0.231-b10
+2019-12-09 13:57:15,382 [INFO] in scala-execution-context-global-31 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2019-12-09 13:57:15,406 [INFO] in scala-execution-context-global-31 - [info] c.j.i.c.m.ChartJSONImExporter - Nothing to import
+2019-12-09 13:57:15,578 [INFO] in scala-execution-context-global-31 - [info] play.api.Play - Application started (Prod)
+2019-12-09 13:57:16,132 [INFO] in scala-execution-context-global-31 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 13:57:17,022 [INFO] in scala-execution-context-global-31 - [info] c.jpro - application requested: 0!software
+2019-12-09 13:57:17,030 [INFO] in scala-execution-context-global-31 - [info] c.jpro - Creating Application: 0!software
+2019-12-09 13:57:17,032 [INFO] in scala-execution-context-global-31 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 13:57:17,033 [INFO] in scala-execution-context-global-31 - [info] c.jpro - host          localhost:8080
+2019-12-09 13:57:17,033 [INFO] in scala-execution-context-global-31 - [info] c.jpro - uri           /app/0!software
+2019-12-09 13:57:17,526 [INFO] in scala-execution-context-global-31 - Switched to Main View!
+2019-12-09 13:57:18,946 [ERROR] in scala-execution-context-global-31 - Mon Dec 09 13:57:18 CST 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-12-09 13:57:19,165 [INFO] in scala-execution-context-global-31 - Apples
+2019-12-09 13:57:19,165 [INFO] in scala-execution-context-global-31 - Bananas
+2019-12-09 13:57:19,166 [INFO] in scala-execution-context-global-43 - Bread
+2019-12-09 13:57:19,166 [INFO] in scala-execution-context-global-43 - Milk
+2019-12-09 13:57:19,166 [INFO] in scala-execution-context-global-43 - Cereal
+2019-12-09 13:57:19,166 [INFO] in scala-execution-context-global-43 - Oranges
+2019-12-09 13:57:19,166 [INFO] in scala-execution-context-global-43 - Sweet Tea
+2019-12-09 13:57:19,166 [INFO] in scala-execution-context-global-43 - Lemonade
+2019-12-09 13:57:19,166 [INFO] in scala-execution-context-global-43 - Avocados
+2019-12-09 13:57:19,166 [INFO] in scala-execution-context-global-43 - Grapes
+2019-12-09 13:57:19,166 [INFO] in scala-execution-context-global-53 - Water
+2019-12-09 13:57:19,166 [INFO] in scala-execution-context-global-53 - Eggs
+2019-12-09 13:57:19,166 [INFO] in scala-execution-context-global-31 - Chicken
+2019-12-09 13:57:19,166 [INFO] in scala-execution-context-global-31 - Coffee
+2019-12-09 13:57:19,166 [INFO] in scala-execution-context-global-53 - Potato Chips
+2019-12-09 13:57:19,166 [INFO] in scala-execution-context-global-53 - Popcorn
+2019-12-09 13:57:19,166 [INFO] in scala-execution-context-global-31 - Cheddar Cheese
+2019-12-09 13:57:19,167 [INFO] in scala-execution-context-global-31 - Cookies
+2019-12-09 13:57:19,167 [INFO] in scala-execution-context-global-31 - Candy
+2019-12-09 13:57:19,167 [INFO] in scala-execution-context-global-31 - Salsa
+2019-12-09 13:57:19,177 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.ViewSerializerActor - appdef: AppByMain(software,application.Main,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/,http://localhost:8080/app/software,1920.0,937.0,false,en-US,List(en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-5-2-actorRefSource#742713893]
+2019-12-09 13:57:19,295 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@73d50d2c
+2019-12-09 13:57:19,346 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@28abd9ee
+2019-12-09 13:57:19,355 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@27f5b276
+2019-12-09 13:57:19,363 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@cf80f78
+2019-12-09 13:57:19,371 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@4a224510
+2019-12-09 13:57:19,414 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@57b3f6
+2019-12-09 13:57:19,420 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@3cd4421f
+2019-12-09 13:57:19,427 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@6351f82e
+2019-12-09 13:57:19,437 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@3737b8f
+2019-12-09 13:57:19,444 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@6dfa8c56
+2019-12-09 13:57:19,453 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@21e18268
+2019-12-09 13:57:19,463 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@57043906
+2019-12-09 13:57:19,604 [INFO] in scala-execution-context-global-43 - [info] com.jpro.JS - received msg: new MainID: 1551 userid: 5054339
+2019-12-09 13:57:28,651 [INFO] in scala-execution-context-global-43 - Switched to Login View!
+2019-12-09 13:57:28,751 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@1793cb14
+2019-12-09 13:57:28,755 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@6ca4595d
+2019-12-09 13:57:28,761 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@16369c19
+2019-12-09 13:57:28,766 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@161e580d
+2019-12-09 13:57:28,771 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@36dcfe3
+2019-12-09 13:57:28,788 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@33b3075f
+2019-12-09 13:57:28,792 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@1080d8bf
+2019-12-09 13:57:28,896 [INFO] in scala-execution-context-global-43 - [info] com.jpro.JS - received msg: new MainID: 3278 userid: 5054339
+2019-12-09 13:57:29,429 [INFO] in scala-execution-context-global-43 - Switched to Login View!
+2019-12-09 13:57:29,483 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@7a24d6d6
+2019-12-09 13:57:29,488 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@79c65949
+2019-12-09 13:57:29,494 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@52fa5ccc
+2019-12-09 13:57:29,499 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@3b070561
+2019-12-09 13:57:29,505 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@320b05c2
+2019-12-09 13:57:29,518 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@3e8d1ce
+2019-12-09 13:57:29,523 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@38457316
+2019-12-09 13:57:29,566 [INFO] in scala-execution-context-global-43 - [info] com.jpro.JS - received msg: new MainID: 5005 userid: 5054339
+2019-12-09 13:57:31,994 [INFO] in scala-execution-context-global-43 - Switched to Cart Controller!
+2019-12-09 13:57:32,108 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@6adc83ef
+2019-12-09 13:57:32,112 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@2df58d9e
+2019-12-09 13:57:32,117 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@48c96671
+2019-12-09 13:57:32,122 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@704cc961
+2019-12-09 13:57:32,126 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@6775c7ab
+2019-12-09 13:57:32,139 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@6f386b14
+2019-12-09 13:57:32,143 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@48084332
+2019-12-09 13:57:32,252 [INFO] in scala-execution-context-global-31 - [info] com.jpro.JS - received msg: new MainID: 9852 userid: 5054339
+2019-12-09 13:57:32,877 [INFO] in scala-execution-context-global-31 - Switched to Search View!
+2019-12-09 13:57:32,989 [INFO] in scala-execution-context-global-31 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@3638cdcb
+2019-12-09 13:57:32,993 [INFO] in scala-execution-context-global-31 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@27951a4e
+2019-12-09 13:57:32,998 [INFO] in scala-execution-context-global-31 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@29e77552
+2019-12-09 13:57:33,002 [INFO] in scala-execution-context-global-31 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@62182b4
+2019-12-09 13:57:33,007 [INFO] in scala-execution-context-global-31 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@6e9f8d2b
+2019-12-09 13:57:33,016 [INFO] in scala-execution-context-global-31 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@7fe59562
+2019-12-09 13:57:33,020 [INFO] in scala-execution-context-global-31 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@70f2d924
+2019-12-09 13:57:33,222 [INFO] in scala-execution-context-global-43 - [info] com.jpro.JS - received msg: new MainID: 20425 userid: 5054339
+2019-12-09 13:57:35,137 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.ViewInfo$ - 
+2019-12-09 13:57:35,138 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2019-12-09 13:57:35,138 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.ViewInfo$ - startTime      : Mon Dec 09 13:57:35 CST 2019      
+2019-12-09 13:57:35,138 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.017 
+2019-12-09 13:57:35,138 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.000  
+2019-12-09 13:57:35,138 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2019-12-09 13:57:35,139 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2019-12-09 13:57:35,139 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.ViewInfo$ - raw            : 815239
+2019-12-09 13:57:35,139 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.ViewInfo$ - zipped         : 101674
+2019-12-09 13:57:35,139 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.ViewInfo$ - 
+2019-12-09 13:57:45,999 [INFO] in scala-execution-context-global-31 - [info] c.j.i.c.InstanceImpl - closing window!
+2019-12-09 14:04:57,527 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2019-12-09 14:04:57,527 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2019-12-09 14:04:57,528 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2019-12-09 14:04:57,528 [INFO] in scala-execution-context-global-43 - Warning: Quantum will not submit render jobs, nothing should draw
+2019-12-09 14:04:57,528 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.Initializer$ - finished init!
+2019-12-09 14:04:57,539 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.Initializer$ - JavaFX version: 8.0.231-b10
+2019-12-09 14:04:57,557 [INFO] in scala-execution-context-global-43 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2019-12-09 14:04:57,581 [INFO] in scala-execution-context-global-43 - [info] c.j.i.c.m.ChartJSONImExporter - Nothing to import
+2019-12-09 14:04:57,747 [INFO] in scala-execution-context-global-43 - [info] play.api.Play - Application started (Prod)
+2019-12-09 14:04:58,308 [INFO] in scala-execution-context-global-43 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 14:04:59,195 [INFO] in scala-execution-context-global-43 - [info] c.jpro - application requested: 0!software
+2019-12-09 14:04:59,204 [INFO] in scala-execution-context-global-43 - [info] c.jpro - Creating Application: 0!software
+2019-12-09 14:04:59,206 [INFO] in scala-execution-context-global-43 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 14:04:59,207 [INFO] in scala-execution-context-global-43 - [info] c.jpro - host          localhost:8080
+2019-12-09 14:04:59,207 [INFO] in scala-execution-context-global-43 - [info] c.jpro - uri           /app/0!software
+2019-12-09 14:04:59,702 [INFO] in scala-execution-context-global-43 - Switched to Main View!
+2019-12-09 14:05:01,286 [ERROR] in scala-execution-context-global-43 - Mon Dec 09 14:05:01 CST 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-12-09 14:05:01,503 [INFO] in scala-execution-context-global-43 - Apples
+2019-12-09 14:05:01,504 [INFO] in scala-execution-context-global-43 - Bananas
+2019-12-09 14:05:01,504 [INFO] in scala-execution-context-global-43 - Bread
+2019-12-09 14:05:01,504 [INFO] in scala-execution-context-global-43 - Milk
+2019-12-09 14:05:01,504 [INFO] in scala-execution-context-global-31 - Cereal
+2019-12-09 14:05:01,504 [INFO] in scala-execution-context-global-43 - Oranges
+2019-12-09 14:05:01,504 [INFO] in scala-execution-context-global-31 - Sweet Tea
+2019-12-09 14:05:01,504 [INFO] in scala-execution-context-global-31 - Lemonade
+2019-12-09 14:05:01,504 [INFO] in scala-execution-context-global-31 - Avocados
+2019-12-09 14:05:01,504 [INFO] in scala-execution-context-global-31 - Grapes
+2019-12-09 14:05:01,504 [INFO] in scala-execution-context-global-31 - Water
+2019-12-09 14:05:01,504 [INFO] in scala-execution-context-global-31 - Eggs
+2019-12-09 14:05:01,504 [INFO] in scala-execution-context-global-53 - Chicken
+2019-12-09 14:05:01,505 [INFO] in scala-execution-context-global-53 - Coffee
+2019-12-09 14:05:01,505 [INFO] in scala-execution-context-global-53 - Potato Chips
+2019-12-09 14:05:01,505 [INFO] in scala-execution-context-global-53 - Popcorn
+2019-12-09 14:05:01,505 [INFO] in scala-execution-context-global-53 - Cheddar Cheese
+2019-12-09 14:05:01,505 [INFO] in scala-execution-context-global-53 - Cookies
+2019-12-09 14:05:01,505 [INFO] in scala-execution-context-global-53 - Candy
+2019-12-09 14:05:01,505 [INFO] in scala-execution-context-global-53 - Salsa
+2019-12-09 14:05:01,515 [INFO] in scala-execution-context-global-53 - [info] c.j.i.s.ViewSerializerActor - appdef: AppByMain(software,application.Main,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/,http://localhost:8080/app/software,1920.0,937.0,false,en-US,List(en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-5-2-actorRefSource#1055432362]
+2019-12-09 14:05:01,633 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@44601e83
+2019-12-09 14:05:01,685 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@36550061
+2019-12-09 14:05:01,694 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@4496da3c
+2019-12-09 14:05:01,701 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@5c0022f7
+2019-12-09 14:05:01,709 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@59c4f968
+2019-12-09 14:05:01,753 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@424eecdf
+2019-12-09 14:05:01,760 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@1867d9dc
+2019-12-09 14:05:01,766 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@188100d2
+2019-12-09 14:05:01,776 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@3beafa56
+2019-12-09 14:05:01,782 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@3e515bbf
+2019-12-09 14:05:01,791 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@47541fb4
+2019-12-09 14:05:01,800 [INFO] in scala-execution-context-global-53 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@1552f2f1
+2019-12-09 14:05:01,942 [INFO] in scala-execution-context-global-53 - [info] com.jpro.JS - received msg: new MainID: 1551 userid: 346260213
+2019-12-09 14:05:19,873 [INFO] in scala-execution-context-global-53 - [info] c.j.i.s.ViewInfo$ - 
+2019-12-09 14:05:19,874 [INFO] in scala-execution-context-global-53 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2019-12-09 14:05:19,874 [INFO] in scala-execution-context-global-53 - [info] c.j.i.s.ViewInfo$ - startTime      : Mon Dec 09 14:05:19 CST 2019      
+2019-12-09 14:05:19,874 [INFO] in scala-execution-context-global-53 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.015 
+2019-12-09 14:05:19,874 [INFO] in scala-execution-context-global-53 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.004  
+2019-12-09 14:05:19,874 [INFO] in scala-execution-context-global-53 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2019-12-09 14:05:19,875 [INFO] in scala-execution-context-global-52 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2019-12-09 14:05:19,875 [INFO] in scala-execution-context-global-52 - [info] c.j.i.s.ViewInfo$ - raw            : 169818
+2019-12-09 14:05:19,875 [INFO] in scala-execution-context-global-52 - [info] c.j.i.s.ViewInfo$ - zipped         : 32088
+2019-12-09 14:05:19,875 [INFO] in scala-execution-context-global-52 - [info] c.j.i.s.ViewInfo$ - 
+2019-12-09 14:07:05,411 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2019-12-09 14:07:05,412 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2019-12-09 14:07:05,412 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2019-12-09 14:07:05,412 [INFO] in scala-execution-context-global-31 - Warning: Quantum will not submit render jobs, nothing should draw
+2019-12-09 14:07:05,412 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - finished init!
+2019-12-09 14:07:05,424 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - JavaFX version: 8.0.231-b10
+2019-12-09 14:07:05,441 [INFO] in scala-execution-context-global-31 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2019-12-09 14:07:05,465 [INFO] in scala-execution-context-global-31 - [info] c.j.i.c.m.ChartJSONImExporter - Nothing to import
+2019-12-09 14:07:05,631 [INFO] in scala-execution-context-global-31 - [info] play.api.Play - Application started (Prod)
+2019-12-09 14:07:06,191 [INFO] in scala-execution-context-global-31 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 14:07:07,098 [INFO] in scala-execution-context-global-31 - [info] c.jpro - application requested: 0!software
+2019-12-09 14:07:07,107 [INFO] in scala-execution-context-global-31 - [info] c.jpro - Creating Application: 0!software
+2019-12-09 14:07:07,109 [INFO] in scala-execution-context-global-31 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 14:07:07,110 [INFO] in scala-execution-context-global-31 - [info] c.jpro - host          localhost:8080
+2019-12-09 14:07:07,110 [INFO] in scala-execution-context-global-31 - [info] c.jpro - uri           /app/0!software
+2019-12-09 14:07:07,601 [INFO] in scala-execution-context-global-31 - Switched to Main View!
+2019-12-09 14:07:08,975 [ERROR] in scala-execution-context-global-31 - Mon Dec 09 14:07:08 CST 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-12-09 14:07:09,193 [INFO] in scala-execution-context-global-31 - Apples
+2019-12-09 14:07:09,193 [INFO] in scala-execution-context-global-31 - Bananas
+2019-12-09 14:07:09,193 [INFO] in scala-execution-context-global-43 - Bread
+2019-12-09 14:07:09,193 [INFO] in scala-execution-context-global-43 - Milk
+2019-12-09 14:07:09,193 [INFO] in scala-execution-context-global-43 - Cereal
+2019-12-09 14:07:09,193 [INFO] in scala-execution-context-global-43 - Oranges
+2019-12-09 14:07:09,193 [INFO] in scala-execution-context-global-43 - Sweet Tea
+2019-12-09 14:07:09,194 [INFO] in scala-execution-context-global-43 - Lemonade
+2019-12-09 14:07:09,194 [INFO] in scala-execution-context-global-43 - Avocados
+2019-12-09 14:07:09,194 [INFO] in scala-execution-context-global-43 - Grapes
+2019-12-09 14:07:09,194 [INFO] in scala-execution-context-global-43 - Water
+2019-12-09 14:07:09,194 [INFO] in scala-execution-context-global-43 - Eggs
+2019-12-09 14:07:09,194 [INFO] in scala-execution-context-global-43 - Chicken
+2019-12-09 14:07:09,194 [INFO] in scala-execution-context-global-43 - Coffee
+2019-12-09 14:07:09,194 [INFO] in scala-execution-context-global-43 - Potato Chips
+2019-12-09 14:07:09,194 [INFO] in scala-execution-context-global-43 - Popcorn
+2019-12-09 14:07:09,194 [INFO] in scala-execution-context-global-43 - Cheddar Cheese
+2019-12-09 14:07:09,194 [INFO] in scala-execution-context-global-43 - Cookies
+2019-12-09 14:07:09,194 [INFO] in scala-execution-context-global-43 - Candy
+2019-12-09 14:07:09,194 [INFO] in scala-execution-context-global-43 - Salsa
+2019-12-09 14:07:09,204 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.ViewSerializerActor - appdef: AppByMain(software,application.Main,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/,http://localhost:8080/app/software,1920.0,937.0,false,en-US,List(en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-5-2-actorRefSource#-1457871257]
+2019-12-09 14:07:09,323 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@7cb640c9
+2019-12-09 14:07:09,374 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@2600a83a
+2019-12-09 14:07:09,383 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@c270ec1
+2019-12-09 14:07:09,392 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@47439a5d
+2019-12-09 14:07:09,399 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@2fc834b
+2019-12-09 14:07:09,443 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@1fd838c6
+2019-12-09 14:07:09,449 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@106f6dc5
+2019-12-09 14:07:09,456 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@28842663
+2019-12-09 14:07:09,466 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@6ac45d02
+2019-12-09 14:07:09,473 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@5858c92e
+2019-12-09 14:07:09,481 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@72af4c0f
+2019-12-09 14:07:09,491 [INFO] in scala-execution-context-global-43 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@56b238e7
+2019-12-09 14:07:09,637 [INFO] in scala-execution-context-global-43 - [info] com.jpro.JS - received msg: new MainID: 1551 userid: 1414373149
+2019-12-09 14:07:12,594 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.ViewInfo$ - 
+2019-12-09 14:07:12,594 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2019-12-09 14:07:12,594 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.ViewInfo$ - startTime      : Mon Dec 09 14:07:12 CST 2019      
+2019-12-09 14:07:12,594 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.017 
+2019-12-09 14:07:12,594 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.000  
+2019-12-09 14:07:12,595 [INFO] in scala-execution-context-global-56 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2019-12-09 14:07:12,595 [INFO] in scala-execution-context-global-56 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2019-12-09 14:07:12,595 [INFO] in scala-execution-context-global-56 - [info] c.j.i.s.ViewInfo$ - raw            : 78064
+2019-12-09 14:07:12,595 [INFO] in scala-execution-context-global-56 - [info] c.j.i.s.ViewInfo$ - zipped         : 12862
+2019-12-09 14:07:12,595 [INFO] in scala-execution-context-global-56 - [info] c.j.i.s.ViewInfo$ - 
+2019-12-09 14:07:19,296 [INFO] in scala-execution-context-global-56 - [info] c.j.i.c.InstanceImpl - closing window!
+2019-12-09 14:17:03,450 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - redirected OUT / ERR
+2019-12-09 14:17:03,451 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - installed SLF4JBridge
+2019-12-09 14:17:03,451 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.MonocleInitializer$ - screen: null
+2019-12-09 14:17:03,451 [INFO] in scala-execution-context-global-31 - Warning: Quantum will not submit render jobs, nothing should draw
+2019-12-09 14:17:03,451 [INFO] in scala-execution-context-global-31 - [info] c.j.i.s.Initializer$ - finished init!
+2019-12-09 14:17:03,462 [INFO] in scala-execution-context-global-43 - [info] c.j.i.s.Initializer$ - JavaFX version: 8.0.231-b10
+2019-12-09 14:17:03,480 [INFO] in scala-execution-context-global-43 - [info] c.j.i.c.m.DynamicDataModel - Started Monitoring chart data...
+2019-12-09 14:17:03,505 [INFO] in scala-execution-context-global-43 - [info] c.j.i.c.m.ChartJSONImExporter - Nothing to import
+2019-12-09 14:17:03,672 [INFO] in scala-execution-context-global-43 - [info] play.api.Play - Application started (Prod)
+2019-12-09 14:17:04,232 [INFO] in scala-execution-context-global-43 - [info] p.c.s.AkkaHttpServer - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 14:17:05,107 [INFO] in scala-execution-context-global-43 - [info] c.jpro - application requested: 0!software
+2019-12-09 14:17:05,116 [INFO] in scala-execution-context-global-43 - [info] c.jpro - Creating Application: 0!software
+2019-12-09 14:17:05,118 [INFO] in scala-execution-context-global-43 - [info] c.jpro - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 14:17:05,118 [INFO] in scala-execution-context-global-43 - [info] c.jpro - host          localhost:8080
+2019-12-09 14:17:05,118 [INFO] in scala-execution-context-global-43 - [info] c.jpro - uri           /app/0!software
+2019-12-09 14:17:05,616 [INFO] in scala-execution-context-global-43 - Switched to Main View!
+2019-12-09 14:17:06,967 [ERROR] in scala-execution-context-global-43 - Mon Dec 09 14:17:06 CST 2019 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+2019-12-09 14:17:07,184 [INFO] in scala-execution-context-global-43 - Apples
+2019-12-09 14:17:07,185 [INFO] in scala-execution-context-global-43 - Bananas
+2019-12-09 14:17:07,185 [INFO] in scala-execution-context-global-43 - Bread
+2019-12-09 14:17:07,185 [INFO] in scala-execution-context-global-43 - Milk
+2019-12-09 14:17:07,185 [INFO] in scala-execution-context-global-31 - Cereal
+2019-12-09 14:17:07,185 [INFO] in scala-execution-context-global-43 - Oranges
+2019-12-09 14:17:07,185 [INFO] in scala-execution-context-global-43 - Sweet Tea
+2019-12-09 14:17:07,185 [INFO] in scala-execution-context-global-43 - Lemonade
+2019-12-09 14:17:07,185 [INFO] in scala-execution-context-global-43 - Avocados
+2019-12-09 14:17:07,185 [INFO] in scala-execution-context-global-43 - Grapes
+2019-12-09 14:17:07,185 [INFO] in scala-execution-context-global-43 - Water
+2019-12-09 14:17:07,185 [INFO] in scala-execution-context-global-43 - Eggs
+2019-12-09 14:17:07,185 [INFO] in scala-execution-context-global-43 - Chicken
+2019-12-09 14:17:07,185 [INFO] in scala-execution-context-global-43 - Coffee
+2019-12-09 14:17:07,185 [INFO] in scala-execution-context-global-43 - Potato Chips
+2019-12-09 14:17:07,186 [INFO] in scala-execution-context-global-43 - Popcorn
+2019-12-09 14:17:07,186 [INFO] in scala-execution-context-global-43 - Cheddar Cheese
+2019-12-09 14:17:07,186 [INFO] in scala-execution-context-global-43 - Cookies
+2019-12-09 14:17:07,186 [INFO] in scala-execution-context-global-43 - Candy
+2019-12-09 14:17:07,186 [INFO] in scala-execution-context-global-43 - Salsa
+2019-12-09 14:17:07,196 [INFO] in scala-execution-context-global-57 - [info] c.j.i.s.ViewSerializerActor - appdef: AppByMain(software,application.Main,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/,http://localhost:8080/app/software,1920.0,937.0,false,en-US,List(en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-5-2-actorRefSource#1172863639]
+2019-12-09 14:17:07,317 [INFO] in scala-execution-context-global-57 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@34989088
+2019-12-09 14:17:07,370 [INFO] in scala-execution-context-global-57 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@51bb2d38
+2019-12-09 14:17:07,379 [INFO] in scala-execution-context-global-57 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@62b55888
+2019-12-09 14:17:07,387 [INFO] in scala-execution-context-global-57 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@3fae205d
+2019-12-09 14:17:07,395 [INFO] in scala-execution-context-global-57 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@3a96af67
+2019-12-09 14:17:07,439 [INFO] in scala-execution-context-global-57 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@4f4425f4
+2019-12-09 14:17:07,445 [INFO] in scala-execution-context-global-57 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@3a65858e
+2019-12-09 14:17:07,452 [INFO] in scala-execution-context-global-57 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@1b3e68da
+2019-12-09 14:17:07,462 [INFO] in scala-execution-context-global-57 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@68827217
+2019-12-09 14:17:07,469 [INFO] in scala-execution-context-global-57 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@17547110
+2019-12-09 14:17:07,478 [INFO] in scala-execution-context-global-57 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@14f8cb66
+2019-12-09 14:17:07,487 [INFO] in scala-execution-context-global-57 - [info] c.j.m.s.Util$ - workaround for image: javafx.scene.image.Image@5bd09921
+2019-12-09 14:17:07,619 [INFO] in scala-execution-context-global-57 - [info] com.jpro.JS - received msg: new MainID: 1551 userid: 2024648847
+2019-12-09 14:17:11,311 [INFO] in scala-execution-context-global-57 - [info] c.j.i.s.ViewInfo$ - 
+2019-12-09 14:17:11,311 [INFO] in scala-execution-context-global-57 - [info] c.j.i.s.ViewInfo$ - Application closed:
+2019-12-09 14:17:11,312 [INFO] in scala-execution-context-global-56 - [info] c.j.i.s.ViewInfo$ - startTime      : Mon Dec 09 14:17:11 CST 2019      
+2019-12-09 14:17:11,312 [INFO] in scala-execution-context-global-56 - [info] c.j.i.s.ViewInfo$ - averageLatency : 00:00:00.004 
+2019-12-09 14:17:11,312 [INFO] in scala-execution-context-global-56 - [info] c.j.i.s.ViewInfo$ - averageJitter  : 00:00:00.007  
+2019-12-09 14:17:11,312 [INFO] in scala-execution-context-global-56 - [info] c.j.i.s.ViewInfo$ - framerateServer: 00:00:00.000
+2019-12-09 14:17:11,313 [INFO] in scala-execution-context-global-56 - [info] c.j.i.s.ViewInfo$ - framerateClient: 00:00:00.000
+2019-12-09 14:17:11,313 [INFO] in scala-execution-context-global-56 - [info] c.j.i.s.ViewInfo$ - raw            : 60164
+2019-12-09 14:17:11,313 [INFO] in scala-execution-context-global-56 - [info] c.j.i.s.ViewInfo$ - zipped         : 7548
+2019-12-09 14:17:11,313 [INFO] in scala-execution-context-global-56 - [info] c.j.i.s.ViewInfo$ - 
+2019-12-09 14:17:18,256 [INFO] in scala-execution-context-global-55 - [info] c.j.i.c.InstanceImpl - closing window!

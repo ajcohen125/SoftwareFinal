@@ -1,0 +1,836 @@
+2019-12-09 13:47:17,122 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2019-12-09 13:47:17,472 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2019-12-09 13:47:17,472 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 -  *** Starting JPro: https://www.jpro.one/ ***
+2019-12-09 13:47:17,472 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 10
+2019-12-09 13:47:17,481 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2019.1.2
+2019-12-09 13:47:17,481 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - Java version: 1.8.0_231
+2019-12-09 13:47:17,481 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_231 Oracle Corporation
+2019-12-09 13:47:17,497 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - redirected OUT / ERR
+2019-12-09 13:47:17,497 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2019-12-09 13:47:17,515 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2019-12-09 13:47:17,964 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2019-12-09 13:47:17,978 [INFO] from com.jpro.internal.server.Initializer$ in JavaFX Application Thread - JavaFX version: 8.0.231-b10
+2019-12-09 13:47:17,995 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2019-12-09 13:47:18,019 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Nothing to import
+2019-12-09 13:47:18,199 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2019-12-09 13:47:18,867 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 13:47:19,917 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - application requested: 0!software
+2019-12-09 13:47:19,927 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - Creating Application: 0!software
+2019-12-09 13:47:19,928 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 13:47:19,929 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - host          localhost:8080
+2019-12-09 13:47:19,929 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - uri           /app/0!software
+2019-12-09 13:47:20,147 [ERROR] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - JavaFXStreamer - got Exception: 
+java.lang.ClassNotFoundException: com.jpro.application.Main
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at simplefx.util.ReflectionUtil.loadClass(ReflectionUtil.scala:38)
+	at simplefx.util.ReflectionUtil.callNew(ReflectionUtil.scala:103)
+	at com.jpro.internal.config.ApplicationStarter$.startApplication(ApplicationStarter.scala:111)
+	at com.jpro.internal.config.ApplicationStarter$.requestApplication(ApplicationStarter.scala:97)
+	at com.jpro.internal.config.ApplicationStarter$.getApplication(ApplicationStarter.scala:63)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$1.$anonfun$applyOrElse$2(ViewSerializerActor.scala:49)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:557)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:541)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:534)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:340)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2019-12-09 13:48:28,045 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2019-12-09 13:48:28,196 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2019-12-09 13:48:28,196 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 -  *** Starting JPro: https://www.jpro.one/ ***
+2019-12-09 13:48:28,196 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 10
+2019-12-09 13:48:28,204 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2019.1.2
+2019-12-09 13:48:28,204 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - Java version: 1.8.0_231
+2019-12-09 13:48:28,204 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_231 Oracle Corporation
+2019-12-09 13:48:28,219 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - redirected OUT / ERR
+2019-12-09 13:48:28,219 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2019-12-09 13:48:28,240 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2019-12-09 13:48:28,615 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2019-12-09 13:48:28,628 [INFO] from com.jpro.internal.server.Initializer$ in JavaFX Application Thread - JavaFX version: 8.0.231-b10
+2019-12-09 13:48:28,646 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2019-12-09 13:48:28,670 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Nothing to import
+2019-12-09 13:48:28,837 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2019-12-09 13:48:29,394 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 13:48:30,269 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - application requested: 0!software
+2019-12-09 13:48:30,278 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - Creating Application: 0!software
+2019-12-09 13:48:30,281 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 13:48:30,281 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - host          localhost:8080
+2019-12-09 13:48:30,281 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - uri           /app/0!software
+2019-12-09 13:48:30,557 [ERROR] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - JavaFXStreamer - got Exception: 
+java.lang.ClassNotFoundException: com.jpro.application.Main
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at simplefx.util.ReflectionUtil.loadClass(ReflectionUtil.scala:38)
+	at simplefx.util.ReflectionUtil.callNew(ReflectionUtil.scala:103)
+	at com.jpro.internal.config.ApplicationStarter$.startApplication(ApplicationStarter.scala:111)
+	at com.jpro.internal.config.ApplicationStarter$.requestApplication(ApplicationStarter.scala:97)
+	at com.jpro.internal.config.ApplicationStarter$.getApplication(ApplicationStarter.scala:63)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$1.$anonfun$applyOrElse$2(ViewSerializerActor.scala:49)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:557)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:541)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:534)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:340)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2019-12-09 13:49:27,527 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2019-12-09 13:49:27,853 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2019-12-09 13:49:27,853 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 -  *** Starting JPro: https://www.jpro.one/ ***
+2019-12-09 13:49:27,853 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 10
+2019-12-09 13:49:27,861 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2019.1.2
+2019-12-09 13:49:27,861 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - Java version: 1.8.0_231
+2019-12-09 13:49:27,861 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_231 Oracle Corporation
+2019-12-09 13:49:27,876 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - redirected OUT / ERR
+2019-12-09 13:49:27,876 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2019-12-09 13:49:27,898 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2019-12-09 13:49:28,283 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2019-12-09 13:49:28,294 [INFO] from com.jpro.internal.server.Initializer$ in JavaFX Application Thread - JavaFX version: 8.0.231-b10
+2019-12-09 13:49:28,312 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2019-12-09 13:49:28,334 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Nothing to import
+2019-12-09 13:49:28,504 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2019-12-09 13:49:29,061 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 13:49:29,949 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - application requested: 0!software
+2019-12-09 13:49:29,958 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - Creating Application: 0!software
+2019-12-09 13:49:29,960 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 13:49:29,960 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - host          localhost:8080
+2019-12-09 13:49:29,960 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-7 - uri           /app/0!software
+2019-12-09 13:49:30,357 [ERROR] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - Error while starting application: 
+java.lang.NullPointerException: null
+	at application.Main.start(Main.java:60)
+	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1(ApplicationStarter.scala:133)
+	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1$adapted(ApplicationStarter.scala:131)
+	at com.jpro.internal.communicator.InstanceImpl.start(InstanceImpl.scala:31)
+	at com.jpro.internal.communicator.InstanceImpl.$anonfun$new$2(InstanceImpl.scala:25)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2(CoreTimeEvent.scala:133)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2$adapted(CoreTimeEvent.scala:133)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$triggerOnChange$3(CoreTypesBindable.scala:208)
+	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl(CoreScheduler.scala:73)
+	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl$(CoreScheduler.scala:52)
+	at simplefx.cores.standard.Core.runSchedulerImpl(Core.scala:9)
+	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop(CoreScheduler.scala:44)
+	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop$(CoreScheduler.scala:42)
+	at simplefx.cores.standard.Core.tryStartSchedulerStop(Core.scala:9)
+	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit(CoreTypesEvent.scala:64)
+	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$(CoreTypesEvent.scala:64)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit(CoreTypesBindable.scala:24)
+	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp(CoreTypesEvent.scala:64)
+	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp$(CoreTypesEvent.scala:64)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit$mcZ$sp(CoreTypesBindable.scala:24)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:103)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:88)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:88)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:24)
+	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set(CoreTypesBindable.scala:161)
+	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$(CoreTypesBindable.scala:161)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.set(CoreTypesBindable.scala:24)
+	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$mcZ$sp(CoreTypesBindable.scala:161)
+	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$mcZ$sp$(CoreTypesBindable.scala:161)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.set$mcZ$sp(CoreTypesBindable.scala:24)
+	at com.jpro.internal.stats.ViewInfo.active_$eq(ViewInfo.scala:35)
+	at com.jpro.internal.stats.ViewInfo.active_$eq$(ViewInfo.scala:35)
+	at com.jpro.internal.communicator.ViewImpl.active_$eq(ViewImpl.scala:25)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:53)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$1.$anonfun$applyOrElse$2(ViewSerializerActor.scala:49)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:557)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:541)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:534)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:340)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2019-12-09 13:49:30,357 [WARN] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - Application didn't show the stage. JPro is now calling show()
+2019-12-09 13:49:30,373 [ERROR] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - JavaFXStreamer - got Exception: 
+java.lang.NullPointerException: null
+	at simplefx.util.ReflectionUtil$UseReflection.applyDynamic(ReflectionUtil.scala:18)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:87)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$1.$anonfun$applyOrElse$2(ViewSerializerActor.scala:49)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:557)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:541)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:534)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:340)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2019-12-09 13:49:31,394 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - WORKAROUND! setting XY for Window because current XY is NaN
+2019-12-09 13:51:28,562 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2019-12-09 13:51:28,713 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2019-12-09 13:51:28,713 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 -  *** Starting JPro: https://www.jpro.one/ ***
+2019-12-09 13:51:28,713 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 10
+2019-12-09 13:51:28,721 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2019.1.2
+2019-12-09 13:51:28,721 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - Java version: 1.8.0_231
+2019-12-09 13:51:28,721 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_231 Oracle Corporation
+2019-12-09 13:51:28,735 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - redirected OUT / ERR
+2019-12-09 13:51:28,735 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2019-12-09 13:51:28,757 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2019-12-09 13:51:29,137 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2019-12-09 13:51:29,149 [INFO] from com.jpro.internal.server.Initializer$ in JavaFX Application Thread - JavaFX version: 8.0.231-b10
+2019-12-09 13:51:29,168 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2019-12-09 13:51:29,191 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Nothing to import
+2019-12-09 13:51:29,354 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2019-12-09 13:51:29,917 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 13:51:30,791 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - application requested: 0!software
+2019-12-09 13:51:30,800 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - Creating Application: 0!software
+2019-12-09 13:51:30,802 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 13:51:30,803 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - host          localhost:8080
+2019-12-09 13:51:30,803 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - uri           /app/0!software
+2019-12-09 13:51:31,211 [ERROR] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - Error while starting application: 
+java.lang.NullPointerException: null
+	at application.Main.start(Main.java:60)
+	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1(ApplicationStarter.scala:133)
+	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1$adapted(ApplicationStarter.scala:131)
+	at com.jpro.internal.communicator.InstanceImpl.start(InstanceImpl.scala:31)
+	at com.jpro.internal.communicator.InstanceImpl.$anonfun$new$2(InstanceImpl.scala:25)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2(CoreTimeEvent.scala:133)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2$adapted(CoreTimeEvent.scala:133)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$triggerOnChange$3(CoreTypesBindable.scala:208)
+	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl(CoreScheduler.scala:73)
+	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl$(CoreScheduler.scala:52)
+	at simplefx.cores.standard.Core.runSchedulerImpl(Core.scala:9)
+	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop(CoreScheduler.scala:44)
+	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop$(CoreScheduler.scala:42)
+	at simplefx.cores.standard.Core.tryStartSchedulerStop(Core.scala:9)
+	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit(CoreTypesEvent.scala:64)
+	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$(CoreTypesEvent.scala:64)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit(CoreTypesBindable.scala:24)
+	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp(CoreTypesEvent.scala:64)
+	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp$(CoreTypesEvent.scala:64)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit$mcZ$sp(CoreTypesBindable.scala:24)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:103)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:88)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:88)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:24)
+	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set(CoreTypesBindable.scala:161)
+	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$(CoreTypesBindable.scala:161)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.set(CoreTypesBindable.scala:24)
+	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$mcZ$sp(CoreTypesBindable.scala:161)
+	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$mcZ$sp$(CoreTypesBindable.scala:161)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.set$mcZ$sp(CoreTypesBindable.scala:24)
+	at com.jpro.internal.stats.ViewInfo.active_$eq(ViewInfo.scala:35)
+	at com.jpro.internal.stats.ViewInfo.active_$eq$(ViewInfo.scala:35)
+	at com.jpro.internal.communicator.ViewImpl.active_$eq(ViewImpl.scala:25)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:53)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$1.$anonfun$applyOrElse$2(ViewSerializerActor.scala:49)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:557)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:541)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:534)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:340)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2019-12-09 13:51:31,211 [WARN] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - Application didn't show the stage. JPro is now calling show()
+2019-12-09 13:51:31,226 [ERROR] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - JavaFXStreamer - got Exception: 
+java.lang.NullPointerException: null
+	at simplefx.util.ReflectionUtil$UseReflection.applyDynamic(ReflectionUtil.scala:18)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:87)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$1.$anonfun$applyOrElse$2(ViewSerializerActor.scala:49)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:557)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:541)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:534)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:340)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2019-12-09 13:51:32,247 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - WORKAROUND! setting XY for Window because current XY is NaN
+2019-12-09 13:52:03,371 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2019-12-09 13:52:03,697 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2019-12-09 13:52:03,698 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 -  *** Starting JPro: https://www.jpro.one/ ***
+2019-12-09 13:52:03,698 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 10
+2019-12-09 13:52:03,705 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2019.1.2
+2019-12-09 13:52:03,705 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - Java version: 1.8.0_231
+2019-12-09 13:52:03,705 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_231 Oracle Corporation
+2019-12-09 13:52:03,720 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - redirected OUT / ERR
+2019-12-09 13:52:03,720 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2019-12-09 13:52:03,742 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2019-12-09 13:52:04,090 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2019-12-09 13:52:04,102 [INFO] from com.jpro.internal.server.Initializer$ in JavaFX Application Thread - JavaFX version: 8.0.231-b10
+2019-12-09 13:52:04,119 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2019-12-09 13:52:04,142 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Nothing to import
+2019-12-09 13:52:04,308 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2019-12-09 13:52:04,870 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 13:52:05,804 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - application requested: 0!software
+2019-12-09 13:52:05,813 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - Creating Application: 0!software
+2019-12-09 13:52:05,815 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 13:52:05,816 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - host          localhost:8080
+2019-12-09 13:52:05,816 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - uri           /app/0!software
+2019-12-09 13:52:06,203 [ERROR] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - Error while starting application: 
+java.lang.NullPointerException: null
+	at application.Main.start(Main.java:61)
+	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1(ApplicationStarter.scala:133)
+	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1$adapted(ApplicationStarter.scala:131)
+	at com.jpro.internal.communicator.InstanceImpl.start(InstanceImpl.scala:31)
+	at com.jpro.internal.communicator.InstanceImpl.$anonfun$new$2(InstanceImpl.scala:25)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2(CoreTimeEvent.scala:133)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2$adapted(CoreTimeEvent.scala:133)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$triggerOnChange$3(CoreTypesBindable.scala:208)
+	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl(CoreScheduler.scala:73)
+	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl$(CoreScheduler.scala:52)
+	at simplefx.cores.standard.Core.runSchedulerImpl(Core.scala:9)
+	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop(CoreScheduler.scala:44)
+	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop$(CoreScheduler.scala:42)
+	at simplefx.cores.standard.Core.tryStartSchedulerStop(Core.scala:9)
+	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit(CoreTypesEvent.scala:64)
+	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$(CoreTypesEvent.scala:64)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit(CoreTypesBindable.scala:24)
+	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp(CoreTypesEvent.scala:64)
+	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp$(CoreTypesEvent.scala:64)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit$mcZ$sp(CoreTypesBindable.scala:24)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:103)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:88)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:88)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:24)
+	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set(CoreTypesBindable.scala:161)
+	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$(CoreTypesBindable.scala:161)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.set(CoreTypesBindable.scala:24)
+	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$mcZ$sp(CoreTypesBindable.scala:161)
+	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$mcZ$sp$(CoreTypesBindable.scala:161)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.set$mcZ$sp(CoreTypesBindable.scala:24)
+	at com.jpro.internal.stats.ViewInfo.active_$eq(ViewInfo.scala:35)
+	at com.jpro.internal.stats.ViewInfo.active_$eq$(ViewInfo.scala:35)
+	at com.jpro.internal.communicator.ViewImpl.active_$eq(ViewImpl.scala:25)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:53)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$1.$anonfun$applyOrElse$2(ViewSerializerActor.scala:49)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:557)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:541)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:534)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:340)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2019-12-09 13:52:06,203 [WARN] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - Application didn't show the stage. JPro is now calling show()
+2019-12-09 13:52:06,219 [ERROR] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - JavaFXStreamer - got Exception: 
+java.lang.NullPointerException: null
+	at simplefx.util.ReflectionUtil$UseReflection.applyDynamic(ReflectionUtil.scala:18)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:87)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$1.$anonfun$applyOrElse$2(ViewSerializerActor.scala:49)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:557)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:541)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:534)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:340)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2019-12-09 13:52:07,232 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - WORKAROUND! setting XY for Window because current XY is NaN
+2019-12-09 13:53:13,708 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2019-12-09 13:53:14,034 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2019-12-09 13:53:14,034 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 -  *** Starting JPro: https://www.jpro.one/ ***
+2019-12-09 13:53:14,034 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 10
+2019-12-09 13:53:14,041 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2019.1.2
+2019-12-09 13:53:14,042 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - Java version: 1.8.0_231
+2019-12-09 13:53:14,042 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_231 Oracle Corporation
+2019-12-09 13:53:14,056 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - redirected OUT / ERR
+2019-12-09 13:53:14,056 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2019-12-09 13:53:14,079 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2019-12-09 13:53:14,471 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2019-12-09 13:53:14,483 [INFO] from com.jpro.internal.server.Initializer$ in JavaFX Application Thread - JavaFX version: 8.0.231-b10
+2019-12-09 13:53:14,503 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2019-12-09 13:53:14,528 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Nothing to import
+2019-12-09 13:53:14,698 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2019-12-09 13:53:15,268 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 13:53:16,111 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - application requested: 0!software
+2019-12-09 13:53:16,120 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - Creating Application: 0!software
+2019-12-09 13:53:16,122 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 13:53:16,122 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - host          localhost:8080
+2019-12-09 13:53:16,122 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - uri           /app/0!software
+2019-12-09 13:53:17,489 [ERROR] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - Error while starting application: 
+java.lang.NullPointerException: null
+	at application.Main.start(Main.java:61)
+	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1(ApplicationStarter.scala:133)
+	at com.jpro.internal.config.ApplicationStarter$.$anonfun$startJApplication$1$adapted(ApplicationStarter.scala:131)
+	at com.jpro.internal.communicator.InstanceImpl.start(InstanceImpl.scala:31)
+	at com.jpro.internal.communicator.InstanceImpl.$anonfun$new$2(InstanceImpl.scala:25)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2(CoreTimeEvent.scala:133)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runWhenever$2$adapted(CoreTimeEvent.scala:133)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.$anonfun$triggerOnChange$3(CoreTypesBindable.scala:208)
+	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl(CoreScheduler.scala:73)
+	at simplefx.cores.standard.parts.CoreScheduler.runSchedulerImpl$(CoreScheduler.scala:52)
+	at simplefx.cores.standard.Core.runSchedulerImpl(Core.scala:9)
+	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop(CoreScheduler.scala:44)
+	at simplefx.cores.standard.parts.CoreScheduler.tryStartSchedulerStop$(CoreScheduler.scala:42)
+	at simplefx.cores.standard.Core.tryStartSchedulerStop(Core.scala:9)
+	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit(CoreTypesEvent.scala:64)
+	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$(CoreTypesEvent.scala:64)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit(CoreTypesBindable.scala:24)
+	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp(CoreTypesEvent.scala:64)
+	at simplefx.cores.interfaces.parts.CoreTypesEvent$IEventEmitter.emit$mcZ$sp$(CoreTypesEvent.scala:64)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.emit$mcZ$sp(CoreTypesBindable.scala:24)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:103)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue$mcZ$sp(CoreTypesBindable.scala:88)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:88)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl$mcZ$sp.setValue(CoreTypesBindable.scala:24)
+	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set(CoreTypesBindable.scala:161)
+	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$(CoreTypesBindable.scala:161)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.set(CoreTypesBindable.scala:24)
+	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$mcZ$sp(CoreTypesBindable.scala:161)
+	at simplefx.cores.interfaces.parts.CoreTypesBindable$ISOBindable.set$mcZ$sp$(CoreTypesBindable.scala:161)
+	at simplefx.cores.standard.parts.CoreTypesBindable$BindableImpl.set$mcZ$sp(CoreTypesBindable.scala:24)
+	at com.jpro.internal.stats.ViewInfo.active_$eq(ViewInfo.scala:35)
+	at com.jpro.internal.stats.ViewInfo.active_$eq$(ViewInfo.scala:35)
+	at com.jpro.internal.communicator.ViewImpl.active_$eq(ViewImpl.scala:25)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:53)
+	at com.jpro.internal.communicator.ViewImpl.<init>(ViewImpl.scala:29)
+	at com.jpro.internal.server.ViewByActor.<init>(ViewSerializerActor.scala:81)
+	at com.jpro.internal.server.ViewSerializerActor$$anonfun$receive$1$$anonfun$applyOrElse$1.$anonfun$applyOrElse$2(ViewSerializerActor.scala:49)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.util.Predef$.$anonfun$runInAndBlock$1(Predef.scala:184)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:557)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:541)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:534)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:340)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2019-12-09 13:53:17,500 [INFO] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - appdef: AppByMain(software,application.Main,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/,http://localhost:8080/app/software,1920.0,937.0,false,en-US,List(en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-5-2-actorRefSource#-1273290292]
+2019-12-09 13:53:17,619 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@6eedd1f5
+2019-12-09 13:53:17,677 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@78099b28
+2019-12-09 13:53:17,687 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@17358a16
+2019-12-09 13:53:17,695 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@7f149aaf
+2019-12-09 13:53:17,703 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@1e75f9f6
+2019-12-09 13:53:17,745 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@1a202989
+2019-12-09 13:53:17,751 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@32ff9240
+2019-12-09 13:53:17,757 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@3a98b6
+2019-12-09 13:53:17,768 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@79b117de
+2019-12-09 13:53:17,775 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@5ef4653d
+2019-12-09 13:53:17,784 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@52abf097
+2019-12-09 13:53:17,794 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@2a40c2fc
+2019-12-09 13:53:17,933 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 1551 userid: 2122215883
+2019-12-09 13:53:31,412 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@114ad98a
+2019-12-09 13:53:31,416 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@43e1ecfb
+2019-12-09 13:53:31,422 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@2d9626d6
+2019-12-09 13:53:31,427 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@1a1549f9
+2019-12-09 13:53:31,433 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@6fb4e60e
+2019-12-09 13:53:31,447 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@9cbce12
+2019-12-09 13:53:31,450 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@344d138
+2019-12-09 13:53:31,526 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 3432 userid: 2122215883
+2019-12-09 13:53:33,189 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2019-12-09 13:53:33,189 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2019-12-09 13:53:33,192 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Mon Dec 09 13:53:33 CST 2019      
+2019-12-09 13:53:33,192 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.018 
+2019-12-09 13:53:33,192 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.001  
+2019-12-09 13:53:33,192 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2019-12-09 13:53:33,193 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2019-12-09 13:53:33,193 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 226316
+2019-12-09 13:53:33,193 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 40881
+2019-12-09 13:53:33,193 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2019-12-09 13:53:43,717 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - closing window!
+2019-12-09 13:54:34,247 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2019-12-09 13:54:34,579 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2019-12-09 13:54:34,579 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 -  *** Starting JPro: https://www.jpro.one/ ***
+2019-12-09 13:54:34,579 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 10
+2019-12-09 13:54:34,586 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2019.1.2
+2019-12-09 13:54:34,586 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - Java version: 1.8.0_231
+2019-12-09 13:54:34,586 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_231 Oracle Corporation
+2019-12-09 13:54:34,601 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - redirected OUT / ERR
+2019-12-09 13:54:34,601 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2019-12-09 13:54:34,623 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2019-12-09 13:54:35,004 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2019-12-09 13:54:35,016 [INFO] from com.jpro.internal.server.Initializer$ in JavaFX Application Thread - JavaFX version: 8.0.231-b10
+2019-12-09 13:54:35,035 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2019-12-09 13:54:35,057 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Nothing to import
+2019-12-09 13:54:35,223 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2019-12-09 13:54:35,776 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 13:54:36,704 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - application requested: 0!software
+2019-12-09 13:54:36,713 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - Creating Application: 0!software
+2019-12-09 13:54:36,715 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 13:54:36,716 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - host          localhost:8080
+2019-12-09 13:54:36,716 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-3 - uri           /app/0!software
+2019-12-09 13:54:38,818 [INFO] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - appdef: AppByMain(software,application.Main,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/,http://localhost:8080/app/software,1920.0,937.0,false,en-US,List(en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-5-2-actorRefSource#-2091301680]
+2019-12-09 13:54:38,937 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@56c382c0
+2019-12-09 13:54:38,989 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@40c126ac
+2019-12-09 13:54:38,998 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@649d094c
+2019-12-09 13:54:39,006 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@29f91c71
+2019-12-09 13:54:39,013 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@6ea0537d
+2019-12-09 13:54:39,059 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@acb0d6a
+2019-12-09 13:54:39,065 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@5f347b0f
+2019-12-09 13:54:39,073 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@59c10e9d
+2019-12-09 13:54:39,083 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@7a0f12f0
+2019-12-09 13:54:39,090 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@76933fd0
+2019-12-09 13:54:39,099 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@259bf182
+2019-12-09 13:54:39,108 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@4d95f342
+2019-12-09 13:54:39,240 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 1551 userid: 2006249910
+2019-12-09 13:54:43,158 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@39132f1
+2019-12-09 13:54:43,163 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@5cec1d8d
+2019-12-09 13:54:43,168 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@14559ad4
+2019-12-09 13:54:43,172 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@7b49ac76
+2019-12-09 13:54:43,177 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@55726384
+2019-12-09 13:54:43,191 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@507cc967
+2019-12-09 13:54:43,196 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@21ac78db
+2019-12-09 13:54:43,359 [ERROR] from com.jpro.meta.tk.SceneInputListener in JavaFX Application Thread - error in process input MouseEventToken(MouseMoved,258.0,64.0,MouseButtonToken(3),false,false,false,false,false,false,false,false)
+java.lang.NullPointerException: null
+	at simplefx.util.ReflectionUtil$UseReflection.applyDynamic(ReflectionUtil.scala:18)
+	at com.jpro.meta.tk.UtilSceneTKListener$ExtendView.view(UtilSceneTKListener.scala:24)
+	at com.jpro.meta.tk.UtilSceneTKListener$ExtendView.isMonocle(UtilSceneTKListener.scala:25)
+	at com.jpro.meta.tk.SceneInputListener.processInputInScene(SceneInputListener.scala:126)
+	at com.jpro.meta.tk.SceneInputListener.processInput(SceneInputListener.scala:116)
+	at com.jpro.meta.tk.SceneInputListener.processInputs(SceneInputListener.scala:97)
+	at com.jpro.meta.tk.SceneInputListener.$anonfun$new$3(SceneInputListener.scala:38)
+	at simplefx.cores.standard.parts.CoreTimeEvent.$anonfun$runAsAnimation$1(CoreTimeEvent.scala:64)
+	at simplefx.cores.standard.parts.CoreTimeEvent$$anon$2.handle(CoreTimeEvent.scala:46)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$0(AnimationTimer.java:57)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+	at com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+	at com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:557)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:541)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:534)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$11(QuantumToolkit.java:340)
+	at com.sun.glass.ui.monocle.RunnableProcessor.runLoop(RunnableProcessor.java:92)
+	at com.sun.glass.ui.monocle.RunnableProcessor.run(RunnableProcessor.java:51)
+	at java.lang.Thread.run(Thread.java:748)
+2019-12-09 13:54:43,466 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 12124 userid: 2006249910
+2019-12-09 13:54:51,070 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@8dcb645
+2019-12-09 13:54:51,074 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@39a8d0e8
+2019-12-09 13:54:51,079 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@32971142
+2019-12-09 13:54:51,083 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@5730bedb
+2019-12-09 13:54:51,088 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@63cf4f74
+2019-12-09 13:54:51,098 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@420f64a2
+2019-12-09 13:54:51,101 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@26cfb8
+2019-12-09 13:54:51,138 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@3be22acf
+2019-12-09 13:54:51,668 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 13777 userid: 2006249910
+2019-12-09 13:54:53,051 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@7cd13eff
+2019-12-09 13:54:53,057 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@69dca6bb
+2019-12-09 13:54:53,062 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@618ed9a8
+2019-12-09 13:54:53,065 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@31de30d2
+2019-12-09 13:54:53,070 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@156e8302
+2019-12-09 13:54:53,080 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@64007df3
+2019-12-09 13:54:53,084 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@23b43f21
+2019-12-09 13:54:53,180 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 18624 userid: 2006249910
+2019-12-09 13:54:55,762 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2019-12-09 13:54:55,762 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2019-12-09 13:54:55,763 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Mon Dec 09 13:54:55 CST 2019      
+2019-12-09 13:54:55,763 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.017 
+2019-12-09 13:54:55,763 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.000  
+2019-12-09 13:54:55,764 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2019-12-09 13:54:55,765 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2019-12-09 13:54:55,765 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 890623
+2019-12-09 13:54:55,765 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 124469
+2019-12-09 13:54:55,765 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2019-12-09 13:55:06,937 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - closing window!
+2019-12-09 13:57:14,609 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2019-12-09 13:57:14,935 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2019-12-09 13:57:14,935 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 -  *** Starting JPro: https://www.jpro.one/ ***
+2019-12-09 13:57:14,935 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 10
+2019-12-09 13:57:14,943 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2019.1.2
+2019-12-09 13:57:14,943 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - Java version: 1.8.0_231
+2019-12-09 13:57:14,943 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_231 Oracle Corporation
+2019-12-09 13:57:14,957 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - redirected OUT / ERR
+2019-12-09 13:57:14,958 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2019-12-09 13:57:14,979 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2019-12-09 13:57:15,354 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2019-12-09 13:57:15,365 [INFO] from com.jpro.internal.server.Initializer$ in JavaFX Application Thread - JavaFX version: 8.0.231-b10
+2019-12-09 13:57:15,382 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2019-12-09 13:57:15,406 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Nothing to import
+2019-12-09 13:57:15,577 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2019-12-09 13:57:16,131 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 13:57:17,021 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-6 - application requested: 0!software
+2019-12-09 13:57:17,030 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-6 - Creating Application: 0!software
+2019-12-09 13:57:17,032 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-6 - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 13:57:17,033 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-6 - host          localhost:8080
+2019-12-09 13:57:17,033 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-6 - uri           /app/0!software
+2019-12-09 13:57:19,177 [INFO] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - appdef: AppByMain(software,application.Main,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/,http://localhost:8080/app/software,1920.0,937.0,false,en-US,List(en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-5-2-actorRefSource#742713893]
+2019-12-09 13:57:19,295 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@73d50d2c
+2019-12-09 13:57:19,346 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@28abd9ee
+2019-12-09 13:57:19,355 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@27f5b276
+2019-12-09 13:57:19,363 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@cf80f78
+2019-12-09 13:57:19,371 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@4a224510
+2019-12-09 13:57:19,414 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@57b3f6
+2019-12-09 13:57:19,420 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@3cd4421f
+2019-12-09 13:57:19,426 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@6351f82e
+2019-12-09 13:57:19,437 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@3737b8f
+2019-12-09 13:57:19,444 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@6dfa8c56
+2019-12-09 13:57:19,453 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@21e18268
+2019-12-09 13:57:19,462 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@57043906
+2019-12-09 13:57:19,604 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 1551 userid: 5054339
+2019-12-09 13:57:28,750 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@1793cb14
+2019-12-09 13:57:28,755 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@6ca4595d
+2019-12-09 13:57:28,761 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@16369c19
+2019-12-09 13:57:28,765 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@161e580d
+2019-12-09 13:57:28,771 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@36dcfe3
+2019-12-09 13:57:28,788 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@33b3075f
+2019-12-09 13:57:28,792 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@1080d8bf
+2019-12-09 13:57:28,896 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 3278 userid: 5054339
+2019-12-09 13:57:29,483 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@7a24d6d6
+2019-12-09 13:57:29,488 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@79c65949
+2019-12-09 13:57:29,494 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@52fa5ccc
+2019-12-09 13:57:29,499 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@3b070561
+2019-12-09 13:57:29,504 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@320b05c2
+2019-12-09 13:57:29,518 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@3e8d1ce
+2019-12-09 13:57:29,522 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@38457316
+2019-12-09 13:57:29,566 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 5005 userid: 5054339
+2019-12-09 13:57:32,107 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@6adc83ef
+2019-12-09 13:57:32,112 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@2df58d9e
+2019-12-09 13:57:32,117 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@48c96671
+2019-12-09 13:57:32,122 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@704cc961
+2019-12-09 13:57:32,126 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@6775c7ab
+2019-12-09 13:57:32,139 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@6f386b14
+2019-12-09 13:57:32,143 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@48084332
+2019-12-09 13:57:32,252 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 9852 userid: 5054339
+2019-12-09 13:57:32,989 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@3638cdcb
+2019-12-09 13:57:32,992 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@27951a4e
+2019-12-09 13:57:32,998 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@29e77552
+2019-12-09 13:57:33,002 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@62182b4
+2019-12-09 13:57:33,007 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@6e9f8d2b
+2019-12-09 13:57:33,016 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@7fe59562
+2019-12-09 13:57:33,020 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@70f2d924
+2019-12-09 13:57:33,222 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 20425 userid: 5054339
+2019-12-09 13:57:35,137 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2019-12-09 13:57:35,137 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2019-12-09 13:57:35,138 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Mon Dec 09 13:57:35 CST 2019      
+2019-12-09 13:57:35,138 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.017 
+2019-12-09 13:57:35,138 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.000  
+2019-12-09 13:57:35,138 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2019-12-09 13:57:35,139 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2019-12-09 13:57:35,139 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 815239
+2019-12-09 13:57:35,139 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 101674
+2019-12-09 13:57:35,139 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2019-12-09 13:57:45,999 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - closing window!
+2019-12-09 14:04:56,770 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2019-12-09 14:04:57,105 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2019-12-09 14:04:57,107 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 -  *** Starting JPro: https://www.jpro.one/ ***
+2019-12-09 14:04:57,107 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 10
+2019-12-09 14:04:57,113 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2019.1.2
+2019-12-09 14:04:57,113 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - Java version: 1.8.0_231
+2019-12-09 14:04:57,113 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_231 Oracle Corporation
+2019-12-09 14:04:57,129 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - redirected OUT / ERR
+2019-12-09 14:04:57,129 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2019-12-09 14:04:57,151 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2019-12-09 14:04:57,526 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2019-12-09 14:04:57,539 [INFO] from com.jpro.internal.server.Initializer$ in JavaFX Application Thread - JavaFX version: 8.0.231-b10
+2019-12-09 14:04:57,557 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2019-12-09 14:04:57,581 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Nothing to import
+2019-12-09 14:04:57,746 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2019-12-09 14:04:58,307 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 14:04:59,195 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - application requested: 0!software
+2019-12-09 14:04:59,204 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - Creating Application: 0!software
+2019-12-09 14:04:59,206 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 14:04:59,207 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - host          localhost:8080
+2019-12-09 14:04:59,207 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-4 - uri           /app/0!software
+2019-12-09 14:05:01,515 [INFO] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - appdef: AppByMain(software,application.Main,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/,http://localhost:8080/app/software,1920.0,937.0,false,en-US,List(en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-5-2-actorRefSource#1055432362]
+2019-12-09 14:05:01,633 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@44601e83
+2019-12-09 14:05:01,684 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@36550061
+2019-12-09 14:05:01,694 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@4496da3c
+2019-12-09 14:05:01,701 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@5c0022f7
+2019-12-09 14:05:01,709 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@59c4f968
+2019-12-09 14:05:01,753 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@424eecdf
+2019-12-09 14:05:01,759 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@1867d9dc
+2019-12-09 14:05:01,766 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@188100d2
+2019-12-09 14:05:01,775 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@3beafa56
+2019-12-09 14:05:01,782 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@3e515bbf
+2019-12-09 14:05:01,791 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@47541fb4
+2019-12-09 14:05:01,800 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@1552f2f1
+2019-12-09 14:05:01,942 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 1551 userid: 346260213
+2019-12-09 14:05:19,872 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2019-12-09 14:05:19,873 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2019-12-09 14:05:19,873 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Mon Dec 09 14:05:19 CST 2019      
+2019-12-09 14:05:19,873 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.015 
+2019-12-09 14:05:19,873 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.004  
+2019-12-09 14:05:19,874 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2019-12-09 14:05:19,875 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2019-12-09 14:05:19,875 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 169818
+2019-12-09 14:05:19,875 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 32088
+2019-12-09 14:05:19,875 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2019-12-09 14:07:04,682 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-2 - Slf4jLogger started
+2019-12-09 14:07:05,004 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2019-12-09 14:07:05,005 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 -  *** Starting JPro: https://www.jpro.one/ ***
+2019-12-09 14:07:05,005 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 10
+2019-12-09 14:07:05,012 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2019.1.2
+2019-12-09 14:07:05,012 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - Java version: 1.8.0_231
+2019-12-09 14:07:05,012 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_231 Oracle Corporation
+2019-12-09 14:07:05,027 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - redirected OUT / ERR
+2019-12-09 14:07:05,027 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2019-12-09 14:07:05,049 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2019-12-09 14:07:05,411 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2019-12-09 14:07:05,424 [INFO] from com.jpro.internal.server.Initializer$ in JavaFX Application Thread - JavaFX version: 8.0.231-b10
+2019-12-09 14:07:05,441 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2019-12-09 14:07:05,465 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Nothing to import
+2019-12-09 14:07:05,631 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2019-12-09 14:07:06,190 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 14:07:07,098 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - application requested: 0!software
+2019-12-09 14:07:07,106 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - Creating Application: 0!software
+2019-12-09 14:07:07,109 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 14:07:07,109 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - host          localhost:8080
+2019-12-09 14:07:07,109 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - uri           /app/0!software
+2019-12-09 14:07:09,204 [INFO] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - appdef: AppByMain(software,application.Main,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/,http://localhost:8080/app/software,1920.0,937.0,false,en-US,List(en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-5-2-actorRefSource#-1457871257]
+2019-12-09 14:07:09,323 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@7cb640c9
+2019-12-09 14:07:09,373 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@2600a83a
+2019-12-09 14:07:09,383 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@c270ec1
+2019-12-09 14:07:09,391 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@47439a5d
+2019-12-09 14:07:09,399 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@2fc834b
+2019-12-09 14:07:09,443 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@1fd838c6
+2019-12-09 14:07:09,449 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@106f6dc5
+2019-12-09 14:07:09,456 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@28842663
+2019-12-09 14:07:09,466 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@6ac45d02
+2019-12-09 14:07:09,473 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@5858c92e
+2019-12-09 14:07:09,481 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@72af4c0f
+2019-12-09 14:07:09,491 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@56b238e7
+2019-12-09 14:07:09,637 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 1551 userid: 1414373149
+2019-12-09 14:07:12,594 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2019-12-09 14:07:12,594 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2019-12-09 14:07:12,594 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Mon Dec 09 14:07:12 CST 2019      
+2019-12-09 14:07:12,594 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.017 
+2019-12-09 14:07:12,594 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.000  
+2019-12-09 14:07:12,595 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2019-12-09 14:07:12,595 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2019-12-09 14:07:12,595 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 78064
+2019-12-09 14:07:12,595 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 12862
+2019-12-09 14:07:12,595 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2019-12-09 14:07:19,296 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - closing window!
+2019-12-09 14:17:02,691 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2019-12-09 14:17:03,027 [INFO] from com.jpro.activity in Thread-0 - Starting the server
+2019-12-09 14:17:03,027 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 -  *** Starting JPro: https://www.jpro.one/ ***
+2019-12-09 14:17:03,027 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - OS: Windows 10
+2019-12-09 14:17:03,034 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JPro: 2019.1.2
+2019-12-09 14:17:03,034 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - Java version: 1.8.0_231
+2019-12-09 14:17:03,034 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - JVM: 1.8.0_231 Oracle Corporation
+2019-12-09 14:17:03,049 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - redirected OUT / ERR
+2019-12-09 14:17:03,049 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - installed SLF4JBridge
+2019-12-09 14:17:03,072 [INFO] from com.jpro.internal.server.MonocleInitializer$ in Thread-0 - screen: null
+2019-12-09 14:17:03,450 [INFO] from com.jpro.internal.server.Initializer$ in Thread-0 - finished init!
+2019-12-09 14:17:03,462 [INFO] from com.jpro.internal.server.Initializer$ in JavaFX Application Thread - JavaFX version: 8.0.231-b10
+2019-12-09 14:17:03,480 [INFO] from com.jpro.internal.chart.model.DynamicDataModel in JavaFX Application Thread - Started Monitoring chart data...
+2019-12-09 14:17:03,505 [INFO] from com.jpro.internal.chart.model.ChartJSONImExporter in JavaFX Application Thread - Nothing to import
+2019-12-09 14:17:03,672 [INFO] from play.api.Play in Thread-0 - Application started (Prod)
+2019-12-09 14:17:04,231 [INFO] from play.core.server.AkkaHttpServer in Thread-0 - Listening for HTTP on /0:0:0:0:0:0:0:0:8080
+2019-12-09 14:17:05,106 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - application requested: 0!software
+2019-12-09 14:17:05,116 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - Creating Application: 0!software
+2019-12-09 14:17:05,117 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - remoteAddress 0:0:0:0:0:0:0:1
+2019-12-09 14:17:05,118 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - host          localhost:8080
+2019-12-09 14:17:05,118 [INFO] from controllers.jpro in application-akka.actor.default-dispatcher-2 - uri           /app/0!software
+2019-12-09 14:17:07,196 [INFO] from com.jpro.internal.server.ViewSerializerActor in JavaFX Application Thread - appdef: AppByMain(software,application.Main,None,NamedClassLoader(system),false) clientinfo: ClientInfo(http://localhost:8080/,http://localhost:8080/app/software,1920.0,937.0,false,en-US,List(en-US, en),Map())out: Actor[akka://application/system/StreamSupervisor-0/flow-5-2-actorRefSource#1172863639]
+2019-12-09 14:17:07,317 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@34989088
+2019-12-09 14:17:07,369 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@51bb2d38
+2019-12-09 14:17:07,379 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@62b55888
+2019-12-09 14:17:07,387 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@3fae205d
+2019-12-09 14:17:07,395 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@3a96af67
+2019-12-09 14:17:07,439 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@4f4425f4
+2019-12-09 14:17:07,445 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@3a65858e
+2019-12-09 14:17:07,452 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@1b3e68da
+2019-12-09 14:17:07,462 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@68827217
+2019-12-09 14:17:07,469 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@17547110
+2019-12-09 14:17:07,478 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@14f8cb66
+2019-12-09 14:17:07,486 [INFO] from com.jpro.meta.stream.Util$ in JavaFX Application Thread - workaround for image: javafx.scene.image.Image@5bd09921
+2019-12-09 14:17:07,619 [INFO] from com.jpro.JS in JavaFX Application Thread - received msg: new MainID: 1551 userid: 2024648847
+2019-12-09 14:17:11,310 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2019-12-09 14:17:11,310 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - Application closed:
+2019-12-09 14:17:11,312 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - startTime      : Mon Dec 09 14:17:11 CST 2019      
+2019-12-09 14:17:11,312 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageLatency : 00:00:00.004 
+2019-12-09 14:17:11,312 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - averageJitter  : 00:00:00.007  
+2019-12-09 14:17:11,312 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateServer: 00:00:00.000
+2019-12-09 14:17:11,313 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - framerateClient: 00:00:00.000
+2019-12-09 14:17:11,313 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - raw            : 60164
+2019-12-09 14:17:11,313 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - zipped         : 7548
+2019-12-09 14:17:11,313 [INFO] from com.jpro.internal.stats.ViewInfo$ in JavaFX Application Thread - 
+2019-12-09 14:17:18,256 [INFO] from com.jpro.internal.communicator.InstanceImpl in JavaFX Application Thread - closing window!
