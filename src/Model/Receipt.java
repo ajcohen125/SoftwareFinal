@@ -15,7 +15,7 @@ public class Receipt {
     public String shipping;
     public double creditUsed;
 
-    public Receipt(){
+	public Receipt(){
 
         this.email = null;
         this.receiptNum = -1;
@@ -74,6 +74,15 @@ public class Receipt {
     	
     	return s;
     }
+    
+    public double getCreditUsed() {
+		return creditUsed;
+	}
+
+	public void setCreditUsed(double creditUsed) {
+		this.creditUsed = creditUsed;
+	}
+	
     public String marshall() {
     	String str ="";
     	

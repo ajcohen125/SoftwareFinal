@@ -74,7 +74,10 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Button fx:id="updateBtn" layoutX="1003.0" layoutY="717.0" mnemonicParsing="false" onAction="#handle" prefHeight="46.0" prefWidth="137.0" text="Update" />
+      <Button fx:id="updateBtn" layoutX="1003.0" layoutY="717.0" mnemonicParsing="false" onAction="#handle" prefHeight="46.0" prefWidth="137.0" text="Update">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
       <TextField fx:id="accountAddressTextField" layoutX="164.0" layoutY="316.0" prefHeight="31.0" prefWidth="347.0" />
       <Label layoutX="710.0" layoutY="220.0" text="Email:">
          <font>
@@ -86,6 +89,7 @@
             <Font size="20.0" />
          </font></Label>
       <Label fx:id="accountStoreCreditLabel" layoutX="784.0" layoutY="316.0" prefHeight="31.0" prefWidth="347.0" text="-1" />
+      <Button fx:id="viewReceiptHistoryBtn" layoutX="793.0" layoutY="717.0" mnemonicParsing="false" onAction="#handle" prefHeight="46.0" prefWidth="172.0" text="View Receipt History" />
       <!--  THESE COMPONENTS ARE USED ACCROSS ALL VIEWS -->
    </children>
 </AnchorPane>

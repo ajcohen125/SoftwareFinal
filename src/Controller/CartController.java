@@ -259,6 +259,8 @@ public class CartController implements Initializable, EventHandler<ActionEvent> 
 		else
 			r.shipping = "EXPEDITED";
 		
+		Main.receiptList.add(r);
+		
 		r.writeToDb();
 	}
 	

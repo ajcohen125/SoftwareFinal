@@ -16,6 +16,7 @@ public class Main extends Application {
 	public static Stage stage;
 	public static AnchorPane layout;
 	public static ArrayList<Item> itemList;
+	public static ArrayList<Receipt> receiptList;
 	public static Cart currentCart;
 	public static Customer user;
 	public static Cart cart;

@@ -82,6 +82,9 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 	@FXML
 	TextField cardExpDateTextField;
 		
+	@FXML
+	Button viewReceiptHistoryBtn;
+	
 	@Override
 	public void handle(ActionEvent e) {
 				
@@ -128,6 +131,11 @@ public class SettingsController implements Initializable, EventHandler<ActionEve
 			else {
 				messageLabel.setText("Some fields missing");
 			}
+		}
+		
+		else if ( viewReceiptHistoryBtn == e.getSource()) {
+			
+			goToView("../View/History.fxml");
 		}
 	}
 	

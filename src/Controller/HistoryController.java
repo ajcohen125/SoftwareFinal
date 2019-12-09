@@ -19,43 +19,17 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import Model.*;
 import java.util.ArrayList;
 
-
-/* TODO
- * 
- * Main
- * Home page
- * 
- * VIEWS THAT DEAL WITH ACCOUNT INFORMATION
- * 
- * LoginController
- * Write validateCredentials()
- * 
- * SettingsController
- * Write updateAccountInfo() and createAccount()
- * 
- * VIEWS WHAT DEAL WITH ITEMS STUFF
- * 
- * SearchController
- * Upload item data to the TableView
- * We had trouble displaying sample data
- * Most of the TableView data is there, but something is off
- * 
- * CartController
- * 
- */
-public class MainController implements Initializable, EventHandler<ActionEvent> {
-	
-	// VARIABLES WE WANT TO ACCESS ACROSS ALL VIEWS
-	// THESE VARIABLES ARE EXCLUSIVE TO THE MAIN CONTROLLER
-	// Ex: Main.selectedOption
-	// Default vaulues for these variables are set in initialize when the application is launched
+public class HistoryController implements Initializable, EventHandler<ActionEvent> {
 	
 	private String curFxml = "../View/Main.fxml";
 	
@@ -79,6 +53,27 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 	ComboBox<String> optionsComboBox;
 	@FXML
 	TextField searchBox;
+	
+	@FXML
+	TableView<Receipt> allReceiptsTableView;
+	@FXML
+	TableColumn<Receipt, String> receiptNumberCol;
+	@FXML
+	TableColumn<Receipt, Double> totalCostCol;
+	
+	@FXML
+	TableView<Item> selectedReceiptTableView;
+	@FXML
+	TableColumn<Item, String> idCol;
+	@FXML
+	TableColumn<Item, String> nameCol;
+	@FXML
+	TableColumn<Item, Double> priceCol;
+	@FXML
+	TableColumn<Item, Integer> quantityCol;
+	
+	// LOCAL
+	Receipt selectedReceipt;
 		
 	@Override
 	public void handle(ActionEvent e) {
@@ -162,20 +157,26 @@ public class MainController implements Initializable, EventHandler<ActionEvent> 
 		System.out.println("Switched to Main View!");
 		setUpNavigationBar();
 		
-		// if the program was launched for the first time
-		if( true == Main.justLaunched ) {
-			
-			Main.user = null;
-			Main.selectedOption = 0;
-			Main.selectedItem = null;
-			Main.justLaunched = false;
-			Main.cart = new Cart();
-			Main.receiptList = new ArrayList<Receipt>();
-		}
+		loadReceipts();
 		
-		else {
-			
-		}
+	}
+	
+	public void loadReceipts() {
+		
+		// add options to the combo box
+		ObservableList<Receipt> receiptHistory = FXCollections.observableArrayList(Main.receiptList);
+		
+		receiptNumberCol.setCellValueFactory(new PropertyValueFactory<Receipt, String>("receiptNum"));
+		
+		totalCostCol.setCellValueFactory(new PropertyValueFactory<Receipt, Double>("totalCost"));
+		
+		allReceiptsTableView.setItems(receiptHistory);
+		allReceiptsTableView.getSelectionModel().select(null);
+	}
+	
+	public void loadSelectedReceipt() {
+		
+		
 	}
 	
 	public void setUpNavigationBar() {
